@@ -1,0 +1,1722 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Bugrio - Creative Personal Portfolio Template
+    Description: Bugrio - Creative Personal Portfolio Template
+    Author: kitbug
+    Author URI: https://themeforest.net/user/kitbug
+    Version: 1.0
+
+    -----------------------------------------------------------------------------------
+    CSS INDEX
+    -----------------------------------------------------------------------------------
+
+    0. Css comes from sass variable, extend and mixIn
+    1. Base Css
+    2. Header area & pre loader
+    3. Menu area
+    4. Menu Animation svg css
+    5. Banner Slider
+    6. About me
+    7. happiness me
+    8. skills me
+    9. protfo me
+    10. single protfo view
+    11. contact me starts
+    12. client me area
+    13. client me starts
+    14. price me starts
+
+ -----------------------------------------------------------------------------------*/
+/*============================================
+    0. Css comes from sass variable, extend and mixIn
+ @mixin ===========================================*/
+.fullHeight, .about-me-area, .happiness-me-area, .skill-me-area, .protfo-me-area, .contact-me-area, .client-me-area, .service-me-area, .price-me-area {
+  height: 100%; }
+
+.overflow-fix, .external-link, section, .header-area, .menu-area .menu-content-area, .home-banner-area .banner-content-area, .about-me-area .about-me-content-area, .happiness-me-area .happiness-me-content-area, .happiness-me-area .happiness-me-content-area .happiness-header-area, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-subtitle, .skill-me-area .skill-me-content-area, .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-percent, .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar, .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content, .protfo-me-area .protfo-me-content-area, .contact-me-area .contact-me-content-area, .client-me-area .client-me-content-area, .service-me-area .service-me-content-area, .price-me-area .price-me-content-area {
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.itemNone {
+  display: none; }
+
+.itemCenter, .header-area .featured-link-area ul, .header-area .featured-link-area ul li, .header-area .social-and-menu-area, .menu-area, .menu-area .menu-content-area .menu-list-area, .home-banner-area, .home-banner-area .banner-content-area .banner-video-area, .about-me-area, .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area .hire-icon, .happiness-me-area, .skill-me-area, .protfo-me-area, .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-title, .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-fullview, .contact-me-area, .client-me-area, .service-me-area, .price-me-area {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.itemCenterBottom {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.buttonOne, .external-link a, .home-banner-area .banner-content-area .banner-content-left-area .about-me-button .about-me span, .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area .hire-icon, .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-fullview a, .contact-me-area .contact-me-content-area .contact-form-area #cntsubmit, .price-me-area .price-me-content-area .price-content .talk-with-me a {
+  display: inline-block;
+  padding: 8px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid #282828;
+  border-radius: 30px;
+  color: #282828; }
+
+.section-title, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title h2, .skill-me-area .skill-me-content-area .skill-header-area .skill-title h2, .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2, .client-me-area .client-me-content-area .client-header-area .client-title h2, .service-me-area .service-me-content-area .service-header-area .service-title h2 {
+  color: #282828;
+  font-size: 35px;
+  font-weight: 500;
+  position: relative;
+  background: transparent;
+  margin-bottom: 5px; }
+
+.section-subtitle, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-subtitle p, .skill-me-area .skill-me-content-area .skill-header-area .skill-subtitle p, .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-subtitle p {
+  font-size: 16px;
+  color: #7d7d7d; }
+
+.line-row {
+  height: 2px;
+  background: #282828;
+  max-width: 400px;
+  width: 100%; }
+
+.external-link {
+  margin-top: 50px;
+  text-align: center; }
+
+/*============================================
+    1. Base Css
+ @mixin ===========================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif, Arial; }
+
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+input:focus, button:focus, textarea {
+  outline: 0px; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  select:focus {
+    outline: none; }
+
+a {
+  color: #000;
+  display: grid; }
+  a:focus, a:hover, a:focus i, a:hover i {
+    text-decoration: none;
+    outline: 0 solid;
+    color: #000; }
+
+ul li {
+  list-style: outside none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.page-content-area {
+  height: 100%; }
+
+.iconSvg path, .iconSvg line, .iconSvg .svgPath {
+  fill: none;
+  stroke: #000000;
+  stroke-linecap: round;
+  stroke-miterlimit: 10; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0.1); }
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 30px; }
+
+/*============================================
+    2. Header area & Pre loader
+ @mixin ===========================================*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99; }
+  #preloader #preloader-area {
+    height: 100%; }
+    #preloader #preloader-area .preloader-img img {
+      margin: 0 auto;
+      display: block;
+      max-width: 50px; }
+    #preloader #preloader-area .preloader-img span {
+      max-width: 30px;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      font-size: 20px;
+      border: 1px solid #282828;
+      border-radius: 50%;
+      height: 30px;
+      margin-top: 20px;
+      cursor: pointer; }
+
+.addBackground {
+  background: #ffffff; }
+
+.header-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  z-index: 10; }
+  .header-area .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header-area .logo-area span {
+    cursor: pointer; }
+    .header-area .logo-area span img {
+      height: 50px;
+      max-width: unset; }
+  .header-area .featured-link-area ul li span {
+    text-transform: capitalize;
+    padding: 0px 15px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    cursor: pointer; }
+    .header-area .featured-link-area ul li span:after {
+      width: 25px;
+      content: "";
+      height: 1px;
+      display: block;
+      background: rgba(125, 125, 125, 0.0588235);
+      margin: 0 auto;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+    .header-area .featured-link-area ul li span:hover:after {
+      background: #282828;
+      width: 100%; }
+  .header-area .social-and-menu-area {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .header-area .social-and-menu-area .social-area ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .header-area .social-and-menu-area .social-area ul li {
+        margin: 0px 10px; }
+        .header-area .social-and-menu-area .social-area ul li:hover a {
+          border-bottom: 1px solid #282828;
+          border-radius: 1px; }
+        .header-area .social-and-menu-area .social-area ul li a {
+          font-size: 20px;
+          border-bottom: 1px solid transparent;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          padding-bottom: 2px; }
+          .header-area .social-and-menu-area .social-area ul li a i {
+            color: #282828; }
+  .header-area .menu-bar-area {
+    margin-left: 15px; }
+    .header-area .menu-bar-area .bar-icon {
+      cursor: pointer;
+      width: 25px;
+      display: block;
+      float: left; }
+      .header-area .menu-bar-area .bar-icon span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #282828;
+        margin-bottom: 3px;
+        border-radius: 500px;
+        float: left; }
+        .header-area .menu-bar-area .bar-icon span:nth-child(2) {
+          width: 15px; }
+        .header-area .menu-bar-area .bar-icon span:nth-child(3) {
+          margin-bottom: 0; }
+
+/*============================================
+    3. Menu area
+ @mixin ===========================================*/
+.menu-area {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff; }
+  .menu-area .menu-content-area .menu-list-area {
+    -webkit-transform: rotateX(40deg) rotateY(0deg) rotateZ(35deg);
+    transform: rotateX(40deg) rotateY(0deg) rotateZ(35deg);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .menu-area .menu-content-area .menu-list-area ul li:hover p {
+      text-shadow: 0px 0px 5px #9e9e9e; }
+    .menu-area .menu-content-area .menu-list-area ul li {
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      padding: 35px 0;
+      -webkit-transform: translateX(-50em);
+      -ms-transform: translateX(-50em);
+      transform: translateX(-50em); }
+      .menu-area .menu-content-area .menu-list-area ul li p {
+        color: #282828;
+        font-size: 75px;
+        line-height: 45px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 6px 6px 5px #9e9e9e;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        letter-spacing: 12px;
+        cursor: pointer; }
+    .menu-area .menu-content-area .menu-list-area ul span {
+      display: none; }
+
+/*============================================
+    4. Menu Animation svg css
+ @mixin ===========================================*/
+.svg-one-area {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; }
+
+.svg-two-area {
+  position: fixed;
+  top: -394.1px;
+  left: auto;
+  z-index: 3;
+  width: 394.1px;
+  height: 460px;
+  overflow: hidden;
+  right: -460px; }
+
+.svg-three-area {
+  position: fixed;
+  top: auto;
+  left: -460px;
+  z-index: 3;
+  width: 394.1px;
+  height: 460px;
+  overflow: hidden;
+  bottom: -394.1px; }
+
+/*============================================
+   5. Banner Slider
+ @mixin ===========================================*/
+.home-banner-area {
+  height: 100%; }
+  .home-banner-area .banner-content-area .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .home-banner-area .banner-content-area .banner-content-left-area {
+    padding-left: 20px; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area {
+      position: relative;
+      float: left; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area .title-bg-text {
+        font-family: "Lobster", cursive;
+        font-size: 110px;
+        color: #f5f5f5;
+        position: absolute;
+        top: -45%;
+        left: -20px;
+        z-index: -1; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 {
+        color: #282828;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 60px;
+        position: relative;
+        background: transparent;
+        margin-bottom: 20px;
+        float: left; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 span {
+          width: 100%;
+          float: left;
+          background: transparent; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 .skil {
+          float: right; }
+          .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 .skil b {
+            background: transparent; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-content-area p {
+      font-size: 15px;
+      color: #7d7d7d;
+      text-align: justify; }
+    .home-banner-area .banner-content-area .banner-content-left-area .about-me-button .about-me {
+      margin-top: 40px;
+      float: left; }
+  .home-banner-area .banner-content-area .banner-video-area .play-button svg {
+    cursor: pointer;
+    width: 60px; }
+
+/*============================================
+   6. About me
+ @mixin ===========================================*/
+.about-me-area .about-me-content-area .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title h3 {
+    color: #282828;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    position: relative;
+    background: transparent;
+    margin-bottom: 20px;
+    float: left; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title h4 {
+    font-size: 15px;
+    color: #7d7d7d;
+    margin-bottom: 10px;
+    float: left; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title p {
+    font-size: 15px;
+    color: #7d7d7d;
+    margin-bottom: 10px; }
+    .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title p:last-child {
+      margin: 0; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area {
+    margin-top: 20px;
+    float: left; }
+    .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area .hire-icon span {
+      color: #282828;
+      font-size: 15px; }
+  .about-me-area .about-me-content-area .row .about-me-info-area .about-info-content {
+    margin-bottom: 20px; }
+    .about-me-area .about-me-content-area .row .about-me-info-area .about-info-content h2 {
+      font-family: "Lobster", cursive;
+      font-size: 30px;
+      color: #282828; }
+    .about-me-area .about-me-content-area .row .about-me-info-area .about-info-content p {
+      font-size: 16px;
+      color: #7d7d7d; }
+  .about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul {
+    max-width: 225px;
+    width: 100%; }
+    .about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul li p {
+      padding: 8px 15px;
+      border-bottom: 1px solid rgba(125, 125, 125, 0.0588235);
+      color: #7d7d7d;
+      position: relative; }
+      .about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul li p:after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        display: block;
+        background: #282828;
+        position: absolute;
+        left: 1px;
+        top: 18px; }
+      .about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul li p:hover {
+        color: #282828; }
+
+/*============================================
+   7. happiness me
+ @mixin ===========================================*/
+.happiness-me-area .happiness-me-content-area {
+  position: relative;
+  padding: 70px 0;
+  overflow-x: hidden;
+  padding-bottom: 90px; }
+  .happiness-me-area .happiness-me-content-area .happiness-me-content-background {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title span {
+      margin-left: 40px; }
+    .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .title-bg-text {
+      font-family: "Lobster", cursive;
+      font-size: 90px;
+      color: #f5f5f5;
+      position: absolute;
+      top: -40px;
+      left: -20px;
+      z-index: -1;
+      margin-left: 0px; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-subtitle {
+    margin-top: 20px; }
+  .happiness-me-area .happiness-me-content-area .happiness-content-area {
+    margin-top: 50px;
+    padding: 40px 0;
+    border: 1px solid rgba(125, 125, 125, 0.0588235);
+    display: inline-block;
+    background: #ffffff; }
+    .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single {
+      padding: 10px 75px;
+      border-right: 1px solid rgba(125, 125, 125, 0.0588235);
+      float: left; }
+      .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single p {
+        color: #282828;
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+        margin-bottom: 10px; }
+      .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single h4 {
+        font-size: 16px;
+        color: #7d7d7d; }
+      .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single:last-child {
+        border-right: 0; }
+
+/*============================================
+   8. skills me
+ @mixin ===========================================*/
+.skill-me-area .skill-me-content-area .skill-header-area .skill-title {
+  position: relative; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1; }
+
+.skill-me-area .skill-me-content-area .skill-header-area .skill-subtitle {
+  margin-top: 0px; }
+
+.skill-me-area .skill-me-content-area .skill-item-slider {
+  overflow-x: auto;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 15px; }
+  .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area {
+    margin-top: 50px; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-percent {
+      margin-left: 52px;
+      margin-bottom: 15px; }
+      .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-percent p {
+        color: #7d7d7d; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar {
+      margin-left: 52px;
+      height: 175px;
+      position: relative;
+      margin-bottom: 15px; }
+      .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 3px;
+        background: #f5f5f5;
+        height: 100%; }
+        .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar span:last-child {
+          z-index: 1;
+          background: #282828; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; }
+      .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content span {
+        color: #f5f5f5;
+        font-size: 50px; }
+      .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content p {
+        color: #282828;
+        font-size: 15px;
+        line-height: 20px;
+        margin-left: 5px; }
+
+/*============================================
+    9. protfo me
+ @mixin ===========================================*/
+.protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title {
+  position: relative; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -55px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter {
+    text-align: center; }
+    .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter button {
+      color: #282828;
+      font-size: 17px;
+      font-weight: 600;
+      position: relative;
+      background: transparent;
+      border: 0px;
+      cursor: pointer;
+      padding: 0 20px;
+      margin: 0px 5px; }
+      .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter button:hover:after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 1px;
+        background: #282828;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+    .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter .active:after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      height: 1px;
+      background: #282828;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+
+.protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-subtitle p {
+  margin-top: 10px; }
+
+.protfo-me-area .protfo-me-content-area .protfo-masonary-area {
+  max-height: 395px;
+  min-height: 395px;
+  overflow-y: auto;
+  margin-top: 40px; }
+  .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid {
+    padding: 0 10px; }
+    .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item {
+      position: relative;
+      margin-bottom: 20px; }
+      .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content {
+        position: relative;
+        overflow: hidden; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content img {
+          display: block;
+          vertical-align: bottom;
+          -o-object-fit: cover;
+          object-fit: cover;
+          width: 100%; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-bg {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.611765);
+          -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+          -o-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+          transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-title {
+          opacity: 1;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: auto;
+          height: 100%; }
+          .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-title h2 {
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            margin-left: 50px;
+            opacity: 0;
+            -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+            -o-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+            transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+            color: #282828;
+            font-size: 17px;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            -webkit-transition-delay: .5s;
+            -o-transition-delay: .5s;
+            transition-delay: .5s; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-fullview {
+          opacity: 0;
+          -webkit-transition-delay: .5s;
+          -o-transition-delay: .5s;
+          transition-delay: .5s;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 20px;
+          -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+          -o-transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s;
+          transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.3s; }
+          .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-fullview a {
+            border: 0; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content:hover .protfo-bg {
+          width: 100%;
+          margin-left: 0;
+          opacity: 1; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content:hover .protfo-title h2 {
+          margin-left: 0px;
+          opacity: 1; }
+        .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content:hover .protfo-fullview {
+          opacity: 1;
+          width: 100%;
+          height: 100%; }
+
+/*============================================
+   10. single protfo view
+ @mixin ===========================================*/
+.single-protfo-view {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #fff;
+  padding: 20px;
+  position: relative; }
+  .single-protfo-view .mfp-close {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .single-protfo-view .mfp-close:hover {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+  .single-protfo-view .single-protfo-header {
+    margin-bottom: 15px; }
+    .single-protfo-view .single-protfo-header h2 {
+      color: #282828;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      background: transparent;
+      border: 0px;
+      cursor: pointer;
+      margin-bottom: 10px; }
+    .single-protfo-view .single-protfo-header .breadcumb-area .breadcumb-list {
+      display: inline-block;
+      list-style: outside none; }
+      .single-protfo-view .single-protfo-header .breadcumb-area .breadcumb-list li {
+        float: left;
+        margin-right: 10px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 10px; }
+        .single-protfo-view .single-protfo-header .breadcumb-area .breadcumb-list li span {
+          margin-right: 10px;
+          color: #282828; }
+        .single-protfo-view .single-protfo-header .breadcumb-area .breadcumb-list li i {
+          color: #282828;
+          font-weight: 600;
+          font-size: 15px; }
+        .single-protfo-view .single-protfo-header .breadcumb-area .breadcumb-list li:last-child span {
+          font-weight: 500; }
+  .single-protfo-view .single-protfo-thub {
+    margin-bottom: 15px; }
+  .single-protfo-view .single-protfo-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7d7d7d; }
+
+/*============================================
+  11. contact me starts
+ @mixin ===========================================*/
+.contact-me-area .contact-me-content-area .contact-header-area .contact-title {
+  position: relative; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -35px;
+    left: -20px;
+    z-index: -1; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2 {
+    line-height: 55px;
+    font-size: 25px; }
+
+.contact-me-area .contact-me-content-area .contact-about-me {
+  margin-top: 30px; }
+  .contact-me-area .contact-me-content-area .contact-about-me img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .contact-me-area .contact-me-content-area .contact-about-me h2 {
+    color: #282828;
+    font-size: 16px;
+    font-weight: 500; }
+  .contact-me-area .contact-me-content-area .contact-about-me p {
+    font-size: 14px;
+    color: #282828;
+    letter-spacing: 0;
+    line-height: 23px;
+    margin-bottom: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 400;
+    margin-top: 10px; }
+    .contact-me-area .contact-me-content-area .contact-about-me p span {
+      font-weight: 500;
+      display: block;
+      margin-left: 5px; }
+
+.contact-me-area .contact-me-content-area .contact-info-area {
+  margin-top: 30px;
+  border-top: 1px solid #f5f5f5;
+  padding-top: 20px;
+  max-width: 400px; }
+  .contact-me-area .contact-me-content-area .contact-info-area ul li {
+    font-size: 14px;
+    color: #282828;
+    letter-spacing: 0;
+    line-height: 23px;
+    margin-bottom: 13px;
+    font-weight: 400; }
+
+.contact-me-area .contact-me-content-area .contact-form-area input {
+  border: 0;
+  font-size: 15px;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 12px 0;
+  width: 100%;
+  margin-bottom: 20px; }
+
+.contact-me-area .contact-me-content-area .contact-form-area #message {
+  border: 0;
+  font-size: 15px;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 12px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 100px; }
+
+.contact-me-area .contact-me-content-area .contact-form-area #cntsubmit {
+  background: transparent;
+  padding: 8px 35px; }
+
+.contact-me-area .contact-me-content-area .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.form-message {
+  margin-top: 20px;
+  width: 100%; }
+  .form-message .loading {
+    font-size: 14px;
+    color: #282828;
+    letter-spacing: 0;
+    font-weight: 400;
+    border: 1px solid #282828;
+    padding: 8px 45px;
+    border-radius: 30px;
+    float: right;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+
+/*============================================
+   12. client me area
+ @mixin ===========================================*/
+.client-me-area .client-me-content-area .client-header-area .client-title {
+  position: relative; }
+  .client-me-area .client-me-content-area .client-header-area .client-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -40px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .client-me-area .client-me-content-area .client-header-area .client-title h2 {
+    line-height: 45px;
+    text-align: center; }
+
+.client-me-area .client-me-content-area .client-slider-area {
+  max-height: 300px;
+  min-height: 300px;
+  overflow-y: auto;
+  margin-top: 15px; }
+  .client-me-area .client-me-content-area .client-slider-area .client-single-item {
+    padding: 20px 0px;
+    margin: 0; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-img {
+      background-image: url(../images/client/c-bg.png);
+      background-size: 60%;
+      background-position: 100% 50%;
+      background-repeat: no-repeat; }
+      .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-name h2 {
+      color: #282828;
+      font-size: 17px;
+      font-weight: 700; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content h3 {
+      color: #282828;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content p {
+      font-size: 14px;
+      color: #7d7d7d;
+      letter-spacing: 0;
+      line-height: 23px;
+      margin-bottom: 13px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-weight: 400;
+      margin-top: 8px; }
+
+.client-me-area .client-me-content-area .client-brand-area {
+  margin-top: 80px; }
+  .client-me-area .client-me-content-area .client-brand-area .client-brand-img {
+    overflow-x: auto;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 30px; }
+    .client-me-area .client-me-content-area .client-brand-area .client-brand-img img {
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 5px; }
+
+/*============================================
+   13. client me starts
+ @mixin ===========================================*/
+.service-me-area .service-me-content-area .service-header-area .service-title {
+  position: relative; }
+  .service-me-area .service-me-content-area .service-header-area .service-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -40px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .service-me-area .service-me-content-area .service-header-area .service-title h2 {
+    line-height: 45px;
+    text-align: center; }
+
+.service-me-area .service-me-content-area .service-list-area {
+  margin-top: 30px; }
+  .service-me-area .service-me-content-area .service-list-area .service-single-item {
+    padding: 15px 0; }
+    .service-me-area .service-me-content-area .service-list-area .service-single-item i {
+      font-size: 30px;
+      color: #7d7d7d;
+      margin-bottom: 15px; }
+    .service-me-area .service-me-content-area .service-list-area .service-single-item h2 {
+      color: #282828;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 1px; }
+    .service-me-area .service-me-content-area .service-list-area .service-single-item p {
+      font-size: 14px;
+      color: #7d7d7d;
+      letter-spacing: 0;
+      line-height: 23px;
+      margin-bottom: 13px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-weight: 400;
+      margin-top: 8px; }
+
+/*============================================
+   14. price me starts
+ @mixin ===========================================*/
+.price-me-area .price-me-content-area .price-header-area {
+  position: relative;
+  float: left; }
+  .price-me-area .price-me-content-area .price-header-area .price-title span.title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 110px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1; }
+  .price-me-area .price-me-content-area .price-header-area .price-title h2 {
+    color: #282828;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 75px;
+    position: relative;
+    background: transparent;
+    margin-bottom: 20px;
+    float: left; }
+
+.price-me-area .price-me-content-area .price-content h2 {
+  color: #282828;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px; }
+
+.price-me-area .price-me-content-area .price-content p {
+  font-size: 14px;
+  color: #7d7d7d;
+  letter-spacing: 0;
+  line-height: 23px;
+  margin-bottom: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  margin-top: 8px; }
+
+.price-me-area .price-me-content-area .price-content .talk-with-me {
+  margin-top: 50px; }
+  .price-me-area .price-me-content-area .price-content .talk-with-me h3 {
+    color: #282828;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px; }
+  .price-me-area .price-me-content-area .price-content .talk-with-me a {
+    display: block;
+    float: left;
+    margin-top: 20px; }
+
+/*============================================
+   15. Footer
+ @mixin ===========================================*/
+.footer-area {
+  position: fixed;
+  bottom: 50%;
+  right: -110px;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: auto;
+  font-size: 12px;
+  letter-spacing: 5px; }
+  .footer-area .copy-right-area p:after {
+    content: "";
+    display: block;
+    background: #282828;
+    width: 50%;
+    height: 1px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    margin-top: 5px; }
+  .footer-area .copy-right-area p:hover:after {
+    width: 100%; }
+  .footer-area .footer-area-contact {
+    display: none; }
+
+/*============================================
+   (1366x768) WXGA Display
+ @mixin ===========================================*/
+/*============================================
+   Display 1199.98px
+ @mixin ===========================================*/
+@media only screen and (min-width: 300px) and (max-width: 1199.98px) {
+  .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area .title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 80px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -27%;
+    left: -20px;
+    z-index: -1; }
+  .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 {
+    font-size: 50px;
+    line-height: 55px; } }
+
+/*============================================
+   Display 991.98px
+ @mixin ===========================================*/
+@media only screen and (min-width: 300px) and (max-width: 991.98px) {
+  .svg-three-area {
+    display: none; }
+  .svg-two-area {
+    display: none; }
+  .header-area .featured-link-area ul li span {
+    padding: 0px 8px;
+    font-size: 15px; }
+  .header-area .social-and-menu-area .social-area ul li a {
+    font-size: 20px; }
+  .menu-area .menu-content-area .menu-list-area ul li {
+    padding: 25px 0; }
+    .menu-area .menu-content-area .menu-list-area ul li p {
+      font-size: 65px;
+      line-height: 40px;
+      letter-spacing: 12px; }
+  .buttonOne, .external-link a, .home-banner-area .banner-content-area .banner-content-left-area .about-me-button .about-me span, .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area .hire-icon, .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-fullview a, .contact-me-area .contact-me-content-area .contact-form-area #cntsubmit, .price-me-area .price-me-content-area .price-content .talk-with-me a {
+    padding: 7px 20px;
+    font-size: 13px; }
+  .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area .title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 55px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -30%;
+    left: -15px;
+    z-index: -1; }
+  .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 {
+    font-size: 35px;
+    line-height: 35px; }
+  .home-banner-area .banner-content-area .banner-content-left-area .banner-content-area p {
+    font-size: 14px; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title h3 {
+    font-size: 30px; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title h2 {
+    margin-bottom: 0; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 75px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    z-index: -1; }
+  .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single {
+    padding: 10px 50px; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title span {
+    font-family: "Lobster", cursive;
+    font-size: 75px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    z-index: -1; }
+  .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area {
+    margin-top: 30px; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar {
+      height: 180px; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content span {
+      font-size: 35px; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-content p {
+      font-size: 14px;
+      line-height: 18px; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1; }
+  .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-title {
+    display: none; }
+  .single-protfo-view {
+    max-width: 600px; }
+  .client-me-area .client-me-content-area .client-header-area .client-title span {
+    font-family: "Lobster", cursive;
+    font-size: 75px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -25px;
+    left: auto;
+    z-index: -1; }
+  .client-me-area .client-me-content-area .client-slider-area {
+    max-height: 210px;
+    min-height: 210px; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .align-self-center {
+      -ms-flex-item-align: start !important;
+      align-self: flex-start !important; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-img img {
+      width: 70px;
+      height: 70px; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-name h2 {
+      font-size: 15px;
+      font-weight: 600; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content h3 {
+      font-size: 15px; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content p {
+      font-size: 13px; }
+  .service-me-area .service-me-content-area .service-header-area .service-title span {
+    font-family: "Lobster", cursive;
+    font-size: 90px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -40px;
+    left: auto;
+    z-index: -1; }
+  .service-me-area .service-me-content-area .service-list-area {
+    margin-top: 50px;
+    max-height: 170px;
+    overflow-y: auto; }
+    .service-me-area .service-me-content-area .service-list-area .service-single-item {
+      padding: 0px 0;
+      margin-bottom: 50px; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title span {
+    font-family: "Lobster", cursive;
+    font-size: 70px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    z-index: -1; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2 {
+    line-height: 35px; } }
+
+/*============================================
+   Display 767.98px
+ @mixin ===========================================*/
+@media only screen and (min-width: 300px) and (max-width: 767.98px) {
+  .d-none-575 {
+    display: none; }
+  .sm-none {
+    display: none; }
+  .order-first-r {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1; }
+  .order-last-r {
+    -webkit-box-ordinal-group: 14;
+    -ms-flex-order: 13;
+    order: 13; }
+  .fullHeight, .about-me-area, .happiness-me-area, .skill-me-area, .protfo-me-area, .contact-me-area, .client-me-area, .service-me-area, .price-me-area {
+    height: auto; }
+  .page-content-area {
+    height: auto;
+    padding: 90px 0; }
+  .menu-area.fullHeight, .menu-area.about-me-area, .menu-area.happiness-me-area, .menu-area.skill-me-area, .menu-area.protfo-me-area, .menu-area.contact-me-area, .menu-area.client-me-area, .menu-area.service-me-area, .menu-area.price-me-area {
+    height: 100%; }
+  .menu-area .menu-content-area .menu-list-area {
+    height: auto; }
+    .menu-area .menu-content-area .menu-list-area ul li {
+      padding: 10px 0; }
+      .menu-area .menu-content-area .menu-list-area ul li p {
+        font-size: 27px;
+        line-height: 22px;
+        text-shadow: 3px 2px 5px #9e9e9e;
+        letter-spacing: 10px;
+        text-transform: capitalize; }
+    .menu-area .menu-content-area .menu-list-area ul span {
+      display: block; }
+  .page-content-area.banner-hight {
+    height: 100%; }
+  .home-banner-area .banner-content-area .banner-content-left-area {
+    padding-left: 0px; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area {
+      width: 100%; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area .title-bg-text {
+        font-family: "Lobster", cursive;
+        font-size: 55px;
+        color: #f5f5f5;
+        position: absolute;
+        top: -100%;
+        left: auto;
+        z-index: -1;
+        right: auto;
+        text-align: center;
+        width: 100%; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 {
+        font-size: 25px;
+        line-height: 15px;
+        text-align: center; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 span {
+          float: none;
+          width: auto; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 .skil {
+          float: none;
+          margin: 0px 10px; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-content-area p {
+      font-size: 14px; }
+    .home-banner-area .banner-content-area .banner-content-left-area .about-me-button .about-me {
+      margin-top: 20px; }
+  .home-banner-area .banner-content-right-area .single-item {
+    max-width: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 10px; }
+  .about-me-area .about-me-content-area .row .about-me-images-area img {
+    max-height: 200px;
+    margin: 0 auto;
+    display: block; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area {
+    float: left;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center; }
+    .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title {
+      float: left;
+      width: 100%; }
+    .about-me-area .about-me-content-area .row .about-me-intro-area .hire-icon-area {
+      width: 100%; }
+  .about-me-area .about-me-content-area .row .about-me-info-area .about-info-content {
+    text-align: center; }
+  .about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul {
+    margin: 0 auto; }
+  .happiness-me-area .happiness-me-content-area {
+    padding: 30px 0;
+    padding-bottom: 55px; }
+    .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title h2 {
+      font-size: 25px; }
+    .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .title-bg-text {
+      font-family: "Lobster", cursive;
+      font-size: 50px;
+      color: #f5f5f5;
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      z-index: -1; }
+    .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .line-row {
+      width: 40%; }
+    .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single {
+      padding: 10px 25px; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title span {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title h2 {
+    line-height: 33px;
+    font-size: 20px;
+    text-align: center; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-subtitle p {
+    text-align: center; }
+  .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area {
+    margin-top: 20px; }
+    .skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar {
+      height: 145px; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title span {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1; }
+  .protfo-me-area .protfo-me-content-area .protfo-masonary-area {
+    margin-top: 40px;
+    max-height: 300px;
+    min-height: 300px; }
+    .protfo-me-area .protfo-me-content-area .protfo-masonary-area .protfo-grid .protfo-item .protfo-item-content .protfo-title {
+      display: none; }
+  .mfp-arrow {
+    top: 10%; }
+  .client-me-area .client-me-content-area .client-header-area .client-title span {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .client-me-area .client-me-content-area .client-header-area .client-title h2 {
+    line-height: 33px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%; }
+  .service-me-area .service-me-content-area .service-header-area .service-title span {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .service-me-area .service-me-content-area .service-header-area .service-title h2 {
+    line-height: 33px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%; }
+  .price-me-area .price-me-content-area .price-header-area {
+    width: 100%; }
+    .price-me-area .price-me-content-area .price-header-area .price-title span.title-bg-text {
+      font-family: "Lobster", cursive;
+      font-size: 50px;
+      color: #f5f5f5;
+      position: absolute;
+      top: -15px;
+      left: auto;
+      z-index: -1;
+      right: auto;
+      text-align: center;
+      width: 100%; }
+    .price-me-area .price-me-content-area .price-header-area .price-title h2 {
+      line-height: 33px;
+      font-size: 20px;
+      text-align: center;
+      width: 100%; }
+  .price-me-area .price-me-content-area .price-content {
+    text-align: center; }
+    .price-me-area .price-me-content-area .price-content .talk-with-me h3 {
+      margin-bottom: 20px; }
+    .price-me-area .price-me-content-area .price-content .talk-with-me a {
+      display: inline;
+      margin: 0 auto;
+      float: none;
+      margin-top: 20px; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title span {
+    font-family: "Lobster", cursive;
+    font-size: 50px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1;
+    right: auto;
+    text-align: center;
+    width: 100%; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2 {
+    line-height: 33px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%; }
+  .contact-me-area .contact-me-content-area .contact-info-area {
+    margin-top: 0; }
+  .contact-me-area .contact-me-content-area .contact-form-area {
+    margin-top: 30px; } }
+
+/*============================================
+   Display 575.98px
+ @mixin ===========================================*/
+@media only screen and (min-width: 300px) and (max-width: 575.98px) {
+  .header-area {
+    background: #ffffff; }
+  .svg-one-area {
+    display: none; }
+  .menu-area .menu-content-area .menu-list-area {
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    .menu-area .menu-content-area .menu-list-area ul li p {
+      font-size: 17px;
+      line-height: 11px;
+      text-shadow: 3px 2px 5px #9e9e9e;
+      letter-spacing: 3px; }
+  .home-banner-area .banner-content-area .banner-content-left-area {
+    padding-left: 0;
+    float: left;
+    width: 100%; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area {
+      width: 100%; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area .title-bg-text {
+        font-family: "Lobster", cursive;
+        font-size: 40px;
+        color: #f5f5f5;
+        position: absolute;
+        top: -25px;
+        left: auto;
+        z-index: -1;
+        right: auto;
+        text-align: center;
+        width: 100%; }
+      .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 {
+        font-size: 20px;
+        line-height: 25px; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 span {
+          float: none;
+          width: auto; }
+        .home-banner-area .banner-content-area .banner-content-left-area .banner-title-area h3 .skil {
+          float: none;
+          margin: 0px 10px; }
+    .home-banner-area .banner-content-area .banner-content-left-area .banner-content-area p {
+      font-size: 15px;
+      line-height: 20px; }
+  .home-banner-area .banner-content-right-area .single-item {
+    max-width: 140px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 20px; }
+  .about-me-area .about-me-content-area .row .about-me-intro-area .about-intro-title h3 {
+    font-size: 24px;
+    line-height: 30px; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title h2 {
+    font-size: 20px; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 35px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1; }
+  .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .line-row {
+    width: 40%; }
+  .happiness-me-area .happiness-me-content-area .happiness-content-area {
+    margin-top: 45px;
+    padding: 10px 0; }
+    .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single {
+      padding: 10px 20px;
+      border-right: 0px; }
+      .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single p {
+        font-size: 18px; }
+      .happiness-me-area .happiness-me-content-area .happiness-content-area .happiness-content-single h4 {
+        font-size: 15px; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -20px;
+    left: auto;
+    z-index: -1; }
+  .skill-me-area .skill-me-content-area .skill-header-area .skill-title h2 {
+    line-height: 20px;
+    font-size: 19px; }
+  .skill-me-area .skill-item-slider {
+    margin-right: 1px;
+    margin-left: 1px; }
+    .skill-me-area .skill-item-slider .col-md-3 {
+      padding-left: 10px;
+      padding-right: 10px; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -15px;
+    left: auto;
+    z-index: -1; }
+  .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter button {
+    font-size: 14px; }
+  .protfo-me-area .protfo-me-content-area .protfo-masonary-area {
+    margin-top: 40px;
+    max-height: unset;
+    min-height: auto;
+    overflow-y: unset; }
+  .client-me-area .client-me-content-area .client-header-area .client-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -20px;
+    left: auto;
+    z-index: -1; }
+  .client-me-area .client-me-content-area .client-header-area .client-title h2 {
+    font-size: 20px;
+    line-height: 20px; }
+  .client-me-area .client-me-content-area .client-slider-area {
+    margin-top: 35px;
+    max-height: unset;
+    min-height: unset; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .align-self-center {
+      -ms-flex-item-align: center !important;
+      align-self: center !important; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-img {
+      background: transparent; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content h3 {
+      font-size: 13px;
+      text-align: justify;
+      line-height: 20px;
+      margin-top: 5px; }
+    .client-me-area .client-me-content-area .client-slider-area .client-single-item .client-content p {
+      text-align: justify; }
+  .service-me-area .service-me-content-area .service-header-area .service-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -20px;
+    left: auto;
+    z-index: -1; }
+  .service-me-area .service-me-content-area .service-header-area .service-title h2 {
+    font-size: 20px;
+    line-height: 20px; }
+  .service-me-area .service-me-content-area .service-list-area {
+    margin: 0;
+    margin-top: 50px;
+    max-height: unset;
+    overflow-y: none; }
+    .service-me-area .service-me-content-area .service-list-area .service-single-item {
+      padding: 0px 0;
+      margin-bottom: 50px; }
+  .price-me-area .price-me-content-area .price-header-area .price-title span.title-bg-text {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -20px;
+    left: auto;
+    z-index: -1; }
+  .price-me-area .price-me-content-area .price-header-area .price-title h2 {
+    line-height: 20px; }
+  .price-me-area .price-me-content-area .price-content h2 {
+    font-size: 14px; }
+  .price-me-area .price-me-content-area .price-content p {
+    line-height: 20px;
+    margin-bottom: 0; }
+  .price-me-area .price-me-content-area .price-content .talk-with-me {
+    margin-top: 20px; }
+    .price-me-area .price-me-content-area .price-content .talk-with-me h3 {
+      font-size: 14px; }
+    .price-me-area .price-me-content-area .price-content .talk-with-me a {
+      display: inline;
+      margin: 0 auto;
+      float: none;
+      margin-top: 20px; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title span {
+    font-family: "Lobster", cursive;
+    font-size: 45px;
+    color: #f5f5f5;
+    position: absolute;
+    top: -20px;
+    left: auto;
+    z-index: -1; }
+  .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2 {
+    line-height: 20px;
+    font-size: 20px; }
+  .happiness-me-content-background {
+    display: none; }
+  .footer-area {
+    display: none; }
+  .footer-area-contact {
+    display: block;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    z-index: 1;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    width: auto;
+    font-size: 13px;
+    letter-spacing: 5px;
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 20px 0px; }
+    .footer-area-contact .copy-right-area p:after {
+      content: "";
+      display: block;
+      background: #282828;
+      width: 50%;
+      height: 1px;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      margin-top: 5px; }
+    .footer-area-contact .copy-right-area p:hover:after {
+      width: 100%; } }
+
+
+
+.theme-mode a {
+  background: #282828;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: e-resize;
+  display: block;
+}
+
+.theme-mode {
+    position: fixed;
+    z-index: 99999;
+    top: 80%;
+    left: 0;
+    display: block;
+    text-align: center;
+}

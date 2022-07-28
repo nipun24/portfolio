@@ -1,0 +1,148 @@
+body {
+    background: #282828;
+}
+body *{
+   color: #fff;
+}
+.copy-right-area p {
+    color: #fff;
+}
+
+.happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title .title-bg-text {
+    color: #4a4a4a;
+}
+
+.skill-me-area .skill-me-content-area .skill-header-area .skill-title span {
+    color: #4a4a4a;
+}
+
+.section-title, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-title h2, .skill-me-area .skill-me-content-area .skill-header-area .skill-title h2, .contact-me-area .contact-me-content-area .contact-header-area .contact-title h2, .client-me-area .client-me-content-area .client-header-area .client-title h2, .service-me-area .service-me-content-area .service-header-area .service-title h2 {
+    color: #fff;
+}
+
+.line-row {
+    background: #fff;
+}
+
+.section-subtitle, .happiness-me-area .happiness-me-content-area .happiness-header-area .happiness-subtitle p, .skill-me-area .skill-me-content-area .skill-header-area .skill-subtitle p, .protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-subtitle p {
+    color: #e8e8e8;
+}
+
+.skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar span:last-child {
+    background: #ffffff;
+}
+
+.skill-me-area .skill-me-content-area .skill-item-slider .skill-item-area .skill-bar span {
+    background: #121212;
+}
+
+.protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title span {
+    color: #4a4a4a;
+}
+
+.protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter button {
+    color: #fff;
+}
+
+.protfo-me-area .protfo-me-content-area .protfo-header-area .protfo-title .protfo-filter .active:after {
+    background: #fff;
+}
+
+.client-me-area .client-me-content-area .client-brand-area .client-brand-img {
+    /* background: #fff; */
+}
+
+.client-me-area .client-me-content-area .client-brand-area {
+    background: #dcdcdc;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    padding-bottom: 15px;
+}
+
+.client-me-area .client-me-content-area .client-header-area .client-title span {
+    color: #4a4a4a;
+}
+
+.contact-me-area .contact-me-content-area .contact-info-area ul li {
+    color: #fff;
+}
+
+.contact-me-area * {
+    color: #fff !important;
+}
+
+.contact-me-area .contact-me-content-area .contact-form-area #cntsubmit {
+    border-color: #fff;
+}
+
+.contact-me-area .contact-me-content-area .contact-form-area input {
+    background: #1d1d1d;
+    padding-left: 15px;
+    border-radius: 3px;
+}
+
+.contact-me-area .contact-me-content-area .contact-form-area #message {
+    background: #1d1d1d;
+    padding-left: 15px;
+    border-radius: 3px;
+}
+
+.contact-me-area .contact-me-content-area .contact-header-area .contact-title span {
+    color: #4a4a4a !important;
+}
+
+.header-area .social-and-menu-area .social-area ul li a i {
+    color: #fff;
+}
+
+.header-area .menu-bar-area .bar-icon {
+    color: #fff;
+}
+
+.header-area .menu-bar-area .bar-icon span {
+    background: #fff;
+}
+.iconSvg path, .iconSvg line, .iconSvg .svgPath {
+    stroke: #fff;
+}
+
+.price-me-area .price-me-content-area .price-header-area .price-title h2 {
+    color: #fff;
+}
+
+.price-me-area .price-me-content-area .price-header-area .price-title span.title-bg-text {
+    color: #4a4a4a;
+}
+
+.service-me-area .service-me-content-area .service-list-area .service-single-item h2 {
+    color: #fff;
+}
+
+.service-me-area .service-me-content-area .service-header-area .service-title span {
+    color: #4a4a4a;
+}
+
+.about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul li p:after {
+    background: #fff;
+}
+
+.about-me-area .about-me-content-area .row .about-me-info-area .about-info-link ul li p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+#preloader #preloader-area .preloader-img span {color: #282828;}
+
+.theme-mode a i {
+    color: #282828;
+}
+
+.theme-mode a {
+    background: #fff;
+    color: #282828;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: e-resize;
+    display: block;
+  }
+  
