@@ -101,7 +101,10 @@ const Welcome = (props) => {
           Symbols
         </label>
       </div>
-      <div onClick={(e) => navigator.clipboard.writeText(e.target.innerText)}>
+      <div
+        role="button"
+        onClick={(e) => navigator.clipboard.writeText(e.target.innerText)}
+      >
         {generatePassword()}
       </div>
     </div>
