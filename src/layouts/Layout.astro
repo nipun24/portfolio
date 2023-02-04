@@ -1,6 +1,4 @@
 ---
-import { inject } from "@vercel/analytics";
-
 export interface Props {
   title: string;
 }
@@ -98,33 +96,33 @@ const pathname = new URL(Astro.request.url).pathname;
       crossorigin="anonymous"
     ></script>
     <!-- vercel analytics -->
-    {inject()}
+    <script defer src="/_vercel/insights/script.js"></script>
   </body>
-
-  <style>
-    html {
-      height: 100%;
-    }
-
-    body {
-      height: 100%;
-      color: white;
-      font-family: "Roboto", sans-serif;
-      background-color: #000000;
-    }
-
-    .bg-glass {
-      background: rgb(128, 203, 196);
-      background: radial-gradient(
-        circle,
-        rgba(168, 235, 18, 1) 0%,
-        rgba(0, 0, 0, 1) 100%
-      );
-    }
-
-    .main-body {
-      background-color: #000000;
-      max-width: 1150px;
-    }
-  </style>
 </html>
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    background-color: #000000;
+  }
+
+  .bg-glass {
+    background: rgb(128, 203, 196);
+    background: radial-gradient(
+      circle,
+      rgba(168, 235, 18, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .main-body {
+    background-color: #000000;
+    max-width: 1150px;
+  }
+</style>
