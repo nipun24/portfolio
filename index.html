@@ -1,213 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Portfolio website of Nipun Haldar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio website of Nipun Haldar" />
     <title>Nipun Haldar</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
-    <link href="./assets/css/styles.min.css" rel="stylesheet">
-</head>
-<body class="print:text-black bg-zinc-950 text-slate-50 mb-16 print:mb-0 print:bg-white">
-<div class="container print:container-none justify-items-center mx-auto mt-16 print:mt-0">
-    <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4 print:grid-cols-1">
-        <div class="rounded-3xl md:bg-zinc-900 p-8 md:border border-zinc-500/50 justify-center h-fit print:p-0 print:border-none">
-            <div class="relative max-w-max mx-auto mt-4 p-2 print:mt-0 print:p-0">
-                <img src="./assets/images/avatar.jpg"
-                     class="rounded-full max-h-40" width="160" height="160"
-                     alt="profile-image"/>
-                <div class="print:hidden absolute top-3 right-3 text-3xl">🇮🇳</div>
-            </div>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <link href="./assets/css/styles.min.css" rel="stylesheet" />
+  </head>
+  <body
+    class="print:text-black bg-zinc-950 text-slate-50 mb-16 print:mb-0 print:bg-white"
+  >
+    <div
+      class="container print:container-none justify-items-center mx-auto mt-16 print:mt-0"
+    >
+      <div
+        class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4 print:grid-cols-1"
+      >
+        <div
+          class="rounded-3xl md:bg-zinc-900 p-8 md:border border-zinc-500/50 justify-center h-fit print:p-0 print:border-none"
+        >
+          <div class="relative max-w-max mx-auto mt-4 p-2 print:mt-0 print:p-0">
+            <img
+              src="./assets/images/avatar.jpg"
+              class="rounded-full max-h-40"
+              width="160"
+              height="160"
+              alt="profile-image"
+            />
+            <div class="print:hidden absolute top-3 right-3 text-3xl">🇮🇳</div>
+          </div>
 
-            <p class="mt-8 text-3xl font-semibold text-center print:text-2xl">Nipun Haldar</p>
-            <div class="flex justify-center my-4 ">
-                <p class="bg-lime-400 rounded-lg text-center p-2 text-xs border border-zinc-500/50 text-black">
-                    Cloud Architect
+          <p class="mt-8 text-3xl font-semibold text-center print:text-2xl">
+            Nipun Haldar
+          </p>
+          <div class="flex justify-center my-4">
+            <p
+              class="bg-lime-400 rounded-lg text-center p-2 text-xs border border-zinc-500/50 text-black"
+            >
+              Cloud Architect
+            </p>
+          </div>
+          <div
+            class="flex justify-center items-center gap-1 mt-2 mb-8 print:mt-0 print:mb-2"
+          >
+            <ion-icon
+              name="location-outline"
+              class="text-lime-400 print:hidden"
+            ></ion-icon>
+            <p class="text-sm text-zi">New Delhi, India</p>
+          </div>
+
+          <span class="hidden md:block h-px bg-zinc-500/50 print:hidden"></span>
+
+          <ul class="flex justify-center mt-8 gap-2 print:mt-0">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/nipunhaldar/"
+                target="_blank"
+                aria-label="linkedin"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/nipun24"
+                target="_blank"
+                aria-label="github"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/focus.breathing"
+                target="_blank"
+                aria-label="instagram"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/focus_breathing"
+                target="_blank"
+                aria-label="twitter"
+              >
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:portfolio@nipunh.com"
+                target="_blank"
+                aria-label="email"
+              >
+                <ion-icon name="mail-outline"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="rounded-3xl md:bg-zinc-900 lg:col-span-3 md:col-span-2 p-8 md:border border-zinc-500/50 print:p-0 print:border-none"
+        >
+          <!-- about -->
+          <div class="flex flex-col">
+            <p class="text-4xl font-bold mb-3 print:mb-0 print:text-xl">
+              About Me
+            </p>
+            <span class="h-px flex-2 bg-zinc-500/50 w-100 print:hidden"></span>
+            <p
+              class="mt-8 font-extralight text-zinc-400 print:mt-0 print:text-xs print:text-black"
+            >
+              I'm a Cloud Architect and Python Developer based in New Delhi,
+              India, with over four years of hands-on experience in designing
+              and implementing robust cloud solutions.
+            </p>
+            <p
+              class="font-extralight mt-2 text-zinc-400 print:text-xs print:text-black"
+            >
+              My role involves architecting scalable and reliable cloud
+              infrastructures tailored to meet the specific needs and goals of
+              my clients. Additionally, I develop custom solutions and
+              automation scripts using Python to streamline processes, enhance
+              efficiency, and drive innovation. From building web applications
+              to creating data processing pipelines, I harness the power of
+              Python to solve complex problems and deliver impactful solutions.
+              My versatile skill set allows me to bridge the gap between cloud
+              architecture and application development, enabling seamless
+              integration across the entire technology stack.
+            </p>
+          </div>
+          <!-- experience -->
+          <div class="flex flex-col mt-8">
+            <p class="text-4xl font-bold mb-3 print:text-xl">Experience</p>
+            <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
+            <ul role="list" class="m-8 max-w-screen-md print:m-0">
+              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                <div
+                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
+                ></div>
+                <div
+                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
+                ></div>
+                <h3
+                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                >
+                  Samarth eGov, ICT Initiative of Ministry of Education
+                </h3>
+                <p
+                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
+                >
+                  Senior Software Developer
                 </p>
-            </div>
-            <div class="flex justify-center items-center gap-1 mt-2 mb-8 print:mt-0 print:mb-2">
-                <ion-icon name="location-outline" class="text-lime-400 print:hidden"></ion-icon>
-                <p class="text-sm text-zi">New Delhi, India</p>
-            </div>
-
-            <span class="hidden md:block h-px bg-zinc-500/50 print:hidden"></span>
-
-            <ul class="flex justify-center mt-8 gap-2 print:mt-0">
-                <li>
-                    <a href="https://www.linkedin.com/in/nipunhaldar/" target="_blank" aria-label="linkedin">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/nipun24" target="_blank" aria-label="github">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://instagram.com/focus.breathing" target="_blank" aria-label="instagram">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/focus_breathing" target="_blank" aria-label="twitter">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:info@nipunh.tech" target="_blank" aria-label="email">
-                        <ion-icon name="mail-outline"></ion-icon>
-                    </a>
-                </li>
+                <p
+                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                >
+                  Currently heading the Cloud infrastructure management and
+                  DevOps.<br />
+                  • Designed a highly efficient seat allocation algorithm in
+                  Python for undergraduate and postgraduate programmes across
+                  all major universities in India.<br />
+                  • Successfully planned, developed and deployed cloud
+                  infrastructure for CUET in AWS, the second largest exam in
+                  India.<br />
+                  • Ensuring uptime of more than 500 in-house SaaS
+                  applications.<br />
+                  • Built a blockchain application to disburse 1.2 Lakh digital
+                  degrees on blockchain for University of Delhi.<br />
+                  • Created a face detection service to minimize unidentifiable
+                  faces in candidate application, saving time during
+                  verification.<br />
+                </p>
+              </li>
+              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                <div
+                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
+                ></div>
+                <div
+                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
+                ></div>
+                <h3
+                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                >
+                  Samarth eGov, ICT Initiative of Ministry of Education
+                </h3>
+                <p
+                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
+                >
+                  Software Developer
+                </p>
+                <p
+                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                >
+                  • Developed an email service which sends millions of emails
+                  per day using AWS Lambda.<br />
+                  • Developed an application to manage and update more than 100
+                  EC2 instances using Ansible.<br />
+                  • Self-hosted GitLab on AWS for our team, making project
+                  management more efficient and standardised.<br />
+                  • Developed numerous other services to take the load off of
+                  our main application stack and provide better performance.<br />
+                  • Streamlined DevOps processes and developed custom tools to
+                  improve internal workflow.<br />
+                </p>
+              </li>
+              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                <div
+                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
+                ></div>
+                <div
+                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
+                ></div>
+                <h3
+                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                >
+                  Insitute of Informatics and Communication, University of Delhi
+                </h3>
+                <p
+                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
+                >
+                  Software Development Intern
+                </p>
+                <p
+                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                >
+                  Made a chess server with cross-platform user interfaces.<br />
+                  • Frontend - React.js and React Native <br />
+                  • Backend - Express.js and socket.io <br />
+                  • Databases - Redis and MongoDB
+                </p>
+              </li>
             </ul>
-        </div>
-        <div class="rounded-3xl md:bg-zinc-900 lg:col-span-3 md:col-span-2 p-8 md:border border-zinc-500/50 print:p-0 print:border-none">
-            <!-- about -->
-            <div class="flex flex-col">
-                <p class="text-4xl font-bold mb-3 print:mb-0 print:text-xl">About Me</p>
-                <span class="h-px flex-2 bg-zinc-500/50 w-100 print:hidden"></span>
-                <p class="mt-8 font-extralight text-zinc-400 print:mt-0 print:text-xs print:text-black">
-                    I'm a Cloud Architect and Python Developer based in New Delhi,
-                    India, with over three years of hands-on experience in designing
-                    and implementing robust cloud solutions.
+          </div>
+          <!-- skills -->
+          <div class="mt-8">
+            <p class="text-4xl font-bold mb-3 print:text-xl">Skills</p>
+            <span class="h-px block bg-zinc-500/50 w-100 print:hidden"></span>
+            <div
+              class="grid md:grid-cols-6 lg:grid-cols-9 grid-cols-5 mt-8 gap-4 print:mt-0 print:gap-1 print:grid-cols-9"
+            >
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-amazon" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-python" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-tux" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-docker" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="terminal-outline" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-javascript" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="git-merge-outline" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-firebase" size="large"></ion-icon>
+              </div>
+              <div
+                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              >
+                <ion-icon name="logo-vercel" sixe="large"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <!-- education -->
+          <div class="flex flex-col mt-8">
+            <p class="text-4xl font-bold mb-3 print:text-xl">Education</p>
+            <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
+            <ul role="list" class="m-8 max-w-screen-md print:m-0">
+              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+                <div
+                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
+                ></div>
+                <h3
+                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                >
+                  Indian Institute of Information Technology, Tiruchirappalli
+                </h3>
+                <p
+                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
+                >
+                  Bachelor of Technology, Electronics and Communication
+                  Engineering
                 </p>
-                <p class="font-extralight mt-2 text-zinc-400 print:text-xs print:text-black">
-                    My role involves architecting scalable and reliable cloud
-                    infrastructures tailored to meet the specific needs and goals of
-                    my clients. Additionally, I develop custom solutions and
-                    automation scripts using Python to streamline processes, enhance
-                    efficiency, and drive innovation. From building web applications
-                    to creating data processing pipelines, I harness the power of
-                    Python to solve complex problems and deliver impactful solutions.
-                    My versatile skill set allows me to bridge the gap between cloud
-                    architecture and application development, enabling seamless
-                    integration across the entire technology stack.
+                <p
+                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                >
+                  2016-2020
                 </p>
-            </div>
-            <!-- experience -->
-            <div class="flex flex-col mt-8">
-                <p class="text-4xl font-bold mb-3 print:text-xl">Experience</p>
-                <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
-                <ul role="list" class="m-8 max-w-screen-md print:m-0">
-                    <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div
-                                class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
-                        ></div>
-                        <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"></div>
-                        <h3 class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black">
-                            Samarth eGov, ICT Initiative of Ministry of Education
-                        </h3>
-                        <p class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black">
-                            Senior Software Developer
-                        </p>
-                        <p class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black">
-                            Currently also heading the Cloud infrastructure management and DevOps.<br>
-                            • Designed a highly efficient seat allocation algorithm in Python for undergraduate and
-                            postgraduate programmes across all major universities in India.<br>
-                            • Successfully planned, developed and deployed cloud infrastructure for CUET in AWS,
-                            the second largest exam in India.<br>
-                            • Ensuring uptime of more than 500 in-house SaaS applications.<br>
-                            • Built a blockchain application to disburse 1.2 Lakh digital degrees on blockchain for
-                            University of Delhi.<br>
-                            • Created a face detection service to minimize unidentifiable faces in candidate
-                            application, saving time during verification.<br>
-                        </p>
-                    </li>
-                    <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"></div>
-                        <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"></div>
-                        <h3 class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black">
-                            Samarth eGov, ICT Initiative of Ministry of Education
-                        </h3>
-                        <p class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black">
-                            Software Developer
-                        </p>
-                        <p class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black">
-                            • Developed an email service which sends millions of emails per day using AWS Lambda.<br>
-                            • Developed an application to manage and update more than 100 EC2 instances using
-                            Ansible.<br>
-                            • Self-hosted GitLab on AWS for our team, making project management more efficient
-                            and standardised.<br>
-                            • Developed numerous other services to take the load off of our main application stack
-                            and provide better performance.<br>
-                            • Streamlined DevOps processes and developed custom tools to improve internal
-                            workflow.<br>
-                        </p>
-                    </li>
-                    <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"></div>
-                        <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"></div>
-                        <h3 class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black">
-                            Insitute of Informatics and Communication, University of Delhi
-                        </h3>
-                        <p class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black">
-                            Software Development Intern
-                        </p>
-                        <p class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black">
-                            Made a chess server with cross-platform user interfaces.<br>
-                            • Frontend - React.js and React Native <br>
-                            • Backend - Express.js and socket.io <br>
-                            • Databases - Redis and MongoDB
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <!-- skills -->
-            <div class="mt-8">
-                <p class="text-4xl font-bold mb-3 print:text-xl">Skills</p>
-                <span class="h-px block bg-zinc-500/50 w-100 print:hidden"></span>
-                <div class="grid md:grid-cols-6 lg:grid-cols-9 grid-cols-5 mt-8 gap-4 print:mt-0 print:gap-1 print:grid-cols-9">
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-amazon" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-python" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-tux" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-docker" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="terminal-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-javascript" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="git-merge-outline" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-firebase" size="large"></ion-icon>
-                    </div>
-                    <div class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none">
-                        <ion-icon name="logo-vercel" sixe="large"></ion-icon>
-                    </div>
-                </div>
-            </div>
-            <!-- education -->
-            <div class="flex flex-col mt-8">
-                <p class="text-4xl font-bold mb-3 print:text-xl">Education</p>
-                <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
-                <ul role="list" class="m-8 max-w-screen-md print:m-0">
-                    <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                        <div class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"></div>
-                        <h3 class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black">
-                            Indian Institute of Information Technology, Tiruchirappalli
-                        </h3>
-                        <p class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black">
-                            Bachelor of Technology, Electronics and Communication Engineering
-                        </p>
-                        <p class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black">
-                            2016-2020
-                        </p>
-                    </li>
-                </ul>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <p
+          class="mt-8 font-extralight text-zinc-400 print:mt-0 print:text-xs print:text-black"
+        >
+          Hosted with 🩵 at 🏠
+        </p>
+      </div>
     </div>
-</div>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
