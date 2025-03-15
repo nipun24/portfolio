@@ -85,97 +85,38 @@
       class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm"
     >
       <nav
-        class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-full mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700"
+        class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-full mx-2 py-2.5 flex items-center justify-between py-4 px-5 mx-auto dark:bg-neutral-900 dark:border-neutral-700"
       >
-        <div class="px-4 md:px-0 flex justify-between items-center">
+        <div class="px-0 flex justify-between items-center">
           <div class="flex items-center">
             <!-- Logo -->
             <a
-              class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
+              class="flex-none inline-block focus:outline-hidden focus:opacity-80"
               href="https://nipunh.com"
               aria-label="Nipun"
             >
-              <p>🚀</p>
+              <div class="flex items-center gap-x-3">
+                <div class="shrink-0">
+                  <img
+                    class="shrink-0 size-16 rounded-full"
+                    src="./assets/images/avatar.jpg"
+                    alt="Avatar"
+                  />
+                </div>
+
+                <div class="grow">
+                  <h1
+                    class="text-lg font-medium text-gray-800 dark:text-neutral-200"
+                  >
+                    Nipun Haldar
+                  </h1>
+                  <p class="text-sm text-gray-600 dark:text-neutral-400">
+                    Cloud Architect, Python Developer
+                  </p>
+                </div>
+              </div>
             </a>
             <!-- End Logo -->
-          </div>
-
-          <div class="md:hidden">
-            <!-- Toggle Button -->
-            <button
-              type="button"
-              class="hs-collapse-toggle flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-              id="hs-navbar-header-floating-collapse"
-              aria-expanded="false"
-              aria-controls="hs-navbar-header-floating"
-              aria-label="Toggle navigation"
-              data-hs-collapse="#hs-navbar-header-floating"
-            >
-              <svg
-                class="hs-collapse-open:hidden shrink-0 size-3.5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="3" x2="21" y1="6" y2="6" />
-                <line x1="3" x2="21" y1="12" y2="12" />
-                <line x1="3" x2="21" y1="18" y2="18" />
-              </svg>
-              <svg
-                class="hs-collapse-open:block hidden shrink-0 size-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-              </svg>
-            </button>
-            <!-- End Toggle Button -->
-          </div>
-        </div>
-
-        <div
-          id="hs-navbar-header-floating"
-          class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block"
-          aria-labelledby="hs-navbar-header-floating-collapse"
-        >
-          <div
-            class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7"
-          >
-            <a
-              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-hidden dark:border-neutral-200 dark:text-neutral-200"
-              href="#"
-              aria-current="page"
-              >Home</a
-            >
-            <a
-              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
-              href="#"
-              >Projects</a
-            >
-            <a
-              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
-              href="#"
-              >Work</a
-            >
-            <a
-              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
-              href="#"
-              >Articles</a
-            >
           </div>
         </div>
       </nav>
@@ -184,30 +125,9 @@
 
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content">
-      <div class="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
-        <!-- Profile -->
-        <div class="flex items-center gap-x-3">
-          <div class="shrink-0">
-            <img
-              class="shrink-0 size-16 rounded-full"
-              src="./assets/images/avatar.jpg"
-              alt="Avatar"
-            />
-          </div>
-
-          <div class="grow">
-            <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
-              Nipun Haldar
-            </h1>
-            <p class="text-sm text-gray-600 dark:text-neutral-400">
-              Cloud Architect, Python Developer
-            </p>
-          </div>
-        </div>
-        <!-- End Profile -->
-
+      <div class="w-full max-w-2xl mx-auto pt-4 md:pt-4 sm:px-2 lg:px-8">
         <!-- About -->
-        <div class="mt-8">
+        <div class="mt-2">
           <p class="text-sm text-gray-600 dark:text-neutral-400">
             I'm a Cloud Architect and Python Developer based in New Delhi,
             India, with over four years of hands-on experience in designing and
