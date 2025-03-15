@@ -1,60 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio website of Nipun Haldar" />
-    <title>Nipun Haldar</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
-    <link href="./assets/css/styles.min.css" rel="stylesheet" />
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8" />
+    <meta
+      name="robots"
+      content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://nipunh.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Nipun's personal website" />
+
+    <meta name="twitter:site" content="@preline" />
+    <meta name="twitter:creator" content="@preline" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS"
+    />
+    <meta name="twitter:description" content="Nipun's personal website" />
+    <meta
+      name="twitter:image"
+      content="https://nipunh.com/assets/images/avatar.jpg"
+    />
+
+    <meta property="og:url" content="https://nipunh.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Preline" />
+    <meta
+      property="og:title"
+      content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS"
+    />
+    <meta property="og:description" content="Nipun's personal website" />
+    <meta
+      property="og:image"
+      content="https://nipunh.com/assets/img/og-image.png"
+    />
+
+    <!-- Title -->
+    <title>Nipun Haldar | Personal Website</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme Check and Update -->
+    <script>
+      const html = document.querySelector("html");
+      const isLightOrAuto =
+        localStorage.getItem("hs_theme") === "light" ||
+        (localStorage.getItem("hs_theme") === "auto" &&
+          !window.matchMedia("(prefers-color-scheme: dark)").matches);
+      const isDarkOrAuto =
+        localStorage.getItem("hs_theme") === "dark" ||
+        (localStorage.getItem("hs_theme") === "auto" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+      if (isLightOrAuto && html.classList.contains("dark"))
+        html.classList.remove("dark");
+      else if (isDarkOrAuto && html.classList.contains("light"))
+        html.classList.remove("light");
+      else if (isDarkOrAuto && !html.classList.contains("dark"))
+        html.classList.add("dark");
+      else if (isLightOrAuto && !html.classList.contains("light"))
+        html.classList.add("light");
+    </script>
+
+    <!-- CSS Preline -->
+    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css" />
   </head>
-  <body
-    class="print:text-black bg-zinc-950 text-slate-50 mb-16 print:mb-0 print:bg-white"
-  >
-    <div
-      class="container print:container-none justify-items-center mx-auto mt-16 print:mt-0"
+
+  <body class="dark:bg-neutral-900">
+    <!-- ========== HEADER ========== -->
+    <header
+      class="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm"
     >
-      <div
-        class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4 print:grid-cols-1"
+      <nav
+        class="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-full mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700"
       >
-        <div
-          class="rounded-3xl md:bg-zinc-900 p-8 md:border border-zinc-500/50 justify-center h-fit print:p-0 print:border-none"
-        >
-          <div class="relative max-w-max mx-auto mt-4 p-2 print:mt-0 print:p-0">
-            <img
-              src="./assets/images/avatar.jpg"
-              class="rounded-full max-h-40"
-              width="160"
-              height="160"
-              alt="profile-image"
-            />
-            <div class="print:hidden absolute top-3 right-3 text-3xl">🇮🇳</div>
+        <div class="px-4 md:px-0 flex justify-between items-center">
+          <div class="flex items-center">
+            <!-- Logo -->
+            <a
+              class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80"
+              href="https://nipunh.com"
+              aria-label="Nipun"
+            >
+              <p>🚀</p>
+            </a>
+            <!-- End Logo -->
           </div>
 
-          <p class="mt-8 text-3xl font-semibold text-center print:text-2xl">
-            Nipun Haldar
-          </p>
-          <div class="flex justify-center my-4">
-            <p
-              class="bg-lime-400 rounded-lg text-center p-2 text-xs border border-zinc-500/50 text-black"
+          <div class="md:hidden">
+            <!-- Toggle Button -->
+            <button
+              type="button"
+              class="hs-collapse-toggle flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              id="hs-navbar-header-floating-collapse"
+              aria-expanded="false"
+              aria-controls="hs-navbar-header-floating"
+              aria-label="Toggle navigation"
+              data-hs-collapse="#hs-navbar-header-floating"
             >
-              Cloud Architect
+              <svg
+                class="hs-collapse-open:hidden shrink-0 size-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" x2="21" y1="6" y2="6" />
+                <line x1="3" x2="21" y1="12" y2="12" />
+                <line x1="3" x2="21" y1="18" y2="18" />
+              </svg>
+              <svg
+                class="hs-collapse-open:block hidden shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+            <!-- End Toggle Button -->
+          </div>
+        </div>
+
+        <div
+          id="hs-navbar-header-floating"
+          class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow md:block"
+          aria-labelledby="hs-navbar-header-floating-collapse"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7"
+          >
+            <a
+              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-hidden dark:border-neutral-200 dark:text-neutral-200"
+              href="#"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+              >Projects</a
+            >
+            <a
+              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+              >Work</a
+            >
+            <a
+              class="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-hidden dark:text-neutral-400 dark:hover:text-neutral-200"
+              href="#"
+              >Articles</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content">
+      <div class="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
+        <!-- Profile -->
+        <div class="flex items-center gap-x-3">
+          <div class="shrink-0">
+            <img
+              class="shrink-0 size-16 rounded-full"
+              src="./assets/images/avatar.jpg"
+              alt="Avatar"
+            />
+          </div>
+
+          <div class="grow">
+            <h1 class="text-lg font-medium text-gray-800 dark:text-neutral-200">
+              Nipun Haldar
+            </h1>
+            <p class="text-sm text-gray-600 dark:text-neutral-400">
+              Cloud Architect, Python Developer
             </p>
           </div>
-          <div
-            class="flex justify-center items-center gap-1 mt-2 mb-8 print:mt-0 print:mb-2"
-          >
-            <ion-icon
-              name="location-outline"
-              class="text-lime-400 print:hidden"
-            ></ion-icon>
-            <p class="text-sm text-zi">New Delhi, India</p>
-          </div>
+        </div>
+        <!-- End Profile -->
 
-          <span class="hidden md:block h-px bg-zinc-500/50 print:hidden"></span>
+        <!-- About -->
+        <div class="mt-8">
+          <p class="text-sm text-gray-600 dark:text-neutral-400">
+            I'm a Cloud Architect and Python Developer based in New Delhi,
+            India, with over four years of hands-on experience in designing and
+            implementing robust cloud solutions.
+          </p>
 
-          <ul class="flex justify-center mt-8 gap-2 print:mt-0">
-            <li>
+          <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
+            My role involves architecting scalable and reliable cloud
+            infrastructures tailored to meet the specific needs and goals of my
+            clients. Additionally, I develop custom solutions and automation
+            scripts using Python to streamline processes, enhance efficiency,
+            and drive innovation. From building web applications to creating
+            data processing pipelines, I harness the power of Python to solve
+            complex problems and deliver impactful solutions. My versatile skill
+            set allows me to bridge the gap between cloud architecture and
+            application development, enabling seamless integration across the
+            entire technology stack.
+          </p>
+
+          <ul class="mt-5 flex flex-row gap-4 dark:text-neutral-400">
+            <li class="flex items-center">
               <a
                 href="https://www.linkedin.com/in/nipunhaldar/"
                 target="_blank"
@@ -63,7 +237,8 @@
                 <ion-icon name="logo-linkedin"></ion-icon>
               </a>
             </li>
-            <li>
+
+            <li class="flex items-center">
               <a
                 href="https://github.com/nipun24"
                 target="_blank"
@@ -72,7 +247,7 @@
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
-            <li>
+            <li class="flex items-center">
               <a
                 href="https://instagram.com/focus.breathing"
                 target="_blank"
@@ -81,7 +256,7 @@
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-            <li>
+            <li class="flex items-center">
               <a
                 href="https://twitter.com/focus_breathing"
                 target="_blank"
@@ -90,7 +265,7 @@
                 <ion-icon name="logo-twitter"></ion-icon>
               </a>
             </li>
-            <li>
+            <li class="flex items-center">
               <a
                 href="mailto:portfolio@nipunh.com"
                 target="_blank"
@@ -101,231 +276,626 @@
             </li>
           </ul>
         </div>
-        <div
-          class="rounded-3xl md:bg-zinc-900 lg:col-span-3 md:col-span-2 p-8 md:border border-zinc-500/50 print:p-0 print:border-none"
-        >
-          <!-- about -->
-          <div class="flex flex-col">
-            <p class="text-4xl font-bold mb-3 print:mb-0 print:text-xl">
-              About Me
-            </p>
-            <span class="h-px flex-2 bg-zinc-500/50 w-100 print:hidden"></span>
-            <p
-              class="mt-8 font-extralight text-zinc-400 print:mt-0 print:text-xs print:text-black"
-            >
-              I'm a Cloud Architect and Python Developer based in New Delhi,
-              India, with over four years of hands-on experience in designing
-              and implementing robust cloud solutions.
-            </p>
-            <p
-              class="font-extralight mt-2 text-zinc-400 print:text-xs print:text-black"
-            >
-              My role involves architecting scalable and reliable cloud
-              infrastructures tailored to meet the specific needs and goals of
-              my clients. Additionally, I develop custom solutions and
-              automation scripts using Python to streamline processes, enhance
-              efficiency, and drive innovation. From building web applications
-              to creating data processing pipelines, I harness the power of
-              Python to solve complex problems and deliver impactful solutions.
-              My versatile skill set allows me to bridge the gap between cloud
-              architecture and application development, enabling seamless
-              integration across the entire technology stack.
-            </p>
+        <!-- End About -->
+
+        <!-- Skills -->
+        <div class="my-10 sm:my-14">
+          <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+            Skills
+          </h2>
+
+          <!-- List -->
+          <div class="space-y-3">
+            <dl class="flex flex-col sm:flex-row gap-1">
+              <dt class="min-w-40">
+                <span class="block text-sm text-gray-500 dark:text-neutral-500"
+                  >Development:</span
+                >
+              </dt>
+              <dd>
+                <ul>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="logo-amazon"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    AWS
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="logo-python"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    Python
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon name="logo-tux" width="22" height="22"></ion-icon>
+                    Linux
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="logo-docker"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    Docker
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="terminal-outline"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    Shell
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="logo-javascript"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    Javascript
+                  </li>
+                  <li
+                    class="me-1 after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <ion-icon
+                      name="git-merge-outline"
+                      width="22"
+                      height="22"
+                    ></ion-icon>
+                    Git
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+
+            <dl class="flex flex-col sm:flex-row gap-1">
+              <dt class="min-w-40">
+                <span class="block text-sm text-gray-500 dark:text-neutral-500"
+                  >Design Tools:</span
+                >
+              </dt>
+              <dd>
+                <ul>
+                  <li
+                    class="me-1 after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    <svg
+                      class="shrink-0 size-4 me-1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"
+                      />
+                      <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                      <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                      <path
+                        d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"
+                      />
+                      <path
+                        d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"
+                      />
+                    </svg>
+                    Figma
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+
+            <dl class="flex flex-col sm:flex-row gap-1">
+              <dt class="min-w-40">
+                <span class="block text-sm text-gray-500 dark:text-neutral-500"
+                  >Soft Skills:</span
+                >
+              </dt>
+              <dd>
+                <ul>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    Team player
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    Strong communication
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    Problem-solving
+                  </li>
+                  <li
+                    class="me-1 after:content-[','] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    Attention to detail
+                  </li>
+                  <li
+                    class="me-1 after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200"
+                  >
+                    Time management
+                  </li>
+                </ul>
+              </dd>
+            </dl>
           </div>
-          <!-- experience -->
-          <div class="flex flex-col mt-8">
-            <p class="text-4xl font-bold mb-3 print:text-xl">Experience</p>
-            <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
-            <ul role="list" class="m-8 max-w-screen-md print:m-0">
-              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
+          <!-- End List -->
+        </div>
+        <!-- End Skills -->
+
+        <!-- Tools -->
+        <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+          Tools & Utilities
+        </h2>
+        <!-- Image Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          <a
+            class="group block relative overflow-hidden rounded-lg"
+            href="https://tools.nipunh.com"
+            target="_blank"
+          >
+            <img
+              class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
+              src="./assets/images/tools.png"
+              alt="Project"
+            />
+            <div
+              class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div
+                class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200"
+              >
+                <svg
+                  class="shrink-0 size-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <span class="text-xs">View</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="group block relative overflow-hidden rounded-lg"
+            href="https://stats.uptimerobot.com/UKE6B7GVT8"
+            target="_blank"
+          >
+            <img
+              class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
+              src="./assets/images/uptime.png"
+              alt="Project"
+            />
+            <div
+              class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition"
+            >
+              <div
+                class="flex items-center gap-x-1 py-1 px-2 bg-white border border-gray-200 text-gray-800 rounded-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200"
+              >
+                <svg
+                  class="shrink-0 size-3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <span class="text-xs">View</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- End Tools -->
+
+        <!-- Work Experience -->
+        <div class="mt-10 sm:mt-14">
+          <h2 class="mb-5 font-medium text-gray-800 dark:text-neutral-200">
+            Work experience
+          </h2>
+
+          <!-- Timeline -->
+          <div>
+            <!-- Item -->
+            <div class="group relative flex gap-x-5">
+              <!-- Icon -->
+              <div
+                class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+              >
                 <div
-                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
-                ></div>
-                <div
-                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
-                ></div>
+                  class="relative z-10 size-6 flex justify-center items-center"
+                >
+                  <svg
+                    class="shrink-0 size-6 text-gray-600 dark:text-neutral-400"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <g id="S" transform="translate(0 8)">
+                      <rect
+                        id="Rectangle"
+                        width="32"
+                        height="32"
+                        rx="8"
+                        transform="translate(0 -8)"
+                        fill="#5c60f5"
+                        opacity="0.88"
+                      />
+                      <path
+                        id="Samarth"
+                        d="M13.355-41.52c-.326-1.8-1.783-4.092-5.63-4.092-2.957,0-5.522,2.035-5.522,4.936,0,2.273,1.587,4.005,4.2,4.5l2.109.39c1.022.195,1.652.758,1.652,1.537,0,.953-.826,1.6-2.174,1.6a2.861,2.861,0,0,1-3.2-2.641l-3.152.758c.217,2.165,2.043,4.915,6.3,4.915,3.674,0,5.7-2.447,5.7-4.85,0-2.187-1.522-4.07-4.457-4.612l-2.065-.39c-1.065-.195-1.522-.736-1.522-1.472A1.89,1.89,0,0,1,7.7-42.581a2.331,2.331,0,0,1,2.565,1.927Z"
+                        transform="translate(8.362 45.612)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- End Icon -->
+
+              <!-- Right Content -->
+              <div class="grow pb-8 group-last:pb-0">
+                <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                  Mar 2022 - Present
+                </h3>
+
+                <p
+                  class="font-semibold text-sm text-gray-800 dark:text-neutral-200"
+                >
+                  Cloud Lead & Senior Software Engineer
+                </p>
                 <h3
-                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                  class="font-medium text-sm text-gray-900 dark:text-neutral-200"
                 >
                   Samarth eGov, ICT Initiative of Ministry of Education
                 </h3>
-                <p
-                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
-                >
-                  Senior Software Developer
+
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Currently also heading the Cloud infrastructure management and
+                  DevOps.
                 </p>
-                <p
-                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Designed a highly efficient seat allocation algorithm in
+                    Python for undergraduate and postgraduate programmes across
+                    all major universities in India.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Successfully planned, developed and deployed cloud
+                    infrastructure for CUET in AWS, the second largest exam in
+                    India.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Ensuring uptime of more than 500 in-house SaaS applications.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Built a blockchain application to disburse 1.2 Lakh digital
+                    degrees on blockchain for University of Delhi.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Created a face detection service to minimize unidentifiable
+                    faces in candidate application, saving time during
+                    verification.
+                  </li>
+                </ul>
+              </div>
+              <!-- End Right Content -->
+            </div>
+            <!-- End Item -->
+
+            <!-- Item -->
+            <div class="group relative flex gap-x-5">
+              <!-- Icon -->
+              <div
+                class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+              >
+                <div
+                  class="relative z-10 size-6 flex justify-center items-center"
                 >
-                  Currently heading the Cloud infrastructure management and
-                  DevOps.<br />
-                  • Designed a highly efficient seat allocation algorithm in
-                  Python for undergraduate and postgraduate programmes across
-                  all major universities in India.<br />
-                  • Successfully planned, developed and deployed cloud
-                  infrastructure for CUET in AWS, the second largest exam in
-                  India.<br />
-                  • Ensuring uptime of more than 500 in-house SaaS
-                  applications.<br />
-                  • Built a blockchain application to disburse 1.2 Lakh digital
-                  degrees on blockchain for University of Delhi.<br />
-                  • Created a face detection service to minimize unidentifiable
-                  faces in candidate application, saving time during
-                  verification.<br />
+                  <svg
+                    class="shrink-0 size-6 text-gray-600 dark:text-neutral-400"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                  >
+                    <g id="S" transform="translate(0 8)">
+                      <rect
+                        id="Rectangle"
+                        width="32"
+                        height="32"
+                        rx="8"
+                        transform="translate(0 -8)"
+                        fill="#5c60f5"
+                        opacity="0.88"
+                      />
+                      <path
+                        id="Samarth"
+                        d="M13.355-41.52c-.326-1.8-1.783-4.092-5.63-4.092-2.957,0-5.522,2.035-5.522,4.936,0,2.273,1.587,4.005,4.2,4.5l2.109.39c1.022.195,1.652.758,1.652,1.537,0,.953-.826,1.6-2.174,1.6a2.861,2.861,0,0,1-3.2-2.641l-3.152.758c.217,2.165,2.043,4.915,6.3,4.915,3.674,0,5.7-2.447,5.7-4.85,0-2.187-1.522-4.07-4.457-4.612l-2.065-.39c-1.065-.195-1.522-.736-1.522-1.472A1.89,1.89,0,0,1,7.7-42.581a2.331,2.331,0,0,1,2.565,1.927Z"
+                        transform="translate(8.362 45.612)"
+                        fill="#fff"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </div>
+              <!-- End Icon -->
+
+              <!-- Right Content -->
+              <div class="grow pb-8 group-last:pb-0">
+                <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                  Aug 2020 - Feb 2021
+                </h3>
+
+                <p
+                  class="font-semibold text-sm text-gray-800 dark:text-neutral-200"
+                >
+                  Software Engineer
                 </p>
-              </li>
-              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                <div
-                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
-                ></div>
-                <div
-                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
-                ></div>
+
                 <h3
-                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                  class="font-medium text-sm text-gray-900 dark:text-neutral-200"
                 >
                   Samarth eGov, ICT Initiative of Ministry of Education
                 </h3>
-                <p
-                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
-                >
-                  Software Developer
+
+                <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                  Developed an email service which sends millions of emails per
+                  day using AWS Lambda.
                 </p>
-                <p
-                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
+                <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Developed an application to manage and update more than 100
+                    EC2 instances using Ansible.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Self-hosted GitLab on AWS for our team, making project
+                    management more efficient and standardised.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Developed numerous other services to take the load off of
+                    our main application stack and provide better performance.
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Streamlined DevOps processes and developed custom tools to
+                    improve internal workflow.
+                  </li>
+                </ul>
+              </div>
+              <!-- End Right Content -->
+            </div>
+            <!-- End Item -->
+
+            <!-- Item -->
+            <div class="group relative flex gap-x-5">
+              <!-- Icon -->
+              <div
+                class="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700"
+              >
+                <div
+                  class="relative z-10 size-6 flex justify-center items-center"
                 >
-                  • Developed an email service which sends millions of emails
-                  per day using AWS Lambda.<br />
-                  • Developed an application to manage and update more than 100
-                  EC2 instances using Ansible.<br />
-                  • Self-hosted GitLab on AWS for our team, making project
-                  management more efficient and standardised.<br />
-                  • Developed numerous other services to take the load off of
-                  our main application stack and provide better performance.<br />
-                  • Streamlined DevOps processes and developed custom tools to
-                  improve internal workflow.<br />
+                  <img
+                    class="rounded-full"
+                    width="24"
+                    height="24"
+                    src="./assets/images/iic.jpeg"
+                  />
+                </div>
+              </div>
+              <!-- End Icon -->
+
+              <!-- Right Content -->
+              <div class="grow pb-8 group-last:pb-0">
+                <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                  Jun 2019 - Jul 2019
+                </h3>
+
+                <p
+                  class="font-semibold text-sm text-gray-800 dark:text-neutral-200"
+                >
+                  Software Development Intern<
                 </p>
-              </li>
-              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                <div
-                  class="absolute bottom-0 left-[calc(0.25rem-0.5px)] top-0 w-px bg-white/10 group-first:top-3"
-                ></div>
-                <div
-                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
-                ></div>
                 <h3
-                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
+                  class="font-medium text-sm text-gray-900 dark:text-neutral-200"
                 >
                   Insitute of Informatics and Communication, University of Delhi
                 </h3>
-                <p
-                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
-                >
-                  Software Development Intern
+                <p class="text-sm text-gray-600 dark:text-neutral-400">
+                  Made a chess server with cross-platform user interfaces.
                 </p>
-                <p
-                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
-                >
-                  Made a chess server with cross-platform user interfaces.<br />
-                  • Frontend - React.js and React Native <br />
-                  • Backend - Express.js and socket.io <br />
-                  • Databases - Redis and MongoDB
-                </p>
-              </li>
-            </ul>
+
+                <ul class="list-disc ms-6 mt-3 space-y-1.5">
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Frontend - React.js and React Native
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Backend - Express.js and socket.io
+                  </li>
+                  <li class="ps-1 text-sm text-gray-600 dark:text-neutral-400">
+                    Databases - Redis and MongoDB
+                  </li>
+                </ul>
+              </div>
+              <!-- End Right Content -->
+            </div>
+            <!-- End Item -->
           </div>
-          <!-- skills -->
-          <div class="mt-8">
-            <p class="text-4xl font-bold mb-3 print:text-xl">Skills</p>
-            <span class="h-px block bg-zinc-500/50 w-100 print:hidden"></span>
+          <!-- End Timeline -->
+        </div>
+        <!-- End Work Experience -->
+
+        <!-- Education -->
+        <div class="my-10 sm:my-14">
+          <h2 class="mb-3 font-medium text-gray-800 dark:text-neutral-200">
+            Education
+          </h2>
+
+          <!-- Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div
-              class="grid md:grid-cols-6 lg:grid-cols-9 grid-cols-5 mt-8 gap-4 print:mt-0 print:gap-1 print:grid-cols-9"
+              class="p-4 border border-gray-200 rounded-lg dark:border-neutral-700"
             >
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
+              <img
+                class="shrink-0 size-10 mb-3"
+                width="400"
+                height="400"
+                viewBox="0 0 400 400"
+                fill="none"
+                src="./assets/images/iiitt.png"
+              />
+
+              <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
+                2016-2020
+              </h3>
+
+              <p
+                class="font-semibold text-sm text-gray-800 dark:text-neutral-200"
               >
-                <ion-icon name="logo-amazon" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-python" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-tux" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-docker" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="terminal-outline" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-javascript" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="git-merge-outline" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-firebase" size="large"></ion-icon>
-              </div>
-              <div
-                class="bg-zinc-800 p-2 max-w-16 h-16 flex justify-center items-center rounded-2xl border border-zinc-500/50 shadow-inner shadow-zinc-500 print:shadow-none"
-              >
-                <ion-icon name="logo-vercel" sixe="large"></ion-icon>
-              </div>
+                Bachelor's degree in Electronics and Communication Technology
+              </p>
+
+              <p class="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+                Indian Institute of Information Technology, Trichy
+              </p>
             </div>
           </div>
-          <!-- education -->
-          <div class="flex flex-col mt-8">
-            <p class="text-4xl font-bold mb-3 print:text-xl">Education</p>
-            <span class="h-px flex-2 bg-zinc-500/50 w-100"></span>
-            <ul role="list" class="m-8 max-w-screen-md print:m-0">
-              <li class="group relative flex flex-col pb-8 pl-7 last:pb-0">
-                <div
-                  class="absolute left-0 top-2 h-2 w-2 rounded-full border border-lime-400 bg-zinc-950 print:border-black"
-                ></div>
-                <h3
-                  class="mt-2 text-sm/6 font-semibold text-white print:text-xs print:text-black"
-                >
-                  Indian Institute of Information Technology, Tiruchirappalli
-                </h3>
-                <p
-                  class="font-display text-2xs/6 order-first font-semibold tracking-[0.2em] text-lime-400 print:text-sm print:text-black"
-                >
-                  Bachelor of Technology, Electronics and Communication
-                  Engineering
-                </p>
-                <p
-                  class="mt-0.5 text-sm/6 text-zinc-400 font-extralight print:text-xs print:text-black"
-                >
-                  2016-2020
-                </p>
-              </li>
-            </ul>
+          <!-- End Grid -->
+        </div>
+        <!-- End Education -->
+      </div>
+    </main>
+    <!-- ========== END MAIN CONTENT ========== -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-6 border-t border-gray-200 dark:border-neutral-700">
+        <div class="flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <p class="text-xs text-gray-600 dark:text-neutral-400">
+              © 2025 Nipun Haldar | This site is hosted at my home.
+            </p>
           </div>
+          <!-- End Col -->
+
+          <!-- List -->
+          <ul class="flex flex-wrap items-center">
+            <li class="inline-block pe-4 text-xs">
+              <a
+                class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+                href="https://unsplash.com/@focusbreathing"
+                target="_blank"
+              >
+                Unsplash
+              </a>
+            </li>
+            <li class="inline-block">
+              <!-- Dark Mode -->
+              <button
+                type="button"
+                class="hs-dark-mode hs-dark-mode-active:hidden relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                data-hs-theme-click-value="dark"
+              >
+                <span class="sr-only">Dark</span>
+                <svg
+                  class="shrink-0 size-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="hs-dark-mode hs-dark-mode-active:flex hidden relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-hidden focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                data-hs-theme-click-value="light"
+              >
+                <span class="sr-only">Light</span>
+                <svg
+                  class="shrink-0 size-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              </button>
+              <!-- End Dark Mode -->
+            </li>
+          </ul>
+          <!-- End List -->
         </div>
       </div>
-      <div class="flex justify-center items-center">
-        <p
-          class="mt-8 font-extralight text-zinc-400 print:mt-0 print:text-xs print:text-black"
-        >
-          Hosted with 🩵 at 🏠
-        </p>
-      </div>
-    </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <!-- JS Implementing Plugins -->
+
+    <!-- JS PLUGINS -->
+    <!-- Required plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
