@@ -48,6 +48,8 @@
     <link rel="shortcut icon" href="./assets/images/favicon.png" />
 
     <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -76,7 +78,7 @@
     </script>
 
     <!-- CSS Preline -->
-    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
   </head>
 
   <body class="dark:bg-neutral-900 mx-4 md:mx-0">
@@ -99,7 +101,7 @@
                 <div class="shrink-0">
                   <img
                     class="shrink-0 size-24 rounded-full"
-                    src="./assets/images/avatar.jpg"
+                    src="./assets/images/avatar.webp"
                     alt="Avatar"
                   />
                 </div>
@@ -134,7 +136,7 @@
             implementing robust cloud solutions.
           </p>
 
-          <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
+          <!-- <p class="mt-3 text-sm text-gray-600 dark:text-neutral-400">
             My role involves architecting scalable and reliable cloud
             infrastructures tailored to meet the specific needs and goals of my
             clients. Additionally, I develop custom solutions and automation
@@ -145,7 +147,7 @@
             set allows me to bridge the gap between cloud architecture and
             application development, enabling seamless integration across the
             entire technology stack.
-          </p>
+          </p> -->
 
           <ul class="mt-5 flex flex-row gap-4 dark:text-neutral-400">
             <li class="flex items-center">
@@ -379,8 +381,9 @@
           >
             <img
               class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-              src="./assets/images/tools.png"
+              src="./assets/images/tools.webp"
               alt="Project"
+              loading="lazy"
             />
             <div
               class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition"
@@ -415,8 +418,9 @@
           >
             <img
               class="w-full size-40 object-cover bg-gray-100 rounded-lg dark:bg-neutral-800"
-              src="./assets/images/uptime.png"
+              src="./assets/images/uptime.webp"
               alt="Project"
+              loading="lazy"
             />
             <div
               class="absolute bottom-1 end-1 opacity-0 group-hover:opacity-100 transition"
@@ -640,7 +644,7 @@
                     class="rounded-full"
                     width="24"
                     height="24"
-                    src="./assets/images/iic.jpeg"
+                    src="./assets/images/iic.webp"
                   />
                 </div>
               </div>
@@ -703,7 +707,7 @@
                 height="400"
                 viewBox="0 0 400 400"
                 fill="none"
-                src="./assets/images/iiitt.png"
+                src="./assets/images/iiitt.webp"
               />
 
               <h3 class="mb-1 text-xs text-gray-600 dark:text-neutral-400">
@@ -815,14 +819,19 @@
 
     <!-- JS PLUGINS -->
     <!-- Required plugins -->
-    <script src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"
+      defer
+    ></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
     ></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
     ></script>
   </body>
 </html>
