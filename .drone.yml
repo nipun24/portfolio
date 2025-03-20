@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+  - name: deploy-to-cloudpanel
+    image: alpine
+    commands:
+      - apk add --no-cache openssh
+      - echo "$DEPLOY_KEY" > /root/.ssh/id_rsa
+      - chmod 600 /root/.ssh/id_rsa
+      - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone $git_http_url"
