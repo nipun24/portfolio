@@ -11,5 +11,5 @@ steps:
       - mkdir ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
-      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP
+      - ssh -o StrictHostKeyChecking=no drone@192.168.50.200
 # cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio
