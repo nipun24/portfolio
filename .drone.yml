@@ -13,6 +13,8 @@ steps:
         from_secret: DEPLOY_USER
       SERVER_IP:
         from_secret: SERVER_IP
+      git_http_url:
+        from_secret: git_http_url
     commands:
       - apt-get -y update
       - apt-get -y install openssh-server
