@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+  - name: deploy-to-cloudpanel
+    image: node:20-slim
+    commands:
+      - pnpm install
+      # - apt-get -y update
+      # - apt-get -y install openssh-server
+      # - mkdir -p ~/.ssh/
+      # - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+      # - chmod 600 ~/.ssh/id_rsa
+      # - echo $DRONE_REMOTE_URL
+      # - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "rm -rf /home/nipunh/tmp/portfolio && cd /home/nipunh/tmp && git clone --depth 1 $DRONE_REMOTE_URL && cd portfolio && rm -rf .* && cp -R . /home/nipunh/htdocs/nipunh.com/ && rm -rf /home/nipunh/tmp/portfolio"
