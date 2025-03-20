@@ -22,4 +22,4 @@ steps:
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - echo $DRONE_REMOTE_URL
-      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $DRONE_REMOTE_URL && cd portfolio"
+      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $DRONE_REMOTE_URL && cd portfolio && rm -rf .* && cp -R . /home/nipunh/htdocs/nipunh.com/"
