@@ -9,7 +9,7 @@ steps:
     commands:
       - apt-get -y update
       - apt-get -y install openssh-server
-      - mkdir ~/.ssh/
+      - mkdir -p ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - ssh -o StrictHostKeyChecking=no "$DEPLOY_USER@192.168.50.200"
