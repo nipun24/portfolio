@@ -6,6 +6,13 @@ name: deploy
 steps:
   - name: deploy-to-cloudpanel
     image: debian:stable-slim
+    environment:
+      DEPLOY_KEY:
+        from_secret: DEPLOY_KEY
+      DEPLOY_USER:
+        from_secret: DEPLOY_USER
+      SERVER_IP:
+        from_secret: SERVER_IP
     commands:
       - apt-get -y update
       - apt-get -y install openssh-server
