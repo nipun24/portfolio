@@ -16,11 +16,11 @@ steps:
       git_http_url:
         from_secret: git_http_url
     commands:
-      - apt-get -y update
-      - apt-get -y install openssh-server
-      - mkdir -p ~/.ssh/
-      - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
-      - chmod 600 ~/.ssh/id_rsa
-      - env
+      # - apt-get -y update
+      # - apt-get -y install openssh-server
+      # - mkdir -p ~/.ssh/
+      # - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+      # - chmod 600 ~/.ssh/id_rsa
+      # - env
       - echo $DRONE_REMOTE_URL
-      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio"
+      # - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio"
