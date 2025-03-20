@@ -5,9 +5,8 @@ name: deploy
 
 steps:
   - name: deploy-to-cloudpanel
-    image: alpine
+    image: debian:stable-slim
     commands:
-      - apk add --no-cache openssh
       - mkdir ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
