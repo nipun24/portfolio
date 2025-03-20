@@ -9,4 +9,4 @@ steps:
       - apk add --no-cache openssh
       - echo "$DEPLOY_KEY" > /root/.ssh/id_rsa
       - chmod 600 /root/.ssh/id_rsa
-      - ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio"
+      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio"
