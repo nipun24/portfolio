@@ -7,7 +7,7 @@ steps:
   - name: deploy-to-cloudpanel
     image: debian:stable-slim
     commands:
-      - apt install openssh-server
+      - apt-get install openssh-server
       - mkdir ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
