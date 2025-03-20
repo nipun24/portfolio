@@ -7,6 +7,6 @@ steps:
     image: alpine
     commands:
       - apk add --no-cache openssh
-      - echo "$DEPLOY_KEY" > /root/.ssh/id_rsa
-      - chmod 600 /root/.ssh/id_rsa
+      - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
       - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "cd /home/nipunh/tmp && git clone --depth 1 $git_http_url && cd portfolio"
