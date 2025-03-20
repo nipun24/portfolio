@@ -5,7 +5,7 @@ name: deploy
 
 steps:
   - name: deploy-to-cloudpanel
-    image: linuxserver/openssh-server
+    image: alpine
     commands:
       - apk add --no-cache openssh
       - mkdir ~/.ssh/
