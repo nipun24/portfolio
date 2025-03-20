@@ -7,13 +7,12 @@ steps:
   - name: deploy-to-cloudpanel
     image: node:20-slim
     commands:
-      - npm install --global corepack@latest
-      - corepack enable
-      - corepack prepare pnpm@latest-10 --activate
-      - pnpm config set store-dir ~/.pnpm-store
-      - pnpm install
-      # - apt-get -y update
-      # - apt-get -y install openssh-server
+      # - npm install --global corepack@latest
+      # - corepack enable
+      # - corepack prepare pnpm@latest-10 --activate
+      # - pnpm config set store-dir ~/.pnpm-store
+      # - pnpm install
+      - ssh
       # - mkdir -p ~/.ssh/
       # - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       # - chmod 600 ~/.ssh/id_rsa
