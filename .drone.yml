@@ -14,15 +14,15 @@ steps:
       SERVER_IP:
         from_secret: SERVER_IP
     commands:
-      # - npm install --global corepack@latest
-      # - corepack enable
-      # - corepack prepare pnpm@latest-10 --activate
-      # - pnpm config set store-dir ~/.pnpm-store
-      # - pnpm install --prod
-      - apk add openssh
+      - npm install --global corepack@latest
+      - corepack enable
+      - corepack prepare pnpm@latest-10 --activate
+      - pnpm config set store-dir ~/.pnpm-store
+      - pnpm install --prod
+      # - apk add openssh
       - mkdir -p ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - echo $DRONE_REMOTE_URL
       # - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "pwd"
-      - scp
+      - scp -r ./dist $DEPLOY_USER@$SERVER_IP:~/htdocs/blog.nipunh.com
