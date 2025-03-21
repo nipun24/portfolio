@@ -27,4 +27,4 @@ steps:
       - echo $DRONE_REMOTE_URL
       # - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "pwd"
       - ls -al
-      - scp -o StrictHostKeyChecking=no -r ./dist/ $DEPLOY_USER@$SERVER_IP:~/htdocs/blog.nipunh.com
+      - scp -o StrictHostKeyChecking=no -r ./dist/* $DEPLOY_USER@$SERVER_IP:~/htdocs/blog.nipunh.com
