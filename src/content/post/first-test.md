@@ -1,5 +1,5 @@
 ---
-title: first test
+title: Test blog
 description: test
 tags:
   - test tag
