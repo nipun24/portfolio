@@ -19,6 +19,7 @@ steps:
       - corepack prepare pnpm@latest-10 --activate
       - pnpm config set store-dir ~/.pnpm-store
       - pnpm install --prod
+      - pnpm build
       - apk add openssh
       - mkdir -p ~/.ssh/
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
