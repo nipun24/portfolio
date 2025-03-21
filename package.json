@@ -14,7 +14,6 @@
   "sideEffects": false,
   "author": "kim, bluepikachu",
   "scripts": {
-    "prepare": "husky",
     "dev": "tinacms dev -c \"astro dev\"",
     "develop": "astro dev",
     "start": "astro dev",
