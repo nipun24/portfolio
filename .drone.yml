@@ -24,4 +24,5 @@ steps:
       - echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - echo $DRONE_REMOTE_URL
-      - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "pwd"
+      # - ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$SERVER_IP "pwd"
+      - scp
