@@ -11,6 +11,11 @@ export default defineConfig({
   description: 'Keeping it simple',
   lastModified: true,
   readTime: true,
+  algolia: {
+    appId: import.meta.env.ALGOLIA_APP_ID,
+    apiKey: import.meta.env.ALGOLIA_API_KEY,
+    indexName: import.meta.env.ALGOLIA_INDEX_NAME,
+  },
   footer: {
     copyright: '© 2025 Nipun Haldar',
   },
