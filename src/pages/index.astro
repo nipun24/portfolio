@@ -1,98 +1,55 @@
 ---
-import { getCollection } from 'astro:content';
-import i18next from '@/i18n';
-// import Search from '@/components/search';
-import Search from 'astro-pagefind/components/Search';
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import { BLOG } from "@consts";
 
-import PageLayout from '@/components/layouts/PageLayout.astro';
-// import Button from '@/components/button';
-import slateConfig from '~@/slate.config';
+const data = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const postCollection = await getCollection('post', ({ data }) => {
-  return import.meta.env.DEV || data.draft !== true;
-});
+type Acc = {
+  [year: string]: CollectionEntry<"blog">[];
+};
 
-const tagCounts = postCollection.reduce<Record<string, number>>(
-  (res, post) => {
-    const postTags = post.data.tags;
-    if (!postTags || !postTags.length) return res;
-    postTags.forEach((tag) => {
-      if (tag.trim() === '') return;
+const posts = data.reduce((acc: Acc, post) => {
+  const year = post.data.date.getFullYear().toString();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(post);
+  return acc;
+}, {});
 
-      if (res[tag]) {
-        res[tag]++;
-      } else {
-        res[tag] = 1;
-      }
-    });
-    return res;
-  },
-  {
-    [i18next.t('common.all')]: postCollection.length,
-  },
-);
-
-const tags = Object.keys(tagCounts).map((tag) => ({
-  name: tag,
-  count: tagCounts[tag],
-}));
-
-const posts = [...postCollection]
-  .sort((a, b) => b.data.pubDate!.getTime() - a.data.pubDate!.getTime())
-  .map((post) => ({
-    id: post.id,
-    slug: post.slug,
-    url: `/blog/${post.slug}`,
-    data: post.data,
-  }));
+const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
-<PageLayout>
-  <section class="relative mb-8">
-    <h3 class="text-slate12 text-[40px] leading-tight font-semibold">
-      {slateConfig.title}
-    </h3>
-    <p class="text-slate10 text-xl">{slateConfig.description}</p>
-    <Search id="search" uiOptions={{ showImages: false }} />
-  </section>
-
-  <section class="mb-16">
-    <div class="text-slate12 text-base">
-      {
-        posts.map((item) => (
-          <a
-            class="active:bg-slate4 sm:hover:bg-slate3 flex cursor-pointer flex-col justify-between rounded-lg py-2.5 transition-all active:scale-[0.995] sm:flex-row sm:items-center sm:px-2"
-            href={item.url}
-            title={item.data.title}
-          >
-            <span class="shrink-0">{item.data.title}</span>
-            <span class="border-slate6 mx-8 hidden h-px w-full grow border-t border-dashed sm:flex" />
-            <span class="text-slate8 shrink-0">
-              {item.data.pubDate?.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}
-            </span>
-          </a>
-        ))
-      }
-    </div>
-    <!-- <Button className='m-auto mt-6' block> More </Button> -->
-  </section>
-
-  <!-- S 标签 -->
-  <section class="mb-16">
-    <ul class="text-slate10 flex flex-wrap gap-2 text-base">
-      {
-        tags.map(({ name, count }) => (
-          <li class="bg-slate3 text-slate10 hover:bg-slate4 hover:text-slate11 block cursor-pointer rounded-full px-4 py-2 transition-all">
-            {name}
-            <sup class="text-slate8 text-[10px]">{count}</sup>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-  <!-- E 标签 -->
-</PageLayout>
+<Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="space-y-10">
+        <div class="space-y-4">
+          {
+            years.map((year) => (
+              <section class="animate space-y-4">
+                <div class="font-semibold text-black dark:text-white">
+                  {year}
+                </div>
+                <div>
+                  <ul class="not-prose flex flex-col gap-4">
+                    {posts[year].map((post) => (
+                      <li>
+                        <ArrowCard entry={post} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            ))
+          }
+        </div>
+      </div>
+    </aside>
+  </Container>
+</Layout>

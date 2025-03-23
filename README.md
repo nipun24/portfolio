@@ -14,4 +14,4 @@ This blog has been created using Astro and TinaCMS.
    pnpm dev
    ```
 4. Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
-5. Open [http://localhost:4321/admin](http://localhost:4321/admin) to see the admin panel.
+5. Open [http://localhost:4321/admin/index.html](http://localhost:4321/admin/index.html) to see the admin panel.

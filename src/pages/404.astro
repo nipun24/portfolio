@@ -1,20 +1,19 @@
 ---
-import i18next from '@/i18n';
-import PageLayout from '@/components/layouts/PageLayout.astro';
-import Button from '@/components/button';
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+import { SITE } from "@consts";
 ---
 
-<PageLayout title="404">
-  <div class="flex h-[70vh] flex-col items-center justify-center">
-    <h1 class="mb-4 text-4xl font-bold">404</h1>
-    <p class="mb-8 text-slate10 text-base">{i18next.t('404.pageText')}</p>
-    <Button id="back">{i18next.t('404.backBtnText')}</Button>
-  </div>
-</PageLayout>
-
-<script>
-  const backBtn = document.getElementById('back');
-  backBtn?.addEventListener('click', () => {
-    window.location.href = '/';
-  });
-</script>
+<Layout title="404" description={SITE.DESCRIPTION}>
+  <Container>
+    <div class="mt-16 grid place-items-center gap-3">
+      <h4 class="animate text-2xl font-semibold text-black dark:text-white">
+        404: Page not found
+      </h4>
+      <span class="animate">
+        <BackToPrevious href="/">Go to home page</BackToPrevious>
+      </span>
+    </div>
+  </Container>
+</Layout>
