@@ -58,6 +58,15 @@ services:
       - ./public:/usr/share/nginx/html/:ro
 ```
 
+The folder structure should look like this:
+
+```
+📦my-site
+ ┣ 📂public
+ ┃ ┗ 📜index.html
+ ┗ 📜compose.yml
+```
+
 Now run the container to see if everything works on you local machine
 
 ```shell

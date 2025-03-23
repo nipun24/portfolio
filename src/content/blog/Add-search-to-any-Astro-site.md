@@ -86,4 +86,4 @@ Now, search for ay blog. You'll be able to full text search on any page.
 
 ![](/astro-search/3.webp)
 
-**Woohoo🥳!! Search is now working on your astro site.**
+**Woohoo!!🥳 Search is now working on your astro site.**
