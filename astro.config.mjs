@@ -11,6 +11,7 @@ import codeImport from 'remark-code-import';
 import remarkBlockContainers from 'remark-block-containers';
 import astroExpressiveCode from 'astro-expressive-code';
 import rehypeFigure from 'rehype-figure';
+import pagefind from 'astro-pagefind';
 
 import { remarkModifiedTime } from './plugins/remark-modified-time';
 import { remarkReadingTime } from './plugins/remark-reading-time';
@@ -22,6 +23,7 @@ function computedIntegrations() {
     mdx(),
     react(),
     sitemap(slateConfig.sitemap),
+    pagefind(),
   ];
 
   return result;
@@ -43,6 +45,9 @@ function generateAstroConfigure() {
     },
     vite: {
       plugins: [svgr(), tailwindcss()],
+    },
+    build: {
+      format: 'file',
     },
   };
 

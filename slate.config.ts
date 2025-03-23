@@ -11,11 +11,11 @@ export default defineConfig({
   description: 'Keeping it simple',
   lastModified: true,
   readTime: true,
-  algolia: {
-    appId: 'G2X0NK0E2R',
-    apiKey: 'a3c407187fc5f7651f3929b5d00df200',
-    indexName: 'blog_nipunh_com_g2x0nk0e2r_pages',
-  },
+  // algolia: {
+  //   appId: 'G2X0NK0E2R',
+  //   apiKey: 'a3c407187fc5f7651f3929b5d00df200',
+  //   indexName: 'blog_nipunh_com_g2x0nk0e2r_pages',
+  // },
   footer: {
     copyright: '© 2025 Nipun Haldar',
   },
