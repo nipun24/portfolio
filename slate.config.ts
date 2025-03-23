@@ -6,7 +6,7 @@ import { defineConfig } from './src/helpers/config-helper';
 export default defineConfig({
   lang: 'en-US',
   site: 'https://blog.nipunh.com',
-  avatar: '/avatar.png',
+  avatar: '/avatar.webp',
   title: "Nipun's blog",
   description: 'Keeping it simple',
   lastModified: true,

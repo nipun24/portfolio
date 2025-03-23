@@ -26,17 +26,15 @@ Now we create a landing page for our site inside `my-site/public/index.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-We are live!!
-</body>
-
+  <body>
+    We are live!!
+  </body>
 </html>
 ```
 
@@ -62,23 +60,23 @@ docker compose up -d
 
 Navigate to `http://localhost:8080` on your machine and you'll be able to see the site.
 
-![](</host-sites-at-home/Screenshot 2025-03-22 at 12.45.48 AM.png>)
+![](/host-sites-at-home/1.webp)
 
 ### Setting up Cloudflare
 
 You should use Cloudflare's nameservers for this to work. If you are not [switch your nameservers to cloudflare](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/).
 
-Now  on cloudflare's dashboard go to **Zero Trust > Networks > Tunnels > Create a tunnel.** Select cloudflared as the tunnel type.
+Now on cloudflare's dashboard go to **Zero Trust > Networks > Tunnels > Create a tunnel.** Select cloudflared as the tunnel type.
 
-\*\*\*\*![](/host-sites-at-home/cloudflared.png)
+![](/host-sites-at-home/2.webp)
 
 Next, give your tunnel a name.
 
-![](</host-sites-at-home/Screenshot 2025-03-22 at 12.00.58 AM.png>)
+![](/host-sites-at-home/3.webp)
 
 In the configure section, copy the token from the docker command.
 
-![](/host-sites-at-home/token.png)
+![](/host-sites-at-home/4.webp)
 
 ### Setting up the tunnel
 
@@ -90,7 +88,7 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: cf-tunnel
     restart: on-failure
-    command: "tunnel --no-autoupdate run --token ${CF_TOKEN}"
+    command: 'tunnel --no-autoupdate run --token ${CF_TOKEN}'
 
   my-site:
     depends_on:
@@ -102,7 +100,6 @@ services:
       - 8080:80
     volumes:
       - ./public:/usr/share/nginx/html/:ro
-
 ```
 
 Also create a .env file to store the token
@@ -119,14 +116,14 @@ docker compose up -d
 
 If everything worked you should see the connector in the cloudflare tunnel page.
 
-![](</host-sites-at-home/Screenshot 2025-03-22 at 12.12.48 AM.png>)
+![](/host-sites-at-home/5.webp)
 
 Next we have to configure the domain (or subdomain) that we want to map to this tunnel. For this tutorial I have kept the subdomain as my-site but you can leave it blank if you want to host this site at the root domain. In the service use HTTP for protocol and my-site:80 as the URL. Replace my-site with the container name in your compose.yml file.
 
-![](</host-sites-at-home/Screenshot 2025-03-22 at 12.23.34 AM.png>)
+![](/host-sites-at-home/6.webp)
 
 Click **Save Tunnel** and open the domain you just configured in the tunnel.
 
-![](</host-sites-at-home/Screenshot 2025-03-22 at 12.40.00 AM.png>)
+![](/host-sites-at-home/7.webp)
 
 **Hurray!🎉 You are live from your home.**
