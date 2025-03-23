@@ -8,6 +8,11 @@ export const SITE: Site = {
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 
+export const HOME: Metadata = {
+  TITLE: "Blog",
+  DESCRIPTION: "A collection of articles on topics I am passionate about.",
+};
+
 export const BLOG: Metadata = {
   TITLE: "Blog",
   DESCRIPTION: "A collection of articles on topics I am passionate about.",
@@ -21,15 +26,24 @@ export const PROJECTS: Metadata = {
 
 export const SOCIALS: Socials = [
   {
-    NAME: "X (formerly Twitter)",
-    HREF: "https://twitter.com/boogerbuttcheek",
-  },
-  {
     NAME: "GitHub",
-    HREF: "https://github.com/trevortylerlee",
+    ICON: "logo-github",
+    HREF: "https://github.com/nipun24",
   },
   {
-    NAME: "Website",
-    HREF: "https://trevortylerlee.com",
+    NAME: "X (formerly Twitter)",
+    ICON: "logo-twitter",
+    HREF: "https://x.com/focus_breathing",
+  },
+
+  {
+    NAME: "Instagram",
+    ICON: "logo-instagram",
+    HREF: "https://instagram.com/focus.breathing",
+  },
+  {
+    NAME: "LinkedIn",
+    ICON: "logo-linkedin",
+    HREF: "https://linkedin.com/in/nipunhaldar",
   },
 ];

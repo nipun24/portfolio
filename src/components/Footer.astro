@@ -1,6 +1,6 @@
 ---
 import Container from "@components/Container.astro";
-import { SITE } from "@consts";
+import { SITE, SOCIALS } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
 ---
 
@@ -12,7 +12,29 @@ import BackToTop from "@components/BackToTop.astro";
       </div>
     </div>
     <div class="flex items-center justify-between">
-      <div>&copy; {new Date().getFullYear()} • {SITE.TITLE}</div>
+      <div>
+        <ul class="not-prose mb-4 flex flex-wrap gap-4">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <a
+                  href={SOCIAL.HREF}
+                  target="_blank"
+                  aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                >
+                  <ion-icon name={SOCIAL.ICON} class="text-lg" />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        &copy; {new Date().getFullYear()} • <a
+          href="https://nipunh.com"
+          class="hover:underline"
+          target="_blank"
+          >Nipun Haldar
+        </a>
+      </div>
       <div class="flex flex-wrap items-center gap-1.5">
         <button
           id="light-theme-button"

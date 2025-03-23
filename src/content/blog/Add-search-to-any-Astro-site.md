@@ -1,7 +1,13 @@
 ---
 title: Add search to any Astro site
-description: Add search functionality to any astro site without using any service likeAlgolia.
-date: "2025-03-22"
+description: >-
+  Add search functionality to any astro site without using any service
+  likeAlgolia.
+tags:
+  - astro
+  - pagefind
+  - static site search
+date: 2025-03-22T00:00:00.000Z
 ---
 
 ## Add search to any Astro site

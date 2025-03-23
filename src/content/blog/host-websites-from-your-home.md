@@ -2,8 +2,12 @@
 title: Host websites from your home
 description: Host any website from you home with Cloudflare tunnel and docker
 tags:
-  - ""
-date: "2025-03-20"
+  - web hosting
+  - docker
+  - nginx
+  - networking
+  - cloudflare
+date: 2025-03-20T00:00:00.000Z
 ---
 
 ## Host websites from your home
