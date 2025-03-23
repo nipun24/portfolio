@@ -67,7 +67,7 @@ The folder structure should look like this:
  ┗ 📜compose.yml
 ```
 
-Now run the container to see if everything works on you local machine
+Now run the container to see if everything works on you local machine.
 
 ```shell
 docker compose up -d
