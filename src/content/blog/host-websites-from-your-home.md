@@ -8,7 +8,7 @@ date: "2025-03-20"
 
 ## Host websites from your home
 
-Wanting to host a website of your own but do not want to pay for servers or do not have a static public IP address. Yes you can probably use any other free services to achieve this and will probably get great uptime but where's the fun in that right?. You just need a domain to get started and expose any application to the internet for free!
+Wanting to host a website of your own but do not want to pay for servers or do not have a static public IP address. Yes you can probably use any other free services to achieve this and will probably get great uptime but where's the fun in that right? You just need a domain to get started and expose any application to the internet for free!
 
 Let's get started!
 
