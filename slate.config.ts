@@ -12,9 +12,9 @@ export default defineConfig({
   lastModified: true,
   readTime: true,
   algolia: {
-    appId: import.meta.env.ALGOLIA_APP_ID,
-    apiKey: import.meta.env.ALGOLIA_API_KEY,
-    indexName: import.meta.env.ALGOLIA_INDEX_NAME,
+    appId: 'G2X0NK0E2R',
+    apiKey: 'a3c407187fc5f7651f3929b5d00df200',
+    indexName: 'blog_nipunh_com_g2x0nk0e2r_pages',
   },
   footer: {
     copyright: '© 2025 Nipun Haldar',
