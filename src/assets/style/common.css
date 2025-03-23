@@ -1,22 +1,22 @@
-@import "tailwindcss";
-@import "@radix-ui/colors/gray.css";
-@import "@radix-ui/colors/blue.css";
-@import "@radix-ui/colors/red.css";
-@import "@radix-ui/colors/green.css";
-@import "@radix-ui/colors/slate.css";
-@import "@radix-ui/colors/tomato.css";
-@import "@radix-ui/colors/amber.css";
-@import "@radix-ui/colors/indigo.css";
-@import "@radix-ui/colors/orange.css";
-@import "@radix-ui/colors/gray-dark.css";
-@import "@radix-ui/colors/blue-dark.css";
-@import "@radix-ui/colors/red-dark.css";
-@import "@radix-ui/colors/green-dark.css";
-@import "@radix-ui/colors/slate-dark.css";
-@import "@radix-ui/colors/tomato-dark.css";
-@import "@radix-ui/colors/amber-dark.css";
-@import "@radix-ui/colors/indigo-dark.css";
-@import "@radix-ui/colors/orange-dark.css";
+@import 'tailwindcss';
+@import '@radix-ui/colors/gray.css';
+@import '@radix-ui/colors/blue.css';
+@import '@radix-ui/colors/red.css';
+@import '@radix-ui/colors/green.css';
+@import '@radix-ui/colors/slate.css';
+@import '@radix-ui/colors/tomato.css';
+@import '@radix-ui/colors/amber.css';
+@import '@radix-ui/colors/indigo.css';
+@import '@radix-ui/colors/orange.css';
+@import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/blue-dark.css';
+@import '@radix-ui/colors/red-dark.css';
+@import '@radix-ui/colors/green-dark.css';
+@import '@radix-ui/colors/slate-dark.css';
+@import '@radix-ui/colors/tomato-dark.css';
+@import '@radix-ui/colors/amber-dark.css';
+@import '@radix-ui/colors/indigo-dark.css';
+@import '@radix-ui/colors/orange-dark.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -139,5 +139,22 @@
 }
 
 body {
-  @apply text-sm text-slate12;
+  @apply text-slate12 text-sm;
+}
+
+[data-theme='dark'] {
+  --pagefind-ui-text: var(--color-blue12);
+}
+
+[data-theme='light'] {
+  --pagefind-ui-text: var(--color-blue10);
+}
+
+.pagefind-ui__search-input {
+  @apply border-slate6 mt-8;
+}
+
+[data-theme='dark'] .pagefind-ui__search-input,
+[data-theme='dark'] .pagefind-ui__search-clear {
+  @apply bg-slate1 border-slate6;
 }

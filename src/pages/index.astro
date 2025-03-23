@@ -48,16 +48,12 @@ const posts = [...postCollection]
 ---
 
 <PageLayout>
-  <section class="relative mb-16">
+  <section class="relative mb-8">
     <h3 class="text-slate12 text-[40px] leading-tight font-semibold">
       {slateConfig.title}
     </h3>
     <p class="text-slate10 text-xl">{slateConfig.description}</p>
-    <Search
-      id="search"
-      className="text-red"
-      uiOptions={{ showImages: false }}
-    />
+    <Search id="search" uiOptions={{ showImages: false }} />
   </section>
 
   <section class="mb-16">
