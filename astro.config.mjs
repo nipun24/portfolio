@@ -46,9 +46,6 @@ function generateAstroConfigure() {
     vite: {
       plugins: [svgr(), tailwindcss()],
     },
-    build: {
-      format: 'file',
-    },
   };
 
   if (slateConfig.lastModified) {
