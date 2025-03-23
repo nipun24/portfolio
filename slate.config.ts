@@ -24,5 +24,17 @@ export default defineConfig({
       icon: 'github',
       link: 'https://github.com/nipun24',
     },
+    {
+      icon: 'instagram',
+      link: 'https://instagram.com/focus.breathing',
+    },
+    {
+      icon: 'x',
+      link: 'https://x.com/focus_breathing',
+    },
+    {
+      icon: 'mail',
+      link: 'mailto:blog@nipunh.com',
+    },
   ],
 });
