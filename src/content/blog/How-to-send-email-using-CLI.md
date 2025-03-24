@@ -59,4 +59,4 @@ Check your receiver mailbox.
 
 ![](/send-email-terminal/1.webp)
 
-Congratulations!🎉 You've successfully sent email from the terminal.
+**Congratulations!🎉 You've successfully sent email from the terminal.**
