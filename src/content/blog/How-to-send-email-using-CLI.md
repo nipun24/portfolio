@@ -4,7 +4,7 @@ description: Test your SMTP credentials without any extra tool just from your te
 date: 2025-03-23T18:30:00.000Z
 ---
 
-## How to send email using CLI
+## How to send email using terminal
 
 In this tutorial we'll use the terminal to send email using SMTP. This method can be used to test the SMTP credentials by sending a test email.
 
@@ -24,7 +24,7 @@ echo -n "<password>" | openssl enc -base64
 
 ### Creating the email body
 
-Create a file named mail.txt with the following content. 
+Create a file named mail.txt with the following content.
 
 ```
 EHLO example.com
@@ -43,7 +43,7 @@ This message was sent using the terminal.
 QUIT
 ```
 
-Replace your\@gmail.com with your gmail id and receiver\@example.com with the email id you want to send the message.
+Replace [your@gmail.com](mailto:your@gmail.com) with your gmail id and [receiver@example.com](mailto:receiver@example.com) with the email id you want to send the message.
 
 ### Sending the email
 
