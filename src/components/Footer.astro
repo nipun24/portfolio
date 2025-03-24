@@ -2,6 +2,8 @@
 import Container from "@components/Container.astro";
 import { SITE, SOCIALS } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <footer class="animate">
@@ -115,4 +117,6 @@ import BackToTop from "@components/BackToTop.astro";
   <script
     nomodule
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <Analytics />
+  <SpeedInsights />
 </footer>
