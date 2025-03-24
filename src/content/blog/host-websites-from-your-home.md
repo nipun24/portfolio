@@ -1,6 +1,7 @@
 ---
 title: Host websites from your home
 description: Host any website from you home with Cloudflare tunnel and docker
+draft: false
 tags:
   - web hosting
   - docker
@@ -15,6 +16,12 @@ date: 2025-03-20T00:00:00.000Z
 Wanting to host a website of your own but do not want to pay for servers or do not have a static public IP address. Yes you can probably use any other free services to achieve this and will probably get great uptime but where's the fun in that right? You just need a domain to get started and expose any application to the internet for free!
 
 Let's get started!
+
+### Before you begin
+
+1. A machine with docker installed (preferably a UNIX based system).
+2. A domain that you own (you can get a .tk domain name for free).
+3. Basic knowledge about DNS settings.
 
 ### Setting up Docker
 
