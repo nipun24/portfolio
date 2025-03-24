@@ -1,6 +1,11 @@
 ---
 title: How to send email using terminal
 description: Test your SMTP credentials without any extra tool just from your terminal
+tags:
+  - email
+  - SMTP
+  - gmail
+  - terminal
 date: 2025-03-23T18:30:00.000Z
 ---
 
