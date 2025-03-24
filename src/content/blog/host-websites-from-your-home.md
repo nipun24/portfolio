@@ -11,19 +11,17 @@ tags:
 date: 2025-03-20T00:00:00.000Z
 ---
 
-## Host websites from your home
-
 Wanting to host a website of your own but do not want to pay for servers or do not have a static public IP address. Yes you can probably use any other free services to achieve this and will probably get great uptime but where's the fun in that right? You just need a domain to get started and expose any application to the internet for free!
 
 Let's get started!
 
-### Before you begin
+## Before you begin
 
 1. A machine with docker installed (preferably a UNIX based system).
 2. A domain that you own (you can get a .tk domain name for free).
 3. Basic knowledge about DNS settings.
 
-### Setting up Docker
+## Setting up Docker
 
 [Install docker](https://docs.docker.com/engine/install/) on a machine that you want to host your site on. Make sure this machine is connected to the internet (preferably using a ethernet cable) and any sleep settings are turned off if you are using a laptop. Just make sure that this machine is always on connected to the internet. For this tutorial we'll be host a simple webpage but this can be extended to any web application.
 
@@ -84,7 +82,7 @@ Navigate to `http://localhost:8080` on your machine and you'll be able to see th
 
 ![](/host-sites-at-home/1.webp)
 
-### Setting up Cloudflare
+## Setting up Cloudflare
 
 You should use Cloudflare's nameservers for this to work. If you are not [switch your nameservers to cloudflare](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/).
 
@@ -100,7 +98,7 @@ In the configure section, copy the token from the docker command.
 
 ![](/host-sites-at-home/4.webp)
 
-### Setting up the tunnel
+## Setting up the tunnel
 
 Now edit the `compose.yml` file to include the cloudflare tunnel.
 
