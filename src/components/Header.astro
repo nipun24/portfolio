@@ -8,11 +8,27 @@ import { SITE } from "@consts";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.TITLE}&nbsp;
-        </div>
+        <img
+          src="/avatar.webp"
+          height="48"
+          width="48"
+          alt="Avatar"
+          class="rounded-full border border-black dark:border-white"
+        />
       </Link>
       <nav class="flex items-center gap-1 text-sm">
+        <Link href="/about">about</Link>
+        <span>
+          {`/`}
+        </span>
+        <Link href="/blog">blog</Link>
+        <span>
+          {`/`}
+        </span>
+        <Link href="/tools">tools</Link>
+        <span>
+          {`/`}
+        </span>
         <button
           id="magnifying-glass"
           aria-label="Search"

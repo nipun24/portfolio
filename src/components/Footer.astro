@@ -22,18 +22,17 @@ import BackToTop from "@components/BackToTop.astro";
                   target="_blank"
                   aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
                 >
-                  <ion-icon name={SOCIAL.ICON} class="text-lg" />
+                  {SOCIAL.ICON ? (
+                    <ion-icon name={SOCIAL.ICON} class="text-lg" />
+                  ) : (
+                    <ion-icon src={SOCIAL.SRC} class="text-lg" />
+                  )}
                 </a>
               </li>
             ))
           }
         </ul>
-        &copy; {new Date().getFullYear()} • <a
-          href="https://nipunh.com"
-          class="hover:underline"
-          target="_blank"
-          >Nipun Haldar
-        </a>
+        &copy; {new Date().getFullYear()} • Nipun Haldar
       </div>
       <div class="flex flex-wrap items-center gap-1.5">
         <button
@@ -109,4 +108,11 @@ import BackToTop from "@components/BackToTop.astro";
       </div>
     </div>
   </Container>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </footer>

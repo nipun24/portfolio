@@ -1,62 +1,105 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
+import { SITE, SOCIALS, HOME } from "@consts";
 import ArrowCard from "@components/ArrowCard.astro";
-import { BLOG } from "@consts";
+import Link from "@components/Link.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
-const data = (await getCollection("blog"))
+const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-type Acc = {
-  [year: string]: CollectionEntry<"blog">[];
-};
-
-const posts = data.reduce((acc: Acc, post) => {
-  const year = post.data.date.getFullYear().toString();
-  if (!acc[year]) {
-    acc[year] = [];
-  }
-  acc[year].push(post);
-  return acc;
-}, {});
-
-const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
+const tools = (await getCollection("tools")).slice(
+  0,
+  SITE.NUM_TOOLS_ON_HOMEPAGE,
+);
 ---
 
-<Layout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
+<Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <aside data-pagefind-ignore>
-      <div class="space-y-10">
-        <div class="space-y-4">
-          {
-            years.map((year) => (
-              <section class="animate space-y-4">
-                <div class="font-semibold text-black dark:text-white">
-                  {year}
-                </div>
-                <div>
-                  <ul class="not-prose flex flex-col gap-4">
-                    {posts[year].map((post) => (
-                      <li>
-                        <ArrowCard entry={post} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </section>
-            ))
-          }
-        </div>
+      <h1 class="font-semibold text-black dark:text-white">Nipun Haldar</h1>
+      <div class="space-y-16">
+        <section>
+          <article class="animate space-y-4">
+            <span>
+              <p>
+                I'm a Cloud Architect and Python Developer based in New Delhi,
+                India, with over four years of hands-on experience in designing
+                and implementing robust cloud solutions.
+              </p>
+            </span>
+          </article>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="font-semibold text-black dark:text-white">
+              Latest posts
+            </h2>
+            <Link href="/blog"> See all</Link>
+          </div>
+          <ul class="not-prose flex flex-col gap-4">
+            {
+              blog.map((post) => (
+                <li>
+                  <ArrowCard entry={post} />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="font-semibold text-black dark:text-white">
+              Tools & Utilities
+            </h2>
+            <Link href="/tools"> See all</Link>
+          </div>
+          <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
+            {
+              tools.map((tool) => (
+                <a
+                  class="group relative block overflow-hidden rounded-lg"
+                  href={tool.data.url}
+                  target="_blank"
+                >
+                  <img
+                    class="size-40 w-full rounded-lg bg-gray-100 object-cover dark:bg-neutral-800"
+                    src={tool.data.imagePath}
+                    alt="Project"
+                    loading="lazy"
+                  />
+                  <div class="absolute end-1 bottom-1 opacity-0 transition group-hover:opacity-100">
+                    <div class="flex items-center gap-x-1 rounded-lg border border-gray-200 bg-white px-2 py-1 text-gray-800 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200">
+                      <svg
+                        class="size-3 shrink-0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                      </svg>
+                      <span class="text-xs">View</span>
+                    </div>
+                  </div>
+                </a>
+              ))
+            }
+          </div>
+        </section>
       </div>
     </aside>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </Container>
 </Layout>
