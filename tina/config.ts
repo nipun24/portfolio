@@ -72,6 +72,32 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "tools",
+        label: "Tools",
+        path: "src/content/tools",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "imagePath",
+            label: "Image Path",
+            required: true,
+          },
+        ],
+      },
     ],
   },
 });
