@@ -18,4 +18,5 @@ backend:
   name: github
   repo: nipun24/portfolio
   branch: main
+  base_url: https://nipunh.com
   auth_endpoint: api/auth
