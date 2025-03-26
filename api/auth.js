@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export function GET(request) {
   const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
   const REDIRECT_URI = process.env.REDIRECT_URI;
