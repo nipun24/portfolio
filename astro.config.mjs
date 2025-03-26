@@ -10,6 +10,13 @@ export default defineConfig({
   integrations: [sitemap(), mdx(), pagefind()],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: "[name]-[hash].js",
+        },
+      },
+    },
   },
   markdown: {
     shikiConfig: {
