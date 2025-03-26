@@ -76,3 +76,7 @@ Then re-run the containers.
 docker compose down
 docker compose up -d
 ```
+
+Now, navigate to \<ip>:3000 and create a admin account.
+
+![](/local-llm/2.webp)
