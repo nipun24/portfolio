@@ -2,6 +2,13 @@
 title: How to host a local LLM model
 description: Use Ollama and docker to host your own LLM model.
 draft: false
+tags:
+  - ollama
+  - open webui
+  - chatgpt
+  - docker
+  - deepseek r1
+  - LLM
 date: 2025-03-25T18:30:00.000Z
 ---
 
@@ -42,7 +49,7 @@ Now, run the container.
 docker compose up -d
 ```
 
-And go to \<ip>:11434. You'll be able to see ollama is running. 
+And go to \<ip>:11434. You'll be able to see ollama is running.
 
 ![](/local-llm/1.webp)
 
