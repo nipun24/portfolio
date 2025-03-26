@@ -17,3 +17,5 @@ public_folder: "src/assets/images" # The src attribute for uploaded media
 backend:
   name: github
   repo: nipun24/portfolio
+  branch: main
+  base_url: https://nipunh.com
