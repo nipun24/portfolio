@@ -1,8 +1,7 @@
 ---
 title: Add search to any Astro site
-description: >-
-  Add search functionality to any astro site without using any service
-  likeAlgolia.
+description: Add search functionality to any astro site without using any
+  service likeAlgolia.
 draft: false
 tags:
   - astro
@@ -10,7 +9,6 @@ tags:
   - static site search
 date: 2025-03-22T00:00:00.000Z
 ---
-
 So you've built a site using [Astro](https://astro.build) but can't figure out how to add search functionality to the site without services like Algolia. Fear not in this tutorial we'll add a full text search to any Astro website. It is simple and fast.
 
 We'll use the [Pagefind ](https://pagefind.app)library to implement the search feature in our astro website. You'll need a working astro website. For this tutorial we'll install and use the [astro blog starter template](https://docs.astro.build/en/install-and-setup/).
