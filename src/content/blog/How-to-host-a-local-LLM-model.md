@@ -11,7 +11,6 @@ tags:
   - LLM
 date: 2025-03-25T18:30:00.000Z
 ---
-
 Hosting your own local LLM can be fast, secure and private to online alternative.
 
 ## Before getting started
@@ -49,7 +48,7 @@ Now, run the container.
 docker compose up -d
 ```
 
-And go to \<ip>:11434. You'll be able to see ollama is running.
+And go to <ip>:11434. You'll be able to see ollama is running.
 
 ![](/local-llm/1.webp)
 
@@ -86,7 +85,9 @@ docker compose down
 docker compose up -d
 ```
 
-Now, navigate to \<ip>:3000 and create a admin account.![](/local-llm/2.webp)
+Now, navigate to <ip>:3000 and create a admin account.
+
+![](/local-llm/2.webp)
 
 ## Downloading a LLM
 
