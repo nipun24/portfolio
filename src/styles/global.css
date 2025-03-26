@@ -151,5 +151,17 @@ pre {
 }
 
 article img {
-  @apply rounded-lg drop-shadow-lg dark:shadow-md dark:shadow-stone-500/50;
+  @apply rounded-lg p-4;
+  background: rgb(232, 165, 87);
+  background: radial-gradient(circle, #72a0c1 0%, #041e42 100%);
 }
+
+/* article img {
+  @apply rounded-lg p-4;
+  background: #72a0c1;
+  background: radial-gradient(
+    circle,
+    rgba(54, 63, 110, 1) 0%,
+    rgba(144, 69, 84, 1) 100%
+  );
+} */
