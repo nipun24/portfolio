@@ -1,7 +1,7 @@
 ---
 title: How to host a local LLM model
 description: Use Ollama and docker to host your own LLM model.
-draft: true
+draft: false
 date: 2025-03-25T18:30:00.000Z
 ---
 
