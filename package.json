@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "cp public/admin/config.prod.yml public/admin/config.yml && astro build",
     "preview": "astro preview",
+    "develop": "cp public/admin/config.dev.yml public/admin/config.yml && vercel dev",
     "astro": "astro"
   },
   "dependencies": {
@@ -21,8 +22,10 @@
     "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.5.5",
     "astro-pagefind": "^1.8.3",
+    "axios": "^1.8.4",
     "clsx": "^2.1.1",
     "decap-cms-app": "^3.6.2",
+    "nest": "^0.1.6",
     "next": "^15.2.4",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.17",

@@ -18,4 +18,6 @@ backend:
   name: github
   repo: nipun24/portfolio
   branch: main
-  auth_endpoint: api/auth
+  # site_domain: http://localhost:3000
+  # base_url: http://localhost:3000
+  # auth_endpoint: api/auth

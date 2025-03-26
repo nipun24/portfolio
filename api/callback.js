@@ -1,11 +1,14 @@
-const axios = require("axios");
+import axios from "axios";
 
 export async function GET(req) {
   const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
   const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
   const REDIRECT_URI = process.env.REDIRECT_URI;
-
-  const code = req.query.code;
+  const url = new URL(req.url);
+  const params = new URLSearchParams(url.search);
+  console.log(url, params);
+  const code = params.get("code");
+  console.log(code);
   if (!code) {
     return new Response(
       `<script>window.opener.postMessage({ error: "Missing code" }, "*"); window.close();</script>`,
@@ -28,7 +31,8 @@ export async function GET(req) {
     const content = JSON.stringify({ token: accessToken, provider: "github" });
     const message = JSON.stringify(`authorization:github:success:${content}`);
 
-    return new Response(`
+    return new Response(
+      `
       <html><body><script>
     (function() {
       function recieveMessage(e) {
@@ -45,7 +49,9 @@ export async function GET(req) {
       window.opener.postMessage("authorizing:github", "*")
       })()
     </script></body></html>
-    `);
+    `,
+      { headers: { "Content-Type": "text/html" } },
+    );
   } catch (error) {
     const content = JSON.stringify(error);
     const message = JSON.stringify(`authorization:github:error:${content}`);
