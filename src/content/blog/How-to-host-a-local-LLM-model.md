@@ -43,3 +43,36 @@ docker compose up -d
 ```
 
 And go to \<ip>:11434. You'll be able to see ollama is running. ![](/local-llm/1.webp)
+
+## Adding the UI for chat
+
+For the UI we'll use the [open web UI](https://github.com/open-webui/open-webui) project. To add this we'll edit the compose.yml file.
+
+```yaml
+services:
+    ollama:
+        image: ollama/ollama
+        container_name: ollama
+        restart: unless-stopped
+        ports:
+            - 11434:11434
+        volumes:
+            - ./ollama-data:/root/.ollama
+    open-webui:
+        image: ghcr.io/open-webui/open-webui:main
+        restart: unless-stopped
+        container_name: ollama-webui
+        volumes:
+            - ./open-webui-data:/app/backend/data
+        environment:
+            - 'OLLAMA_BASE_URL=http://ollama:11434'
+        ports:
+            - 3000:8080
+```
+
+Then re-run the containers.
+
+```yaml
+docker compose down
+docker compose up -d
+```
