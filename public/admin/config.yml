@@ -22,6 +22,5 @@ backend:
   name: github
   repo: nipun24/portfolio
   branch: main
-  # site_domain: http://localhost:3000
-  # base_url: http://localhost:3000
-  # auth_endpoint: api/auth
+  base_url: https://nipunh.com
+  auth_endpoint: api/auth
