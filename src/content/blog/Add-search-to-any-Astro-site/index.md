@@ -1,7 +1,7 @@
 ---
 title: Add search to any Astro site
 description: Add search functionality to any astro site without using any
-  service likeAlgolia.
+  service like Algolia.
 draft: false
 tags:
   - astro
