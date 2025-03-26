@@ -52,7 +52,7 @@ export default defineConfig({
 
 We'll add the search bar to the blog page.
 
-![](/astro-search/1.webp)
+![](1.webp)
 
 Edit `src/pages/blog/index.astro` and add the following code.
 
@@ -83,6 +83,6 @@ npm run dev
 
 Now, search for ay blog. You'll be able to full text search on any page.
 
-![](/astro-search/3.webp)
+![](3.webp)
 
 **Woohoo!!🥳 Search is now working on your astro site.**

@@ -80,7 +80,7 @@ docker compose up -d
 
 Navigate to `http://localhost:8080` on your machine and you'll be able to see the site.
 
-![](/host-sites-at-home/1.webp)
+![](1.webp)
 
 ## Setting up Cloudflare
 
@@ -88,15 +88,15 @@ You should use Cloudflare's nameservers for this to work. If you are not [switch
 
 Now on cloudflare's dashboard go to **Zero Trust > Networks > Tunnels > Create a tunnel.** Select cloudflared as the tunnel type.
 
-![](/host-sites-at-home/2.webp)
+![](2.webp)
 
 Next, give your tunnel a name.
 
-![](/host-sites-at-home/3.webp)
+![](3.webp)
 
 In the configure section, copy the token from the docker command.
 
-![](/host-sites-at-home/4.webp)
+![](4.webp)
 
 ## Setting up the tunnel
 
@@ -136,14 +136,14 @@ docker compose up -d
 
 If everything worked you should see the connector in the cloudflare tunnel page.
 
-![](/host-sites-at-home/5.webp)
+![](5.webp)
 
 Next we have to configure the domain (or subdomain) that we want to map to this tunnel. For this tutorial I have kept the subdomain as my-site but you can leave it blank if you want to host this site at the root domain. In the service use HTTP for protocol and my-site:80 as the URL. Replace my-site with the container name in your compose.yml file.
 
-![](/host-sites-at-home/6.webp)
+![](6.webp)
 
 Click **Save Tunnel** and open the domain you just configured in the tunnel.
 
-![](/host-sites-at-home/7.webp)
+![](7.webp)
 
 **Hurray!🎉 You are live from your home.**

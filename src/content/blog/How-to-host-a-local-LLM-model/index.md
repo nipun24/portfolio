@@ -11,6 +11,7 @@ tags:
   - LLM
 date: 2025-03-25T18:30:00.000Z
 ---
+
 Hosting your own local LLM can be fast, secure and private to online alternative.
 
 ## Before getting started
@@ -50,7 +51,7 @@ docker compose up -d
 
 And go to <ip>:11434. You'll be able to see ollama is running.
 
-![](/local-llm/1.webp)
+![](1.webp)
 
 ## Adding the UI for chat
 
@@ -87,7 +88,7 @@ docker compose up -d
 
 Now, navigate to <ip>:3000 and create a admin account.
 
-![](/local-llm/2.webp)
+![](2.webp)
 
 ## Downloading a LLM
 
@@ -95,12 +96,12 @@ Now we have all the essentials setup and running to download a use a LLM model. 
 
 On the web interface go to select model and search deepseek-r1:1.5b and click pull to begin downloading. Wait for the model to get downloaded.
 
-![](/local-llm/4.webp)
+![](4.webp)
 
-Once the model is downloaded select the model.![](/local-llm/5.webp)
+Once the model is downloaded select the model.![](5.webp)
 
 Try to ask it a joke 😂
 
-![](/local-llm/6.webp)
+![](6.webp)
 
 Okay! the jokes might not be as funny 😅 but you have your own private chatbot.

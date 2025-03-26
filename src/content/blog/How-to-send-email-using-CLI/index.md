@@ -61,6 +61,6 @@ Replace your mail server host and port provided to you by the service.
 
 Check your receiver mailbox.
 
-![](/send-email-terminal/1.webp)
+![](1.webp)
 
 **Congratulations!🎉 You've successfully sent email from the terminal.**

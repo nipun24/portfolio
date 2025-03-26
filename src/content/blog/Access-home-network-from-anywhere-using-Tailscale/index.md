@@ -17,8 +17,8 @@ Want to securely access resources on your home network when you are away without
 
 For this to work we'll need a tailscale account. Do not worry it is totally free for the purpose we are using it. Login using Google for easy onboarding and select for personal use.
 
-![](/home-remote-tailscale/1.webp)
+![](1.webp)
 
 ### Adding your first device
 
-Now, we'll add your first device. You can use the device that 
+Now, we'll add your first device. You can use the device that
