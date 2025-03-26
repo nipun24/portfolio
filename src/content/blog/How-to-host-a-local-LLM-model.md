@@ -85,6 +85,10 @@ Now we have all the essentials setup and running to download a use a LLM model. 
 
 On the web interface go to select model and search deepseek-r1:1.5b and click pull to begin downloading. Wait for the model to get downloaded.
 
-![](/local-llm/3.webp)![](/local-llm/4.webp)
+![](/local-llm/3.webp)
 
-Once the model is downloaded select the model and begin chatting.![](/local-llm/5.webp)![](/local-llm/6.webp)Okay! the jokes might not be as funny 😅 but you have your own private chatbot.
+![](/local-llm/4.webp)
+
+Once the model is downloaded select the model and begin chatting.![](/local-llm/5.webp)
+
+![](/local-llm/6.webp)Okay! the jokes might not be as funny 😅 but you have your own private chatbot.
