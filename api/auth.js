@@ -1,3 +1,4 @@
 export function GET(request) {
-  return new Response("Hello from Vercel!");
+  const authURL = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=repo,user`;
+  redirect(authURL);
 }
