@@ -14,7 +14,7 @@ Hosting your own local LLM can be fast, secure and private to online alternative
 
 ## Installing Ollama
 
-In this tutorial we'll use [Ollama](https://ollama.com) to host the LLM and later connect an UI. Create a directory called chat and create a compose.yml file inside it.
+In this tutorial we'll use [Ollama](https://ollama.com) to host the LLM and later connect an UI. Create a directory called `chat` and create a `compose.yml` file inside it.
 
 ```shell
 mkdir chat
@@ -22,7 +22,7 @@ cd chat
 touch compose.yml
 ```
 
-Add the following to the compose.yml file.
+Add the following to the `compose.yml` file.
 
 ```yaml
 services:
