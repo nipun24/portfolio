@@ -42,7 +42,9 @@ Now, run the container.
 docker compose up -d
 ```
 
-And go to \<ip>:11434. You'll be able to see ollama is running. ![](/local-llm/1.webp)
+And go to \<ip>:11434. You'll be able to see ollama is running. 
+
+![](/local-llm/1.webp)
 
 ## Adding the UI for chat
 
