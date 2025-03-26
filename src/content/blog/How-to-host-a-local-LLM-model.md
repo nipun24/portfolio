@@ -33,14 +33,14 @@ Add the following to the `compose.yml` file.
 
 ```yaml
 services:
-    ollama:
-        image: ollama/ollama
-        container_name: ollama
-        restart: unless-stopped
-        ports:
-            - 11434:11434
-        volumes:
-            - ./ollama-data:/root/.ollama
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - 11434:11434
+    volumes:
+      - ./ollama-data:/root/.ollama
 ```
 
 Now, run the container.
@@ -59,24 +59,24 @@ For the UI we'll use the [open web UI](https://github.com/open-webui/open-webui)
 
 ```yaml
 services:
-    ollama:
-        image: ollama/ollama
-        container_name: ollama
-        restart: unless-stopped
-        ports:
-            - 11434:11434
-        volumes:
-            - ./ollama-data:/root/.ollama
-    open-webui:
-        image: ghcr.io/open-webui/open-webui:main
-        restart: unless-stopped
-        container_name: ollama-webui
-        volumes:
-            - ./open-webui-data:/app/backend/data
-        environment:
-            - 'OLLAMA_BASE_URL=http://ollama:11434'
-        ports:
-            - 3000:8080
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    restart: unless-stopped
+    ports:
+      - 11434:11434
+    volumes:
+      - ./ollama-data:/root/.ollama
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    restart: unless-stopped
+    container_name: ollama-webui
+    volumes:
+      - ./open-webui-data:/app/backend/data
+    environment:
+      - "OLLAMA_BASE_URL=http://ollama:11434"
+    ports:
+      - 3000:8080
 ```
 
 Then re-run the containers.
@@ -100,4 +100,6 @@ On the web interface go to select model and search deepseek-r1:1.5b and click pu
 
 Once the model is downloaded select the model and begin chatting.![](/local-llm/5.webp)
 
-![](/local-llm/6.webp)Okay! the jokes might not be as funny 😅 but you have your own private chatbot.
+![](/local-llm/6.webp)
+
+Okay! the jokes might not be as funny 😅 but you have your own private chatbot.
