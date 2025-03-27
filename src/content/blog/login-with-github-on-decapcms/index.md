@@ -17,13 +17,16 @@ I created this tutorial as I could not find a simple and easy to understand meth
 
 For this tutorial we'll need the following:
 
-1. A Github and Vercel account (its free).
-2. A project in which you want to add DecapCMS. We'll use the [Astro blog template](https://astro.build/themes/details/blog/) for this tutorial.
-3. A custom domain (not mandatory but good to have).
+1. Node.js installed (v22+).
+2. A Github and Vercel account (its free).
+3. A project in which you want to add DecapCMS. We'll use the [Astro blog template](https://astro.build/themes/details/blog/) for this tutorial.
+4. A custom domain (not mandatory but good to have).
 
 Let's get started 
 
-## Creating the Astro site
+## Setting up the Astro site
+
+### Cloning the starter project
 
 Create a new project with the Astro blog template. You can keep the directory name as `blog`.
 
@@ -33,7 +36,7 @@ npm create astro@latest -- --template blog
 
 After following the steps you'll have the following directory structure.
 
-```restructuredtext
+```
 📦blog
  ┣ 📂.astro
  ┣ 📂.vscode
@@ -46,3 +49,13 @@ After following the steps you'll have the following directory structure.
  ┣ 📜package.json
  ┗ 📜tsconfig.json
 ```
+
+Now, run the project.
+
+```shell
+npm dev
+```
+
+And go to <http://localhost:4321>. You'll be able to see the site.
+
+![](1.png)
