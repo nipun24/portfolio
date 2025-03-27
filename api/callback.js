@@ -6,9 +6,7 @@ export async function GET(req) {
   const REDIRECT_URI = process.env.REDIRECT_URI;
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
-  console.log(url, params);
   const code = params.get("code");
-  console.log(code);
   if (!code) {
     return new Response(
       `<script>window.opener.postMessage({ error: "Missing code" }, "*"); window.close();</script>`,
