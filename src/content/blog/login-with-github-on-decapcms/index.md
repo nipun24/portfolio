@@ -201,3 +201,183 @@ Enter the following values:
 Click **Register.** On the next page copy the **Client ID** and **Client secret.** We'll need it later.
 
 ![](10.png)
+
+### Adding environment variables in vercel
+
+In your vercel project go to **Settings>Environment variables.**
+
+![](11.png)
+
+Enter the following values:
+
+1. **GITHUB_CLIENT_ID:** copied from github.
+2. **GITHUB_CLIENT_SECRET:** copied from github.
+3. **REDIRECT_URI:** The url you used in github authorization callback url.
+
+Click **Save.** 
+
+### Adding API routes in application
+
+We'll use vercel functions to create an API to forward these requests to Github. 
+
+Create a directory named `api` in the root blog `directory`. Create two files `auth.js` and `callback.js`.
+
+**auth.js**
+
+```javascript
+export function GET(request, res) {
+  const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
+  const REDIRECT_URI = process.env.REDIRECT_URI;
+  const authURL = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=repo,user`;
+  return Response.redirect(authURL, 307);
+}
+```
+
+**callback.js**
+
+```javascript
+import axios from "axios";
+
+export async function GET(req) {
+  const CLIENT_ID = process.env.GITHUB_CLIENT_ID;
+  const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
+  const REDIRECT_URI = process.env.REDIRECT_URI;
+  const url = new URL(req.url);
+  const params = new URLSearchParams(url.search);
+  console.log(url, params);
+  const code = params.get("code");
+  console.log(code);
+  if (!code) {
+    return new Response(
+      `<script>window.opener.postMessage({ error: "Missing code" }, "*"); window.close();</script>`,
+    );
+  }
+
+  try {
+    const tokenResponse = await axios.post(
+      "https://github.com/login/oauth/access_token",
+      {
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        code,
+        redirect_uri: REDIRECT_URI,
+      },
+      { headers: { Accept: "application/json" } },
+    );
+
+    const accessToken = tokenResponse.data.access_token;
+    const content = JSON.stringify({ token: accessToken, provider: "github" });
+    const message = JSON.stringify(`authorization:github:success:${content}`);
+
+    return new Response(
+      `
+      <html><body><script>
+    (function() {
+      function recieveMessage(e) {
+        console.log("recieveMessage %o", e)
+        // send message to main window with da app
+        window.opener.postMessage(
+          ${message},
+          e.origin
+        )
+      }
+      window.addEventListener("message", recieveMessage, false)
+      // Start handshare with parent
+      console.log("Sending message: %o", "github")
+      window.opener.postMessage("authorizing:github", "*")
+      })()
+    </script></body></html>
+    `,
+      { headers: { "Content-Type": "text/html" } },
+    );
+  } catch (error) {
+    const content = JSON.stringify(error);
+    const message = JSON.stringify(`authorization:github:error:${content}`);
+    return new Response(`
+      <html><body><script>
+    (function() {
+      function recieveMessage(e) {
+        console.log("recieveMessage %o", e)
+        // send message to main window with da app
+        window.opener.postMessage(
+          ${message},
+          e.origin
+        )
+      }
+      window.addEventListener("message", recieveMessage, false)
+      // Start handshare with parent
+      console.log("Sending message: %o", "github")
+      window.opener.postMessage("authorizing:github", "*")
+      })()
+    </script></body></html>
+    `);
+  }
+}
+```
+
+The directory structure will look like this:
+
+```
+📦blog
+ ┣ 📂api
+ ┃ ┣ 📜auth.js
+ ┃ ┗ 📜callback.js
+```
+
+### Add production and development config
+
+Make a copy of the `public/admin/config.yml` as **config.dev.yml** and **config.prod.yml.**
+
+**config.dev.yml**
+
+```yaml
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publist date", name: "pubDate", widget: "datetime" }
+      - { label: "Hero image", name: "heroImage", widget: "string" }
+
+
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "src/assets/images" # The src attribute for uploaded media
+
+
+backend:
+  name: github
+  repo: <owner-name>/<repo-name>
+  branch: main
+
+```
+
+**config.prod.yml**
+
+```yaml
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publist date", name: "pubDate", widget: "datetime" }
+      - { label: "Hero image", name: "heroImage", widget: "string" }
+
+
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "src/assets/images" # The src attribute for uploaded media
+
+
+backend:
+  name: github
+  repo: <owner-name>/<repo-name>
+  branch: main
+  base_url: <astro public url>
+  auth_endpoint: api/auth
+
+```
