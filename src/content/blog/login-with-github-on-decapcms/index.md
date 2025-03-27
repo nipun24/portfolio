@@ -381,3 +381,22 @@ backend:
   auth_endpoint: api/auth
 
 ```
+
+Edit the scripts in **package.json** as follows:
+
+```json
+
+  "scripts": {
+    ...
+    "build": "cp public/admin/config.prod.yml public/admin/config.yml && astro build",
+    "develop": "cp public/admin/config.dev.yml public/admin/config.yml && vercel dev",
+    ...
+  },
+```
+
+Now install the following packages
+
+```shell
+npm i -g vercel
+npm i next@latest axios
+```
