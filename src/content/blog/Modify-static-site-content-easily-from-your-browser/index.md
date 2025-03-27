@@ -221,7 +221,7 @@ Click **Save.**
 
 We'll use vercel functions to create an API to forward these requests to Github. 
 
-Create a directory named `api` in the root blog `directory`. Create two files `auth.js` and `callback.js`.
+Create a directory named `api` in the root `blog` directory. Create two files `auth.js` and `callback.js`.
 
 **auth.js**
 
