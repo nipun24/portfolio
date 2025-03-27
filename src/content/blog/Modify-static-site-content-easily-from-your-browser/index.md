@@ -59,7 +59,7 @@ npm dev
 
 And go to <http://localhost:4321>. You'll be able to see the site.
 
-![](1.png)
+![astro site local](1.png)
 
 ### Adding a post
 
@@ -78,7 +78,7 @@ This is a test post
 
 Save the file and go to the blog section of the site. Open the **Test 1** post.
 
-![](2.png)
+![first post](2.png)
 
 ## Deploying the site
 
@@ -98,15 +98,15 @@ git push -u origin main
 
 Login to Vercel using Github for easy configuration. Then add a new project. Choose **Import Git Repository.**
 
-![](3.png)
+![vercel git](3.png)
 
 Finally, click **Deploy.**
 
-![](4.png)
+![vercel deploy](4.png)
 
 Wait for the site to get deployed. When the site is deployed click on the url to open the site.
 
-![](5.png)
+![deploy](5.png)
 
 Now if you add a post and push to your repository, vercel will automatically build and deploy the site. But this becomes clunky if you do not have access to you machine with the repository setup locally. So to make it easier to add and edit posts well add DecapCMS so that you can edit the blog from anywhere through an interface in your browser only.
 
@@ -169,17 +169,17 @@ backend:
 
 Now open <http://localhost:4321/admin/index.html> and click **Login with GitHub**.
 
-![](6.png)
+![decap login](6.png)
 
 If everything worked you will be able to see all your posts.
 
-![](7.png)
+![edit blog](7.png)
 
 ### Editing a post
 
 Open the post we just created and edit it. When you are done click on **Publish.** DecapCMS will push a commit with the changes to your Github repository and vercel will start the build. Wait for the build to finish and see the changes.
 
-![](8.png)
+![blog test](8.png)
 
 You'll not be able to edit the posts just yet from the public url on vercel. Commit and push all your changes to Github. We'll need to configure the OAuth for production use.
 
@@ -189,7 +189,7 @@ You'll not be able to edit the posts just yet from the public url on vercel. Com
 
 Login to Github and go to **Profile > Developer Settings > OAuth Apps > New OAuth app.**
 
-![](9.png)
+![gitlab oauth](9.png)
 
 Enter the following values:
 
@@ -201,13 +201,13 @@ Enter the following values:
 
 Click **Register.** On the next page copy the **Client ID** and **Client secret.** We'll need it later.
 
-![](10.png)
+![gitlab oauth app](10.png)
 
 ### Adding environment variables in vercel
 
 In your vercel project go to **Settings > Environment variables.**
 
-![](11.png)
+![vercel env variables](11.png)
 
 Enter the following values:
 
@@ -411,11 +411,11 @@ If everything worked you'll still be able to open <http://localhost:4321/admin/i
 
 Now we'll finally commit and push everything again. Wait for the deployment to finish on vercel. Then navigate to **<vercel url>/admin/index.html.** If all went good you'll be able to login using Github and see your posts.
 
-![](12.png)
+![final deploy](12.png)
 
 Try to edit a post and publish. The changes will reflected on the site after the build is completed in vercel.
 
-![](13.png)
+![final blog](13.png)
 
 This blog is a bit long. Thank you for making it till the end.🙏
 
