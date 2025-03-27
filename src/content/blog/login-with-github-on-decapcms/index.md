@@ -182,4 +182,8 @@ Open the post we just and edit it. When you are done click on **Publish.** Decap
 
 ![](8.png)
 
-You'll not be able to edit the posts just yet from the public url on vercel. Commit and push all your changes to Github.
+You'll not be able to edit the posts just yet from the public url on vercel. Commit and push all your changes to Github. We'll need to configure the OAuth for production use.
+
+## Creating OAuth for production
+
+### Create Github OAuth application
