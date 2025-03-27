@@ -1,7 +1,7 @@
 ---
 title: Login with Github on DecapCMS
 description: Learn how to handle OAuth with GitHub for DecapCMS using Vercel Functions
-draft: true
+draft: false
 tags:
   - Vercel
   - DecapCMS
@@ -9,6 +9,7 @@ tags:
   - Github
   - serverless
   - astro
+  - SSG
 date: 2025-03-27T12:27:00.000Z
 ---
 I created this tutorial as I could not find a simple and easy to understand method to add OAuth using Vercel functions to [DecapCMS](https://decapcms.org). But in this tutorial I'll also show you how to add DecamCMS to an existing Astro project to edit the site using an admin interface.
@@ -416,3 +417,7 @@ Now we'll finally commit and push everything again. Wait for the deployment to f
 ![](12.png)
 
 Try to edit a post and publish. The changes will reflected on the site after the build is completed in vercel.
+
+![](13.png)
+
+This blog is a bit long. Thank you for making it till the end.🙏
