@@ -1,7 +1,7 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { SITE } from "@consts";
+import avatar from "../assets/images/avatar.webp";
 ---
 
 <header transition:persist>
@@ -9,12 +9,11 @@ import { SITE } from "@consts";
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/">
         <img
-          src="/avatar.webp"
+          src={avatar.src}
           height="48"
           width="48"
           alt="Avatar"
           class="rounded-full"
-          loading="lazy"
         />
       </Link>
       <nav class="flex items-center gap-1 text-sm">
