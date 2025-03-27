@@ -20,7 +20,7 @@ All the SSGs have a single issue that you have to edit the markdown directly. Yo
 
 For this tutorial we'll need the following:
 
-1. Node.js installed (v22+).
+1. Node.js (v22+).
 2. A Github and Vercel account (its free).
 3. A project in which you want to add DecapCMS. We'll use the [Astro blog template](https://astro.build/themes/details/blog/) for this tutorial.
 4. A custom domain (not mandatory but good to have).
