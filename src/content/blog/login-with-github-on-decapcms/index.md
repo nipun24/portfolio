@@ -181,3 +181,5 @@ If everything worked you will be able to see all your posts.
 Open the post we just and edit it. When you are done click on **Publish.** DecapCMS will push a commit with the changes to your Github repository and vercel will start the build. Wait for the build to finish and see the changes.
 
 ![](8.png)
+
+You'll not be able to edit the posts just yet from the public url on vercel. Commit and push all your changes to Github.
