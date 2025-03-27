@@ -169,3 +169,11 @@ backend:
   branch: main
 
 ```
+
+Now open <http://localhost:4321/admin/index.html> and click **Login with GitHub**.
+
+![](6.png)
+
+If everything worked you will be able to see all your posts.
+
+![](7.png)
