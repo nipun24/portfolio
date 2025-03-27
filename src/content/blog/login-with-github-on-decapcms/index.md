@@ -141,7 +141,6 @@ Create two files inside `public/admin/`
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
-
 ```
 
 **config.yml**
@@ -165,7 +164,6 @@ backend:
   name: github
   repo: <owner-name>/<repo-name>
   branch: main
-
 ```
 
 Now open <http://localhost:4321/admin/index.html> and click **Login with GitHub**.
@@ -188,6 +186,13 @@ You'll not be able to edit the posts just yet from the public url on vercel. Com
 
 ### Create Github OAuth application
 
-Login to Github and go to **Profile > Developer Settings > OAuth Apps > New OAuth app**
+Login to Github and go to **Profile > Developer Settings > OAuth Apps > New OAuth app.**
 
 ![](9.png)
+
+Enter the following values:
+
+1. **Application name:** blog (can be anything)
+2. **Homepage URL:** vercel public url of the app
+3. **Application Description:** decap oauth (can be anything)
+4. **Authorization callback URL:** <vercel public url>/api/callback
