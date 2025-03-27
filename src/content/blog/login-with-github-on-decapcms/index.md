@@ -400,3 +400,19 @@ Now install the following packages
 npm i -g vercel
 npm i next@latest axios
 ```
+
+Check that everything is working locally. You'll asked to login to vercel. Follow the steps to link the existing project on vercel to your local project.
+
+```shell
+npm run develop
+```
+
+If everything worked you'll still be able to open <http://localhost:4321/admin/index.html>.
+
+## Finally deploying everything
+
+Now we'll finally commit and push everything again. Wait for the deployment to finish on vercel. Then navigate to **<vercel url>/admin/index.html.** If all went good you'll be able to login using Github and see your posts.
+
+![](12.png)
+
+Try to edit a post and publish. The changes will reflected on the site after the build is completed in vercel.
