@@ -1,6 +1,6 @@
 ---
-title: Login with Github on DecapCMS
-description: Learn how to handle OAuth with GitHub for DecapCMS using Vercel Functions
+title: Modify static site content easily from your browser
+description: Learn how to integrate CMS to a astro website to edit blogs from your browser
 draft: false
 tags:
   - Vercel
@@ -12,7 +12,9 @@ tags:
   - SSG
 date: 2025-03-27T12:27:00.000Z
 ---
-I created this tutorial as I could not find a simple and easy to understand method to add OAuth using Vercel functions to [DecapCMS](https://decapcms.org). But in this tutorial I'll also show you how to add DecamCMS to an existing Astro project to edit the site using an admin interface.
+I created this tutorial as I could not find a simple and easy to integrate a CMS with a static site generator (SSG).
+
+All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS](<>) to an existing Astro project to edit the site using an admin interface.
 
 ## Getting started
 
@@ -352,7 +354,6 @@ backend:
   name: github
   repo: <owner-name>/<repo-name>
   branch: main
-
 ```
 
 **config.prod.yml**
@@ -380,13 +381,11 @@ backend:
   branch: main
   base_url: <astro public url>
   auth_endpoint: api/auth
-
 ```
 
 Edit the scripts in **package.json** as follows:
 
 ```json
-
   "scripts": {
     ...
     "build": "cp public/admin/config.prod.yml public/admin/config.yml && astro build",
