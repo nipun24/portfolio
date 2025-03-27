@@ -14,12 +14,13 @@ const blog = defineCollection({
 
 const tools = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/tools" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    url: z.string().optional(),
-    imagePath: z.string().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      url: z.string().optional(),
+      imagePath: image(),
+    }),
 });
 
 export const collections = { blog, tools };

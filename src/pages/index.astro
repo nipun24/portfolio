@@ -6,6 +6,7 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import path from "path";
+import { Image } from "astro:assets";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -65,14 +66,13 @@ const tools = (await getCollection("tools")).slice(
               tools.map((tool) => (
                 <a
                   class="group relative block overflow-hidden rounded-lg"
-                  href={`${tool.filePath}tool.data.url`}
+                  href={tool.data.url}
                   target="_blank"
                 >
-                  <img
+                  <Image
                     class="size-40 w-full rounded-lg bg-gray-100 object-cover dark:bg-neutral-800"
-                    src={`${path.parse(tool.filePath).dir}/${tool.data.imagePath}`}
-                    alt="Project"
-                    loading="lazy"
+                    src={tool.data.imagePath}
+                    alt={tool.data.title}
                   />
                   <div class="absolute end-1 bottom-1 opacity-0 transition group-hover:opacity-100">
                     <div class="flex items-center gap-x-1 rounded-lg border border-gray-200 bg-white px-2 py-1 text-gray-800 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200">
