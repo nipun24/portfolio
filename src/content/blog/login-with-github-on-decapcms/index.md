@@ -187,3 +187,7 @@ You'll not be able to edit the posts just yet from the public url on vercel. Com
 ## Creating OAuth for production
 
 ### Create Github OAuth application
+
+Login to Github and go to **Profile > Developer Settings > OAuth Apps > New OAuth app**
+
+![](9.png)
