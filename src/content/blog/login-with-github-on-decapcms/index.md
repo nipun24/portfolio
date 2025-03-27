@@ -101,3 +101,11 @@ git push -u origin main
 Login to Vercel using Github for easy configuration. Then add a new project. Choose **Import Git Repository.**
 
 ![](3.png)
+
+Finally, click **Deploy.**
+
+![](4.png)
+
+Wait for the site to get deployed. When the site is deployed click on the url to open the site.
+
+![](5.png)
