@@ -81,3 +81,23 @@ This is a test post
 Save the file and go to the blog section of the site. Open the **Test 1** post.
 
 ![](2.png)
+
+## Deploying the site
+
+Your site is now ready to be deployed. First we'll push the code to Github and then deploy it using vercel.
+
+### Pushing to Github
+
+Create an [empty repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) in Github and push the code.
+
+```
+git remote add origin <your repository url>
+git branch -M main
+git push -u origin main
+```
+
+### Deploy on vercel
+
+Login to Vercel using Github for easy configuration. Then add a new project. Choose **Import Git Repository.**
+
+![](3.png)
