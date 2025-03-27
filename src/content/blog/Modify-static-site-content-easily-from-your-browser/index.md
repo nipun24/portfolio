@@ -108,7 +108,7 @@ Wait for the site to get deployed. When the site is deployed click on the url to
 
 ![](5.png)
 
-Now if you add a post and push to your repository vercel will automatically build and deploy the site. But this becomes clunky if you do not have access to you machine with the repository setup locally. So the make it easier to add and edit posts well add DecapCMS so that you can edit the blog from anywhere through an interface in your browser only.
+Now if you add a post and push to your repository, vercel will automatically build and deploy the site. But this becomes clunky if you do not have access to you machine with the repository setup locally. So to make it easier to add and edit posts well add DecapCMS so that you can edit the blog from anywhere through an interface in your browser only.
 
 ## Adding DecapCMS
 
