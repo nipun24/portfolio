@@ -9,7 +9,6 @@ tags:
   - terminal
 date: 2025-03-23T18:30:00.000Z
 ---
-
 In this tutorial we'll use the terminal to send email using SMTP. This method can be used to test the SMTP credentials by sending a test email.
 
 ## Before you start
@@ -61,6 +60,6 @@ Replace your mail server host and port provided to you by the service.
 
 Check your receiver mailbox.
 
-![](1.webp)
+![email](1.webp)
 
 **Congratulations!🎉 You've successfully sent email from the terminal.**
