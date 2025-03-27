@@ -205,7 +205,7 @@ Click **Register.** On the next page copy the **Client ID** and **Client secret.
 
 ### Adding environment variables in vercel
 
-In your vercel project go to **Settings>Environment variables.**
+In your vercel project go to **Settings > Environment variables.**
 
 ![](11.png)
 
