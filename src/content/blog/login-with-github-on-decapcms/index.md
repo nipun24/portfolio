@@ -73,10 +73,7 @@ heroImage: "/blog-placeholder-4.jpg"
 ---
 
 This is a test post
-
 ```
-
-
 
 Save the file and go to the blog section of the site. Open the **Test 1** post.
 
@@ -109,3 +106,64 @@ Finally, click **Deploy.**
 Wait for the site to get deployed. When the site is deployed click on the url to open the site.
 
 ![](5.png)
+
+Now if you add a post and push to your repository vercel will automatically build and deploy the site. But this becomes clunky if you do not have access to you machine with the repository setup locally. So the make it easier to add and edit posts well add DecapCMS so that you can edit the blog from anywhere through an interface in your browser only.
+
+## Adding DecapCMS
+
+Create two files inside `public/admin/` 
+
+```
+📦public
+ ┣ 📂admin
+ ┃ ┣ 📜config.yml
+ ┃ ┗ 📜index.html
+ 
+```
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
+</html>
+
+```
+
+**config.yml**
+
+```yaml
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: name
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publist date", name: "pubDate", widget: "datetime" }
+      - { label: "Hero image", name: "heroImage", widget: "string" }
+
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "src/assets/images" # The src attribute for uploaded media
+
+backend:
+  name: github
+  repo: <owner-name>/<repo-name>
+  branch: main
+
+```
