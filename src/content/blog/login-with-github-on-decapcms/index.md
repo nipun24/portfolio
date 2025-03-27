@@ -195,4 +195,9 @@ Enter the following values:
 1. **Application name:** blog (can be anything)
 2. **Homepage URL:** vercel public url of the app
 3. **Application Description:** decap oauth (can be anything)
-4. **Authorization callback URL:** <vercel public url>/api/callback
+4. **Authorization callback URL:** <vercel public url>/api/callback 
+5. **Enable Device Flow:** Keep unchecked
+
+Click **Register.** On the next page copy the **Client ID** and **Client secret.** We'll need it later.
+
+![](10.png)
