@@ -25,8 +25,6 @@ For this tutorial we'll need the following:
 3. A project in which you want to add DecapCMS. We'll use the [Astro blog template](https://astro.build/themes/details/blog/) for this tutorial.
 4. A custom domain (not mandatory but good to have).
 
-Let's get started 
-
 ## Setting up the Astro site
 
 ### Cloning the starter project
