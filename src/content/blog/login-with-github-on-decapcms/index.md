@@ -111,6 +111,8 @@ Now if you add a post and push to your repository vercel will automatically buil
 
 ## Adding DecapCMS
 
+### Configuring DecapCMS
+
 Create two files inside `public/admin/` 
 
 ```
@@ -150,10 +152,6 @@ collections:
     label: "Blog" # Used in the UI
     folder: "src/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    media_folder: ""
-    public_folder: ""
-    path: "{{slug}}/index"
-    identifier_field: name
     fields: # The fields for each document, usually in frontmatter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -177,3 +175,9 @@ Now open <http://localhost:4321/admin/index.html> and click **Login with GitHub*
 If everything worked you will be able to see all your posts.
 
 ![](7.png)
+
+### Editing a post
+
+Open the post we just and edit it. When you are done click on **Publish.** DecapCMS will push a commit with the changes to your Github repository and vercel will start the build. Wait for the build to finish and see the changes.
+
+![](8.png)
