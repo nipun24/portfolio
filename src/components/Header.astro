@@ -2,16 +2,15 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import avatar from "../assets/images/avatar.webp";
+import { Image } from "astro:assets";
 ---
 
 <header transition:persist>
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/">
-        <img
-          src={avatar.src}
-          loading="lazy"
-          decoding="async"
+        <Image
+          src={avatar}
           height="48"
           width="48"
           alt="Avatar"
