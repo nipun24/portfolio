@@ -1,5 +1,7 @@
 # This is my blog
 
+![lighthouse score](lighthouse.png)
+
 This blog has been created using Astro and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
 
 ## How to run this blog

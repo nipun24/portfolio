@@ -15,6 +15,20 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "tools" # Used in routes, e.g., /admin/collections/blog
+    label: "Tools" # Used in the UI
+    folder: "src/content/tools" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: name
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Image Path", name: "imagepath", widget: "string" }
+
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 public_folder: "src/assets/images" # The src attribute for uploaded media
 
