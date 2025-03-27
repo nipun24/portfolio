@@ -59,3 +59,25 @@ npm dev
 And go to <http://localhost:4321>. You'll be able to see the site.
 
 ![](1.png)
+
+### Adding a post
+
+Now we'll add a post to the site. Go to `src/content/blog` and create a file named `test.md`
+
+```markdown
+---
+title: "Test 1"
+description: "created using code editor"
+pubDate: "Mar 27 2025"
+heroImage: "/blog-placeholder-4.jpg"
+---
+
+This is a test post
+
+```
+
+
+
+Save the file and go to the blog section of the site. Open the **Test 1** post.
+
+![](2.png)
