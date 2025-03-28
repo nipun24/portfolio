@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import avatar from "../assets/images/avatar.webp";
+import logo from "../assets/images/logo1x.png";
 import { Image } from "astro:assets";
 ---
 
@@ -9,13 +10,24 @@ import { Image } from "astro:assets";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/">
-        <Image
-          src={avatar}
-          height="48"
-          width="48"
-          alt="Avatar"
-          class="rounded-full"
-        />
+        <div class="flip-container relative h-[48px] w-[48px]">
+          <div class="flip-inner relative h-full w-full">
+            <Image
+              src={logo}
+              height="48"
+              width="48"
+              alt="logo"
+              class="flip-front rounded-full"
+            />
+            <Image
+              src={avatar}
+              height="48"
+              width="48"
+              alt="Avatar"
+              class="flip-back rounded-full"
+            />
+          </div>
+        </div>
       </Link>
       <nav class="flex items-center gap-1 text-sm">
         <Link href="/about">about</Link>
