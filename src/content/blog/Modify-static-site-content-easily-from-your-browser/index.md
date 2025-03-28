@@ -12,10 +12,9 @@ tags:
   - SSG
 date: 2025-03-27T12:27:00.000Z
 ---
-
 I created this tutorial as I could not find a simple and easy to integrate a CMS with a static site generator (SSG).
 
-All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS]() to an existing Astro project to edit the site using an admin interface.
+All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS](<>) to an existing Astro project to edit the site using an admin interface.
 
 ## Getting started
 
@@ -40,7 +39,6 @@ After following the steps you'll have the following directory structure.
 
 ```
 📦blog
- ┣ 📂.astro
  ┣ 📂.vscode
  ┣ 📂public
  ┣ 📂src
@@ -122,7 +120,6 @@ Create two files inside `public/admin/`
  ┣ 📂admin
  ┃ ┣ 📜config.yml
  ┃ ┗ 📜index.html
-
 ```
 
 **index.html**
