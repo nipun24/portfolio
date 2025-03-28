@@ -12,9 +12,10 @@ tags:
   - SSG
 date: 2025-03-27T12:27:00.000Z
 ---
+
 I created this tutorial as I could not find a simple and easy to integrate a CMS with a static site generator (SSG).
 
-All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS](<>) to an existing Astro project to edit the site using an admin interface.
+All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS]() to an existing Astro project to edit the site using an admin interface.
 
 ## Getting started
 
@@ -114,14 +115,14 @@ Now if you add a post and push to your repository, vercel will automatically bui
 
 ### Configuring DecapCMS
 
-Create two files inside `public/admin/` 
+Create two files inside `public/admin/`
 
 ```
 📦public
  ┣ 📂admin
  ┃ ┣ 📜config.yml
  ┃ ┗ 📜index.html
- 
+
 ```
 
 **index.html**
@@ -139,7 +140,7 @@ Create two files inside `public/admin/`
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
 ```
@@ -196,7 +197,7 @@ Enter the following values:
 1. **Application name:** blog (can be anything)
 2. **Homepage URL:** vercel public url of the app
 3. **Application Description:** decap oauth (can be anything)
-4. **Authorization callback URL:** <vercel public url>/api/callback 
+4. **Authorization callback URL:** <vercel public url>/api/callback
 5. **Enable Device Flow:** Keep unchecked
 
 Click **Register.** On the next page copy the **Client ID** and **Client secret.** We'll need it later.
@@ -215,11 +216,11 @@ Enter the following values:
 2. **GITHUB_CLIENT_SECRET:** copied from github.
 3. **REDIRECT_URI:** The url you used in github authorization callback url.
 
-Click **Save.** 
+Click **Save.**
 
 ### Adding API routes in application
 
-We'll use vercel functions to create an API to forward these requests to Github. 
+We'll use vercel functions to create an API to forward these requests to Github.
 
 Create a directory named `api` in the root `blog` directory. Create two files `auth.js` and `callback.js`.
 
@@ -343,10 +344,8 @@ collections:
       - { label: "Publist date", name: "pubDate", widget: "datetime" }
       - { label: "Hero image", name: "heroImage", widget: "string" }
 
-
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 public_folder: "src/assets/images" # The src attribute for uploaded media
-
 
 backend:
   name: github
@@ -368,10 +367,8 @@ collections:
       - { label: "Publist date", name: "pubDate", widget: "datetime" }
       - { label: "Hero image", name: "heroImage", widget: "string" }
 
-
 media_folder: "src/assets/images" # Location where files will be stored in the repo
 public_folder: "src/assets/images" # The src attribute for uploaded media
-
 
 backend:
   name: github
