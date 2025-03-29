@@ -1,8 +1,6 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import avatar from "../assets/images/avatar.webp";
-import { Image } from "astro:assets";
 ---
 
 <header transition:persist>
@@ -11,25 +9,13 @@ import { Image } from "astro:assets";
       <Link href="/">
         <div class="flip-container relative h-[48px] w-[48px]">
           <div class="flip-inner relative h-full w-full">
-            {
-              Astro.url.pathname === "/about" ? (
-                <Image
-                  src={avatar}
-                  height="48"
-                  width="48"
-                  alt="Avatar"
-                  class="rounded-full"
-                />
-              ) : (
-                <img
-                  src="/logo.svg"
-                  height="48"
-                  width="48"
-                  alt="logo"
-                  class="rounded-full"
-                />
-              )
-            }
+            <img
+              src="/logo.svg"
+              height="48"
+              width="48"
+              alt="logo"
+              class="rounded-full"
+            />
           </div>
         </div>
       </Link>
