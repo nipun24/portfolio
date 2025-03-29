@@ -20,6 +20,7 @@ async function fetchPhotos(page: number) {
       "Error fetching photos:",
       error.response?.status,
       error.message,
+      error.headers,
     );
 
     return { data: [], headers: {} }; // Return a safe fallback
