@@ -11,20 +11,25 @@ import { Image } from "astro:assets";
       <Link href="/">
         <div class="flip-container relative h-[48px] w-[48px]">
           <div class="flip-inner relative h-full w-full">
-            <img
-              src="/logo.svg"
-              height="48"
-              width="48"
-              alt="logo"
-              class="flip-front rounded-full"
-            />
-            <Image
-              src={avatar}
-              height="48"
-              width="48"
-              alt="Avatar"
-              class="flip-back rounded-full"
-            />
+            {
+              Astro.url.pathname === "/about" ? (
+                <Image
+                  src={avatar}
+                  height="48"
+                  width="48"
+                  alt="Avatar"
+                  class="rounded-full"
+                />
+              ) : (
+                <img
+                  src="/logo.svg"
+                  height="48"
+                  width="48"
+                  alt="logo"
+                  class="rounded-full"
+                />
+              )
+            }
           </div>
         </div>
       </Link>
