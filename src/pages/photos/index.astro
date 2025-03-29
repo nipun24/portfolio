@@ -3,7 +3,9 @@ import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import { PHOTOS } from "@consts";
+// import images from "./photos.json";
 import axios from "axios";
+import { string } from "astro:schema";
 
 const get_url = (page: number) =>
   `https://api.unsplash.com/users/focusbreathing/photos?client_id=${process.env.UNSPLASH_CLIENT_ID}&page=${page}`;
@@ -29,11 +31,16 @@ async function fetchPhotos(page: number) {
 
 const { data, headers } = await fetchPhotos(1);
 
-let images = [];
-// for (let i = 2; i < Number(headers["x-total"]) + 1; i++) {
-// for (let i = 2; i < 3; i++) {
-//   images = data.concat((await axios.get(get_url(i))).data);
-// }
+let images = data;
+const pages = Math.ceil(
+  Number(headers["x-total"]) / Number(headers["x-per-page"]),
+);
+
+for (let i = 2; i < pages; i++) {
+  // for (let i = 2; i < 3; i++) {
+
+  images = images.concat((await fetchPhotos(i)).data);
+}
 
 if (images.length === 0) {
   images = data;
