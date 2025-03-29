@@ -1,10 +1,12 @@
-# This is my blog
+# This is my portfolio and blogging site
+
+This site has been created using Astro and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
+
+🚀 The site scores 100/100 on [lighthouse](https://pagespeed.web.dev/analysis/https-nipunh-com/5znpceml4r?utm_source=search_console&form_factor=desktop&hl=en).
 
 ![lighthouse score](lighthouse.png)
 
-This blog has been created using Astro and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
-
-## How to run this blog
+## How to run this site
 
 1. Clone this repo
 2. Install dependencies
@@ -18,14 +20,9 @@ This blog has been created using Astro and DecapCMS. The oauth for decapCMS is w
 4. Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
 5. Open [http://localhost:4321/admin/index.html](http://localhost:4321/admin/index.html) to see the admin panel.
 
-## Create gitlab oauth
+## How to deploy this site
 
-1. Create a new gitlab oauth app
-1. Add the redirect url as `https://domain/admin/api/callback`
-1. Copy the client id and secret and add them to the `.env` file
+Follow my these two sections of my blog for deploying this site to production.
 
-## Add blogs using admin interface
-
-1. Create vercel account
-2. Create a new project
-3. Run `pnpm develop` to start the dev server and admin server
+1. [Deploying to vercel](https://nipunh.com/blog/modify-static-site-content-easily-from-your-browser#deploying-the-site)
+2. [Creating OAuth](https://nipunh.com/blog/modify-static-site-content-easily-from-your-browser#creating-oauth-for-production)
