@@ -18,7 +18,7 @@ async function fetchPhotos(page: number) {
   } catch (error) {
     console.error(
       "Error fetching photos:",
-      error.response?.status,
+      error.response,
       error.message,
       error.headers,
     );
