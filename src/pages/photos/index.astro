@@ -50,17 +50,17 @@ if (images.length === 0) {
     <aside data-pagefind-ignore>
       <div class="space-y-10">
         <div class="space-y-4">
-          <div class="flex flex-wrap justify-center gap-2">
+          <div class="grid grid-cols-3 gap-1">
             {
               images.map((photo) => (
                 <a
-                  class="group animate relative block overflow-hidden hover:z-10 hover:scale-125 hover:shadow-lg"
+                  class="group animate block overflow-hidden hover:z-10 hover:scale-125 hover:shadow-lg"
                   href={photo.links.html}
                   target="_blank"
                 >
                   <Image
-                    class="h-full object-cover"
-                    src={photo.urls.small}
+                    class="h-64 w-full object-cover"
+                    src={photo.urls.regular}
                     alt={photo.id}
                     width={photo.width * 0.05}
                     height={photo.height * 0.05}
