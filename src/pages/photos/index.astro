@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import { PHOTOS } from "@consts";
+import axios from "axios";
+
+const get_url = (page: number) =>
+  `https://api.unsplash.com/users/focusbreathing/photos?client_id=${process.env.UNSPLASH_CLIENT_ID}&page=${page}`;
+
+let { data, headers } = await axios.get(get_url(1));
+let images = [];
+// for (let i = 2; i < Number(headers["x-total"]) + 1; i++) {
+for (let i = 2; i < 3; i++) {
+  images = data.concat((await axios.get(get_url(i))).data);
+}
+
+if (images.length === 0) {
+  images = data;
+}
+---
+
+<Layout title={PHOTOS.TITLE} description={PHOTOS.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="space-y-10">
+        <div class="space-y-4">
+          <div class="flex flex-wrap justify-center gap-2">
+            {
+              images.map((photo) => (
+                <a
+                  class="animate relative block overflow-hidden hover:z-10 hover:scale-125 hover:shadow-lg"
+                  href={photo.links.html}
+                  target="_blank"
+                >
+                  <Image
+                    class="h-full object-cover"
+                    src={photo.urls.small}
+                    alt={photo.id}
+                    width={photo.width * 0.05}
+                    height={photo.height * 0.05}
+                  />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </aside>
+  </Container>
+</Layout>
