@@ -3,9 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import { PHOTOS } from "@consts";
-// import images from "./photos.json";
 import axios from "axios";
-import { string } from "astro:schema";
 
 const get_url = (page: number) =>
   `https://api.unsplash.com/users/focusbreathing/photos?client_id=${process.env.UNSPLASH_CLIENT_ID}&page=${page}`;
@@ -56,7 +54,7 @@ if (images.length === 0) {
             {
               images.map((photo) => (
                 <a
-                  class="animate relative block overflow-hidden hover:z-10 hover:scale-125 hover:shadow-lg"
+                  class="group animate relative block overflow-hidden hover:z-10 hover:scale-125 hover:shadow-lg"
                   href={photo.links.html}
                   target="_blank"
                 >
