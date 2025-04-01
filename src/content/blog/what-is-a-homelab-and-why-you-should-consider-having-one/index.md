@@ -119,7 +119,11 @@ Now we are running all these services on our homelab in our local network and al
 
 ### Productivity
 
-#### Nextcloud
+#### [Nextcloud](https://nextcloud.com)
+
+Nextcloud is a very well built google workspace alternative. It has all the features of google workspaces like drive, meet, calendar, mail inbox any much more. You can save a lot of money by self hosting nextcloud instead of paying for google drive.
+
+![nextcloud](nextcloud.png)
 
 #### Immich
 
