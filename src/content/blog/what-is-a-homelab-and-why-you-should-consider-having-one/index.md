@@ -139,7 +139,9 @@ We all have used github, but you need to remove all your secrets from the commit
 
 #### Homarr
 
-#### Ollama with OpenWebUI
+#### [Ollama](https://ollama.com/library/gemma3) with [OpenWebUI](https://openwebui.com)
+
+LLMs like ChatGPT are very popular these days. It can be useful in many tasks but what about privacy. And due to high demand chatgpt is down sometimes too. You can [host your local LLM](/blog/how-to-host-a-local-llm-model) to use as your personal private chatbot.
 
 ![ollama](ollama.png)
 
