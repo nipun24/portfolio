@@ -139,7 +139,11 @@ We all have used github, but you need to remove all your secrets from the commit
 
 #### Homarr
 
-#### Ollama
+#### Ollama with OpenWebUI
+
+![ollama](ollama.png)
+
+
 
 ### Entertainment
 
