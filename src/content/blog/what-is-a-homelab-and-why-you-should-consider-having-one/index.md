@@ -157,7 +157,7 @@ Jellyfin is a media server. It organises all your downloaded media with the corr
 
 ![jellyfin](jellyfin.png)
 
-#### \*arr Stack
+#### [\*arr Stack](https://wiki.servarr.com)
 
 Paying for multiple OTT subscriptions. Save money by hosting the *arr stack. I host [sonarr](https://sonarr.tv), [radarr](https://radarr.video) and [prowlarr](https://prowlarr.com) in my homelab. You'll also need to host a download client with these like [qBittorrent](https://docs.linuxserver.io/images/docker-qbittorrent/). 
 
