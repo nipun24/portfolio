@@ -1,7 +1,7 @@
 ---
 title: What is a Homelab and why you should consider having one?
 description: This is a list of all the tools and services that I self host in my Homelab
-draft: true
+draft: false
 tags:
   - homelab
   - docker
@@ -71,7 +71,11 @@ Creating a strong password for every site and then remembering it is not humanly
 
 ![vaultwarden](vaultwarden.png)
 
-#### It-tools
+#### [It-tools](https://github.com/CorentinTh/it-tools)
+
+Want to convert markdown to HTML, hash a piece of text, convert hex to rgb, prettify JSON etc? This is collection of all these tools and many more in a single application. No need to go to different sites or download multiple tools. I have a self hosted version of this [here](https://tools.nipunh.com).
+
+![it-tools](it-tools.png)
 
 #### Speedtest
 
