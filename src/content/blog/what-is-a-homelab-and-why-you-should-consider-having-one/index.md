@@ -83,8 +83,6 @@ It is simply a internet speedtest on a schedule. It can also send notifications 
 
 #### OpenMedia vault
 
-#### Portainer
-
 #### [Code Server](https://github.com/coder/code-server)
 
 Write code from anywhere on VS Code from your browser. No need to install dependencies on your device. You can install this on a separate VM and get full access like you would in SSH.
@@ -92,6 +90,12 @@ Write code from anywhere on VS Code from your browser. No need to install depend
 ![code server](code-server.png)
 
 #### Home Assistant
+
+#### [Portainer](https://www.portainer.io)
+
+So now you have all these services running through docker but what if you need to restart a service or check for logs? You have to go to the homelab server and run docker commands to do so. Not anymore, use portainer for a GUI to quickly manage all the docker containers you are running.
+
+![portainer](portainer.png)
 
 ### Productivity
 
