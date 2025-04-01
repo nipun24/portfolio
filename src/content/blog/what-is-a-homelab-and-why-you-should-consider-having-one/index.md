@@ -77,8 +77,6 @@ It is simply a internet speedtest on a schedule. It can also send notifications 
 
 ![speedtest](speedtest.png)
 
-#### Uptime Kuma
-
 #### OpenMedia vault
 
 #### [Code Server](https://github.com/coder/code-server)
@@ -88,6 +86,14 @@ Write code from anywhere on VS Code from your browser. No need to install depend
 ![code server](code-server.png)
 
 #### Home Assistant
+
+#### [Uptime Kuma](https://github.com/louislam/uptime-kuma)
+
+Homelab services do not provide high uptime as the cloud counterparts, its not a huge problem as it caters only to you and a few other and not thousands or millions of people. But what is important is that you should be able to know when a service is down. This is what Uptime Kuma does, it regularly pings your services and notifies you if any of them goes down.
+
+![uptime kuma](uptime-kuma.png)
+
+As this is also hosted in my homelab and prone to downtime, in addition I also use UptimeRobot. These are both very similar but uptimerobot is a service on cloud so it gives better uptime. You can see my current uptime [here](https://stats.uptimerobot.com/UKE6B7GVT8).
 
 #### [Portainer](https://www.portainer.io)
 
@@ -99,7 +105,7 @@ So now you have all these services running through docker but what if you need t
 
 Now we are running all these services on our homelab in our local network and all works fine when we are at home. But what happens if you are not. You can either port forward your services and make them public (security nightmare!! and not even possible for some ISPs) or you can use a VPN (low security risks but still not a feasible way for all ISPs). Twingate can be used no matter what is your use case. It is a VPN which can be setup with zero configuration.[](https://github.com/dani-garcia/vaultwarden)
 
-![](twingate.png)
+![twingate](twingate.png)
 
 [](https://github.com/dani-garcia/vaultwarden)[](https://github.com/dani-garcia/vaultwarden)
 
