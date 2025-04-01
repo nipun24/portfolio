@@ -125,7 +125,11 @@ Nextcloud is a very well built google workspace alternative. It has all the feat
 
 ![nextcloud](nextcloud.png)
 
-#### Immich
+#### [Immich](https://immich.app)
+
+Most of us are either paying for icloud or google photos to backup photos. Not anymore, self host immich to fully replace any cloud photos backup. Unlike other alternative it has a very nice and easy to use UI too. 
+
+![immich](immich.png)
 
 #### Gitea
 
