@@ -25,7 +25,7 @@ For my homelab server I use an Asrock Deskmeet x600, it is a mini ITX barebone u
 
 ![homelab pc](asrock-deskmeet.jpg)
 
-## Storage
+### Storage
 
 Storage is an important part of any homelab. For me, I am using it as a media server, photos and drive. So I have a lot of storage for this data as well as for backups.
 
@@ -39,13 +39,9 @@ Storage is an important part of any homelab. For me, I am using it as a media se
 
 **NAS:** It's a [Synology NAS](https://amzn.to/3E2Rv4k) with a 1TB drive from another old computer. This stores the backup of all my VMs.
 
-## Architecture
+### Architecture
 
 This is a high level architecture of my homelab.
-
-
-
-
 
 ## Services Running
 
