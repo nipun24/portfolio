@@ -15,13 +15,13 @@ Homelab is the name given to the server(s) that reside locally in your home that
 
 For my homelab server I use an Asrock Deskmeet x600, it is a mini ITX barebone unit. It is a great fit for a homelab due to its compact size. The specs are:
 
-1. **CPU:** Ryzen 7 5700G
-2. **RAM:** 64GB
-3. **Storage:** 
+* **CPU:** Ryzen 7 5700G
+* **RAM:** 64GB
+* **Storage:** 
 
-   * Internal - 500GB + 4TB
-   * External - 4TB + 1TB
-   * Network Attached Storage - 1TB
+  * Internal - 500GB + 4TB
+  * External - 4TB + 1TB
+  * Network Attached Storage - 1TB
 
 ![homelab pc](asrock-deskmeet.jpg)
 
