@@ -5,7 +5,7 @@ draft: false
 tags:
   - homelab
   - docker
-date: 2025-04-01T13:38:00.000Z
+date: 2025-04-01T19:52:00.000Z
 ---
 Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer. 
 
@@ -137,15 +137,17 @@ We all have used github, but you need to remove all your secrets from the commit
 
 ![gitea](gitea.png)
 
-#### Homarr
+#### [Homarr](https://homarr.dev)
+
+Keeping track of all these services becomes a hassle when you have a quite a few like me. Homarr provides a pretty dashboard where you can add all your services and look at them at a quick glance. It also provices API integration with these services to show widgets.
+
+![homarr](homarr.png)
 
 #### [Ollama](https://ollama.com/library/gemma3) with [OpenWebUI](https://openwebui.com)
 
 LLMs like ChatGPT are very popular these days. It can be useful in many tasks but what about privacy. And due to high demand chatgpt is down sometimes too. You can [host your local LLM](/blog/how-to-host-a-local-llm-model) to use as your personal private chatbot.
 
 ![ollama](ollama.png)
-
-
 
 ### Entertainment
 
