@@ -59,8 +59,6 @@ When starting out you can access your homelab resources with the ip and port com
 
 We use adblock on your browsers but that's it, there is not option to block ads from other resources like on a smart TV or OS level telemetry. This is where a DNS based adblock like Adguard comes into play. It serves two purposes. Firstly, It blocks DNS queries to the Ad services essentially blocking the ad providing a network wide adblock. And second, it provides internal DNS records to my local resources. You just have to change the DHCP settings on your router to use adguard as the DNS server.
 
-#### [Twingate](https://www.twingate.com)
-
 #### [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 
 Creating a strong password for every site and then remembering it is not humanly possible. That is where password managers come in, but they are not free or very limited in their free tier. Vaultwarden is an alternative implementation of the Bitwarden Client API, written in Rust and compatible with the official bitwarden clients.[](https://bitwarden.com/download/)
@@ -96,6 +94,14 @@ Write code from anywhere on VS Code from your browser. No need to install depend
 So now you have all these services running through docker but what if you need to restart a service or check for logs? You have to go to the homelab server and run docker commands to do so. Not anymore, use portainer for a GUI to quickly manage all the docker containers you are running.
 
 ![portainer](portainer.png)
+
+#### [Twingate](https://www.twingate.com)
+
+Now we are running all these services on our homelab in our local network and all works fine when we are at home. But what happens if you are not. You can either port forward your services and make them public (security nightmare!! and not even possible for some ISPs) or you can use a VPN (low security risks but still not a feasible way for all ISPs). Twingate can be used no matter what is your use case. It is a VPN which can be setup with zero configuration.[](https://github.com/dani-garcia/vaultwarden)
+
+![](twingate.png)
+
+[](https://github.com/dani-garcia/vaultwarden)[](https://github.com/dani-garcia/vaultwarden)
 
 ### Productivity
 
