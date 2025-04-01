@@ -53,11 +53,19 @@ All of the services that I am running are through [Docker](https://www.docker.co
 
 ### Utilities
 
-#### Nginx Proxy Manager
+#### [Nginx Proxy Manager](https://nginxproxymanager.com)
 
-#### Adguard
+When starting out you can access your homelab resources with the ip and port combination but it gets very difficult to remember all the ips and ports to your service. Moreover, some services require you to run over SSL. Nginx Proxy Manager provides an easy to use GUI for nginx to be used as reverse proxy and handles SSL as well.
+
+![nginx proxy manager](nginx-proxy-manager.png)
+
+#### [Adguard](https://adguard.com/en/welcome.html)
+
+This serves two purposes. Firstly, it provides network wide adblock through
 
 #### Twingate
+
+#### Vaultwarden
 
 #### It-tools
 
