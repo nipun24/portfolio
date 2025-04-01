@@ -151,7 +151,9 @@ LLMs like ChatGPT are very popular these days. It can be useful in many tasks bu
 
 ### Entertainment
 
-#### Jellyfin
+#### [Jellyfin](https://jellyfin.org)
+
+Jellyfin is a media server. It organises all your downloaded media with the correct metadata and provides a web UI for playback.
 
 ![jellyfin](jellyfin.png)
 
