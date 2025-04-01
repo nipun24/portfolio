@@ -77,7 +77,11 @@ It is simply a internet speedtest on a schedule. It can also send notifications 
 
 ![speedtest](speedtest.png)
 
-#### OpenMedia vault
+#### [OpenMedia vault](https://www.openmediavault.org)
+
+Managing storage and backups in a homelab is a very crucial part. I have Open Media Vault (OMV) running in a VM that is used to centrally manage all the storage. OMV exposes network shares which can be mounted by other VMs and systems on my network. As all storage is now centralised I can easy backup this to the external hard drive using a software called [borg backup](https://www.borgbackup.org). OMV also exposes the 1TB external hard drive as a samba share to be used time machine backup for my mac.
+
+![open media vault](omv.png)
 
 #### [Code Server](https://github.com/coder/code-server)
 
