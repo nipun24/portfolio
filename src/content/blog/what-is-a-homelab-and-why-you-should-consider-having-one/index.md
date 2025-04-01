@@ -89,7 +89,11 @@ Write code from anywhere on VS Code from your browser. No need to install depend
 
 ![code server](code-server.png)
 
-#### Home Assistant
+#### [Home Assistant](https://www.home-assistant.io)
+
+[](https://github.com/louislam/uptime-kuma)Are you using smart devices in your house but are having to manage them though different apps. Home Assistant is an opensource home automation tool. It is very powerful can be integrated with a variety of a smart devices to create automations around it. I mainly use it to turn on/off lights on a schedule and monitor the cameras outside my house. But it can do far more than this.
+
+![](home-asistant.png)
 
 #### [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
