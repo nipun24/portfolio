@@ -4,6 +4,7 @@ description: This is a list of all the tools and services that I self host in my
 draft: true
 tags:
   - homelab
+  - docker
 date: 2025-04-01T13:38:00.000Z
 ---
 Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer. 
@@ -40,8 +41,52 @@ Storage is an important part of any homelab. For me, I am using it as a media se
 
 ## Architecture
 
-My homelab consists of three physical devices:
+This is a high level architecture of my homelab.
 
-1. Homelab server
-2. Synology NAS
-3. Router + Wifi Access point
+
+
+
+
+## Services Running
+
+All of the services that I am running are through [Docker](https://www.docker.com) on Debian VMs. This enables easy onboarding and testing of these services and does not leave residue after uninstallation.
+
+### Utilities
+
+#### Nginx Proxy Manager
+
+#### Adguard
+
+#### Twingate
+
+#### It-tools
+
+#### Speedtest
+
+#### Uptime Kuma
+
+#### OpenMedia vault
+
+#### Portainer
+
+#### Code Server
+
+#### Home Assistant
+
+### Productivity
+
+#### Nextcloud
+
+#### Immich
+
+#### Gitea
+
+#### Homarr
+
+#### Ollama
+
+### Entertainment
+
+#### Jellyfin
+
+#### \*arr Stack
