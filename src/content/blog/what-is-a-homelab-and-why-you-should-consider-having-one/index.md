@@ -93,7 +93,7 @@ Homelab services do not provide high uptime as the cloud counterparts, its not a
 
 ![uptime kuma](uptime-kuma.png)
 
-As this is also hosted in my homelab and prone to downtime, in addition I also use UptimeRobot. These are both very similar but uptimerobot is a service on cloud so it gives better uptime. You can see my current uptime [here](https://stats.uptimerobot.com/UKE6B7GVT8).
+As this is also hosted in my homelab and prone to downtime, so in addition I also use UptimeRobot. These are both very similar but uptimerobot is a service on cloud so it gives better uptime. You can see my current uptime [here](https://stats.uptimerobot.com/UKE6B7GVT8).
 
 #### [Portainer](https://www.portainer.io)
 
