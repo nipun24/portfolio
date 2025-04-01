@@ -133,6 +133,8 @@ Most of us are either paying for icloud or google photos to backup photos. Not a
 
 #### Gitea
 
+![gitea](gitea.png)
+
 #### Homarr
 
 #### Ollama
