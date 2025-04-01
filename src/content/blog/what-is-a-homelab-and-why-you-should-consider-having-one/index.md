@@ -133,6 +133,8 @@ Most of us are either paying for icloud or google photos to backup photos. Not a
 
 #### Gitea
 
+We all have used github, but you need to remove all your secrets from the commits before pushing. A local github alternative might be useful incase you just need to keep all your files as is with secrets also. I use gitea as my local git server, all the git features work as expected and it has a nice UI to view your code.
+
 ![gitea](gitea.png)
 
 #### Homarr
