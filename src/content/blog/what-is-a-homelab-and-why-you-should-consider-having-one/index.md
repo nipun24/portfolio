@@ -85,7 +85,11 @@ It is simply a internet speedtest on a schedule. It can also send notifications 
 
 #### Portainer
 
-#### Code Server
+#### [Code Server](https://github.com/coder/code-server)
+
+Write code from anywhere on VS Code from your browser. No need to install dependencies on your device. You can install this on a separate VM get get full access like you would in SSH.
+
+![code server](code-server.png)
 
 #### Home Assistant
 
