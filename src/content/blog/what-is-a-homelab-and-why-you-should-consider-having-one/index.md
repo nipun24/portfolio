@@ -1,6 +1,6 @@
 ---
 title: What is a Homelab and why you should consider having one?
-description: This is a list of all the tools and services that I self host in my Homelab
+description: Learn what is a homelab and the services that you can run on it
 draft: false
 tags:
   - homelab
