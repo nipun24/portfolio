@@ -153,4 +153,6 @@ LLMs like ChatGPT are very popular these days. It can be useful in many tasks bu
 
 #### Jellyfin
 
+![jellyfin](jellyfin.png)
+
 #### \*arr Stack
