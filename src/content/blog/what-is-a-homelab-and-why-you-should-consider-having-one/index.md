@@ -73,7 +73,11 @@ Want to convert markdown to HTML, hash a piece of text, convert hex to rgb, pret
 
 ![it-tools](it-tools.png)
 
-#### Speedtest
+#### [Speedtest tracker](https://github.com/alexjustesen/speedtest-tracker)
+
+It is simply a internet speedtest on a schedule. It can also send notifications when the speed is lower than a certain threshold.
+
+![speedtest](speedtest.png)
 
 #### Uptime Kuma
 
