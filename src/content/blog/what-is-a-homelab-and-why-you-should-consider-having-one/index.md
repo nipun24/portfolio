@@ -25,3 +25,11 @@ For my homelab I use the Asrock Deskmeet x600, it is a mini ITX barebone unit. I
    * Network - 1TB
 
 ![homelab pc](asrock-deskmeet.jpg)
+
+## My Homelab architecture
+
+My homelab consists of three physical devices:
+
+1. Homelab server
+2. Synology NAS
+3. Router + Wifi Access point
