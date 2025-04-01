@@ -7,7 +7,7 @@ tags:
   - docker
 date: 2025-04-01T19:52:00.000Z
 ---
-Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer. 
+ Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer. 
 
 ## The homelab architecture
 
@@ -158,3 +158,7 @@ Jellyfin is a media server. It organises all your downloaded media with the corr
 ![jellyfin](jellyfin.png)
 
 #### \*arr Stack
+
+Paying for multiple OTT subscriptions. Save money by hosting the *arr stack. I host [sonarr](https://sonarr.tv), [radarr](https://radarr.video) and [prowlarr](https://prowlarr.com) in my homelab. You'll also need to host a download client with these like [qBittorrent](https://docs.linuxserver.io/images/docker-qbittorrent/). 
+
+You'll still need to manually add the shows and movies which can be a hassle. To fully automate this you can use [listrr.pro](https://listrr.pro) to create lists of movies and shows using filters. You can use my custom lists as a starting point: [Movies](https://listrr.pro/Lists/ShowMovieList/6726592c8e1c7df1624485ad) and [Shows](https://listrr.pro/Lists/ShowShowList/67346e00ad3213fedc8bf15c).
