@@ -13,7 +13,7 @@ date: 2025-04-01T19:52:00.000Z
 
 ### The server
 
-For my homelab server I use an Asrock Deskmeet x600, it is a mini ITX barebone unit. It is a great fit for a homelab due to its compact size. The specs are:
+For my homelab server I use an [Asrock Deskmeet x600](https://www.asrock.com/nettop/AMD/DeskMeet%20X600%20Series/index.asp), it is a mini ITX barebone unit. It is a great fit for a homelab due to its compact size. The specs are:
 
 * **CPU:** Ryzen 7 5700G
 * **RAM:** 64GB
