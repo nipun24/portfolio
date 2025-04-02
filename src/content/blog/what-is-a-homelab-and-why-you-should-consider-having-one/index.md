@@ -55,6 +55,8 @@ When starting out you can access your homelab resources with the ip and port com
 
 We use adblock on your browsers but that's it, there is not option to block ads from other resources like on a smart TV or OS level telemetry. This is where a DNS based adblock like Adguard comes into play. It serves two purposes. Firstly, It blocks DNS queries to the Ad services essentially blocking the ad providing a network wide adblock. And second, it provides internal DNS records to my local resources. You just have to change the DHCP settings on your router to use adguard as the DNS server.
 
+![adguard](adguard.png)
+
 #### [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 
 Creating a strong password for every site and then remembering it is not humanly possible. That is where password managers come in, but they are not free or very limited in their free tier. Vaultwarden is an alternative implementation of the Bitwarden Client API, written in Rust and compatible with the official bitwarden clients.[](https://bitwarden.com/download/)
