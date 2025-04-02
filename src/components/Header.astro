@@ -7,8 +7,10 @@ import Link from "@components/Link.astro";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/">
-        <div class="flip-container relative h-[48px] w-[48px]">
-          <div class="flip-inner relative h-full w-full">
+        <div class="relative h-[48px] w-[48px]">
+          <div
+            class="relative h-full w-full transition duration-700 hover:rotate-360"
+          >
             <img
               src="/logo.svg"
               height="48"
