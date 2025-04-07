@@ -3,7 +3,6 @@ languageCode = "en"
 languageName = "English"
 weight = 1
 title = "Focus Breathing"
-description = "Portfolio | Blog"
 
 [params]
 displayName = "EN"
@@ -11,6 +10,7 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 logo = "logo.png"
+description = "Keeping it Simple"
 pronounciation = "/ˈfoʊ.kəs ˈbriː.ðɪŋ/"
 meaning = "A conceptual breathing style inspired by the elemental techniques in anime, symbolizing a mastery of controlled focus and precision. Unlike elemental breathing forms such as Flame Breathing or Water Breathing, Focus Breathing is not tied to a physical element but instead channels pure concentration and awareness."
 author = { name = "Nipun Haldar" }
