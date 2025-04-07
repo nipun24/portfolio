@@ -13,5 +13,11 @@ pageRef = "about"
 identifier = "woBKqfGKC5"
 weight = 9999
 
+[[main]]
+name = "Photos"
+pageRef = "photos"
+identifier = "yS11aKwCyc"
+weight = 9999
+
 [[footer]]
 none = "none"
