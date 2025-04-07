@@ -7,6 +7,10 @@ buildFuture = false
 enableEmoji = true
 baseURL = "https://nipunh.com"
 
+[params]
+  description = "Keeping it Simple"
+  images = ['og-image.png']
+
 [pagination]
 pagerSize = 100
 
