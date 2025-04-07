@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pagefind on Focus Breathing</title>
+    <link>http://localhost:1313/tags/pagefind/</link>
+    <description>Recent content in Pagefind on Focus Breathing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Nipun Haldar</copyright>
+    <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/pagefind/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Add search to any Astro site</title>
+      <link>http://localhost:1313/blog/add-search-to-any-astro-site/</link>
+      <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/add-search-to-any-astro-site/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

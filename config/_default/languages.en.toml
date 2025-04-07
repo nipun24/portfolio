@@ -1,0 +1,20 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Focus Breathing"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "logo.png"
+pronounciation = "/ˈfoʊ.kəs ˈbriː.ðɪŋ/"
+meaning = "A conceptual breathing style inspired by the elemental techniques in anime, symbolizing a mastery of controlled focus and precision. Unlike elemental breathing forms such as Flame Breathing or Water Breathing, Focus Breathing is not tied to a physical element but instead channels pure concentration and awareness."
+author = { name = "Nipun Haldar" }
+links = [ { email = "mailto:portfolio@nipunh.com" }, { github = "https://github.com/nipun24" }, { instagram = "http://instagram.com/focus.breathing" }, { linkedin = "http://linkedin.com/in/nipunhaldar/" }, { x-twitter = "http://twitter.com/focus_breathing" } ]
+
+[author]
+name = "Nipun Haldar"
+

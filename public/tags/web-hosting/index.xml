@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Hosting on Focus Breathing</title>
+    <link>http://localhost:1313/tags/web-hosting/</link>
+    <description>Recent content in Web Hosting on Focus Breathing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Nipun Haldar</copyright>
+    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/web-hosting/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Host websites from your home</title>
+      <link>http://localhost:1313/blog/host-websites-from-your-home/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/blog/host-websites-from-your-home/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

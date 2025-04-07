@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Modify static site content easily from your browser &middot; Focus Breathing</title>
+  <meta name="title" content="Modify static site content easily from your browser &middot; Focus Breathing" />
+  
+  <meta name="description" content="Learn how to integrate CMS to a astro website to edit blogs from your browser" />
+  <meta name="keywords" content="Vercel, DecapCMS, OAuth, Github, serverless, astro, SSG, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/modify-static-site-content-easily-from-your-browser/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.446a8b9c076e66da0e80c76714e26dd9ec36f07c75a6f91f2ed5b9140c8f48bf53e431c5e426df98e3e593b9b3c6266a60d611aa69cce9f4811297f4d5772c6d.css"
+    integrity="sha512-RGqLnAduZtoOgMdnFOJt2ew28Hx1pvkfLtW5FAyPSL9T5DHF5CbfmOPlk7mzxiZqYNYRqmnM6fSBEpf01XcsbQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.3ad74b33440334ca29f8801ec6dac1f314951cf580e503d49631816b48d1f28d03543275f92b651565b48045b90731f47595b1396214b8b6aa11c6990f867f7e.js"
+    integrity="sha512-OtdLM0QDNMop&#43;IAextrB8xSVHPWA5QPUljGBa0jR8o0DVDJ1&#43;StlFWW0gEW5BzH0dZWxOWIUuLaqEcaZD4Z/fg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.f592a181a15d2a5b042daa7f746c3721acf9063f8b6acd175d989129865a37d400ae0e85b640f9ad42cd98d1f8ad30931718cf8811abdcc5fcb264400d1a2b0c.js" integrity="sha512-9ZKhgaFdKlsELap/dGw3Iaz5Bj&#43;Las0XXZiRKYZaN9QArg6FtkD5rULNmNH4rTCTFxjPiBGr3MX8smRADRorDA=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/blog/modify-static-site-content-easily-from-your-browser/">
+  <meta property="og:site_name" content="Focus Breathing">
+  <meta property="og:title" content="Modify static site content easily from your browser">
+  <meta property="og:description" content="Learn how to integrate CMS to a astro website to edit blogs from your browser">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-03-27T12:27:00+00:00">
+    <meta property="article:modified_time" content="2025-03-27T12:27:00+00:00">
+    <meta property="article:tag" content="Vercel">
+    <meta property="article:tag" content="DecapCMS">
+    <meta property="article:tag" content="OAuth">
+    <meta property="article:tag" content="Github">
+    <meta property="article:tag" content="Serverless">
+    <meta property="article:tag" content="Astro">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Modify static site content easily from your browser">
+  <meta name="twitter:description" content="Learn how to integrate CMS to a astro website to edit blogs from your browser">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blogs",
+    "name": "Modify static site content easily from your browser",
+    "headline": "Modify static site content easily from your browser",
+    "description": "Learn how to integrate CMS to a astro website to edit blogs from your browser",
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/blog\/modify-static-site-content-easily-from-your-browser\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Nipun Haldar"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-27T12:27:00\u002b00:00",
+    "datePublished": "2025-03-27T12:27:00\u002b00:00",
+    
+    "dateModified": "2025-03-27T12:27:00\u002b00:00",
+    
+    "keywords": ["Vercel","DecapCMS","OAuth","Github","serverless","astro","SSG"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1548"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Nipun Haldar" />
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Focus Breathing</span>
+
+            
+            <img src="/logo.png" width="73" height="73"
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom py-4" alt="Focus Breathing" />
+            
+
+        </a>
+    </div>
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        About
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Blogs">
+        Blog
+    </p>
+</a>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/about/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            About
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/blog/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Blogs">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/bg.svg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >Focus Breathing</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/blog/"
+      >Blogs</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/blog/modify-static-site-content-easily-from-your-browser/"
+      >Modify static site content easily from your browser</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Modify static site content easily from your browser
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-03-27T12:27:00&#43;00:00">27 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1548 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+<script type="text/javascript" src="/js/zen-mode.min.eea5245cf9244ecbdf2c150d1c8833226c1541cadf6e98f63a7c9192b1a3676df2c3ec603b14f4cfaaa53971fd9d8955640c0f405bf3de2b43ee7a5fb29ae721.js" integrity="sha512-7qUkXPkkTsvfLBUNHIgzImwVQcrfbpj2OnyRkrGjZ23yw&#43;xgOxT0z6qlOXH9nYlVZAwPQFvz3itD7npfsprnIQ=="></script>
+
+<span class="mb-[2px]">
+    <span id="zen-mode-button"
+          class="text-lg hover:text-primary-500"
+          title="Enable zen mode"
+          data-title-i18n-disable="Enable zen mode"
+          data-title-i18n-enable="Disable zen mode">
+        <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+    </span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/vercel/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vercel
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/decapcms/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    DecapCMS
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/oauth/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OAuth
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/github/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Github
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/serverless/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Serverless
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/astro/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Astro
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/ssg/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    SSG
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Nipun Haldar
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#setting-up-the-astro-site">Setting up the Astro site</a>
+      <ul>
+        <li><a href="#cloning-the-starter-project">Cloning the starter project</a></li>
+        <li><a href="#adding-a-post">Adding a post</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploying-the-site">Deploying the site</a>
+      <ul>
+        <li><a href="#pushing-to-github">Pushing to Github</a></li>
+        <li><a href="#deploy-on-vercel">Deploy on vercel</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-decapcms">Adding DecapCMS</a>
+      <ul>
+        <li><a href="#configuring-decapcms">Configuring DecapCMS</a></li>
+        <li><a href="#editing-a-post">Editing a post</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-oauth-for-production">Creating OAuth for production</a>
+      <ul>
+        <li><a href="#create-github-oauth-application">Create Github OAuth application</a></li>
+        <li><a href="#adding-environment-variables-in-vercel">Adding environment variables in vercel</a></li>
+        <li><a href="#adding-api-routes-in-application">Adding API routes in application</a></li>
+        <li><a href="#add-production-and-development-config">Add production and development config</a></li>
+      </ul>
+    </li>
+    <li><a href="#finally-deploying-everything">Finally deploying everything</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#setting-up-the-astro-site">Setting up the Astro site</a>
+      <ul>
+        <li><a href="#cloning-the-starter-project">Cloning the starter project</a></li>
+        <li><a href="#adding-a-post">Adding a post</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploying-the-site">Deploying the site</a>
+      <ul>
+        <li><a href="#pushing-to-github">Pushing to Github</a></li>
+        <li><a href="#deploy-on-vercel">Deploy on vercel</a></li>
+      </ul>
+    </li>
+    <li><a href="#adding-decapcms">Adding DecapCMS</a>
+      <ul>
+        <li><a href="#configuring-decapcms">Configuring DecapCMS</a></li>
+        <li><a href="#editing-a-post">Editing a post</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-oauth-for-production">Creating OAuth for production</a>
+      <ul>
+        <li><a href="#create-github-oauth-application">Create Github OAuth application</a></li>
+        <li><a href="#adding-environment-variables-in-vercel">Adding environment variables in vercel</a></li>
+        <li><a href="#adding-api-routes-in-application">Adding API routes in application</a></li>
+        <li><a href="#add-production-and-development-config">Add production and development config</a></li>
+      </ul>
+    </li>
+    <li><a href="#finally-deploying-everything">Finally deploying everything</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          <p>I created this tutorial as I could not find a simple and easy to integrate a CMS with a static site generator (SSG).</p>
+<p>All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website<a href="https://decapcms.org" target="_blank"></a>. The tutorials available are not easy to understand and implement. But in this tutorial I&rsquo;ll also show you how to add <a href="">DecapCMS</a> to an existing Astro project to edit the site using an admin interface.</p>
+
+
+<h2 class="relative group">Getting started 
+    <div id="getting-started" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#getting-started" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>For this tutorial we&rsquo;ll need the following:</p>
+<ol>
+<li>Node.js (v22+).</li>
+<li>A Github and Vercel account (its free).</li>
+<li>A project in which you want to add DecapCMS. We&rsquo;ll use the <a href="https://astro.build/themes/details/blog/" target="_blank">Astro blog template</a> for this tutorial.</li>
+<li>A custom domain (not mandatory but good to have).</li>
+</ol>
+
+
+<h2 class="relative group">Setting up the Astro site 
+    <div id="setting-up-the-astro-site" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#setting-up-the-astro-site" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Cloning the starter project 
+    <div id="cloning-the-starter-project" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#cloning-the-starter-project" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Create a new project with the Astro blog template. You can keep the directory name as <code>blog</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm create astro@latest -- --template blog
+</span></span></code></pre></div><p>After following the steps you&rsquo;ll have the following directory structure.</p>
+<pre tabindex="0"><code>📦blog
+ ┣ 📂.vscode
+ ┣ 📂public
+ ┣ 📂src
+ ┣ 📜.gitignore
+ ┣ 📜README.md
+ ┣ 📜astro.config.mjs
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┗ 📜tsconfig.json
+</code></pre><p>Now, run the project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm dev
+</span></span></code></pre></div><p>And go to <a href="http://localhost:4321" target="_blank">http://localhost:4321</a>. You&rsquo;ll be able to see the site.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/1_hu_96b02cdbe674aaf6.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/1_hu_34be2445a4cf6bd3.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/1_hu_339a3ad92e683dc6.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/1_hu_69c94bf80fd504e6.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/1_hu_34be2445a4cf6bd3.png"
+        alt="astro site local"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">Adding a post 
+    <div id="adding-a-post" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#adding-a-post" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Now we&rsquo;ll add a post to the site. Go to <code>src/content/blog</code> and create a file named <code>test.md</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;Test 1&#34;
+</span></span><span class="line"><span class="cl">description: &#34;created using code editor&#34;
+</span></span><span class="line"><span class="cl">pubDate: &#34;Mar 27 2025&#34;
+</span></span><span class="line"><span class="cl">heroImage: &#34;/blog-placeholder-4.jpg&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This is a test post
+</span></span></code></pre></div><p>Save the file and go to the blog section of the site. Open the <strong>Test 1</strong> post.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/2_hu_e145eb4f3848f3ba.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/2_hu_1ef5f6a6e81608ef.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/2_hu_e2834173874410db.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/2_hu_f2ebb729c1c4f1b7.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/2_hu_1ef5f6a6e81608ef.png"
+        alt="first post"
+      />
+      
+    </figure>
+</p>
+
+
+<h2 class="relative group">Deploying the site 
+    <div id="deploying-the-site" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#deploying-the-site" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Your site is now ready to be deployed. First we&rsquo;ll push the code to Github and then deploy it using vercel.</p>
+
+
+<h3 class="relative group">Pushing to Github 
+    <div id="pushing-to-github" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#pushing-to-github" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Create an <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository" target="_blank">empty repository</a> in Github and push the code.</p>
+<pre tabindex="0"><code>git remote add origin &lt;your repository url&gt;
+git branch -M main
+git push -u origin main
+</code></pre>
+
+<h3 class="relative group">Deploy on vercel 
+    <div id="deploy-on-vercel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#deploy-on-vercel" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Login to Vercel using Github for easy configuration. Then add a new project. Choose <strong>Import Git Repository.</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/3_hu_ca0172f2a13735fd.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/3_hu_3f5d8bff55f8a55e.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/3_hu_a8b9395cd1795cb2.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/3_hu_4fc7df243704487.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/3_hu_3f5d8bff55f8a55e.png"
+        alt="vercel git"
+      />
+      
+    </figure>
+</p>
+<p>Finally, click <strong>Deploy.</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/4_hu_ec2bf0ab8cb346ea.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/4_hu_d9aafe52d236f1a3.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/4_hu_180ccfe8f7c7ff69.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/4_hu_303163a2f89606a8.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/4_hu_d9aafe52d236f1a3.png"
+        alt="vercel deploy"
+      />
+      
+    </figure>
+</p>
+<p>Wait for the site to get deployed. When the site is deployed click on the url to open the site.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/5_hu_82c69ca3295d378f.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/5_hu_c84805cd2fabbefc.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/5_hu_dfa73483f5fe765b.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/5_hu_be3ed86da5186112.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/5_hu_c84805cd2fabbefc.png"
+        alt="deploy"
+      />
+      
+    </figure>
+</p>
+<p>Now if you add a post and push to your repository, vercel will automatically build and deploy the site. But this becomes clunky if you do not have access to you machine with the repository setup locally. So to make it easier to add and edit posts well add DecapCMS so that you can edit the blog from anywhere through an interface in your browser only.</p>
+
+
+<h2 class="relative group">Adding DecapCMS 
+    <div id="adding-decapcms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#adding-decapcms" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Configuring DecapCMS 
+    <div id="configuring-decapcms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#configuring-decapcms" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Create two files inside <code>public/admin/</code></p>
+<pre tabindex="0"><code>📦public
+ ┣ 📂admin
+ ┃ ┣ 📜config.yml
+ ┃ ┗ 📜index.html
+</code></pre><p><strong>index.html</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;robots&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;noindex&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/admin/config.yml&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/yaml&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;cms-config-url&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Content Manager<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Include the script that builds the page and powers Decap CMS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>config.yml</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">collections</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;blog&#34;</span><span class="w"> </span><span class="c"># Used in routes, e.g., /admin/collections/blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Blog&#34;</span><span class="w"> </span><span class="c"># Used in the UI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/content/blog&#34;</span><span class="w"> </span><span class="c"># The path to the folder where the documents are stored</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># Allow users to create new documents in this collection</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="c"># The fields for each document, usually in frontmatter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Title&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;title&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Description&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;description&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Publist date&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pubDate&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;datetime&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hero image&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;heroImage&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">media_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># Location where files will be stored in the repo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">public_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># The src attribute for uploaded media</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">backend</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;owner-name&gt;/&lt;repo-name&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
+</span></span></span></code></pre></div><p>Now open <a href="http://localhost:4321/admin/index.html" target="_blank">http://localhost:4321/admin/index.html</a> and click <strong>Login with GitHub</strong>.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/6_hu_db1f6a7fb4a732e0.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/6_hu_efb4aef02fe5f317.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/6_hu_102edd5c7bea2180.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/6_hu_e554d1bcaec08358.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/6_hu_efb4aef02fe5f317.png"
+        alt="decap login"
+      />
+      
+    </figure>
+</p>
+<p>If everything worked you will be able to see all your posts.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/7_hu_4b21c29de9c1f554.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/7_hu_2e551c4fda1e0d4f.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/7_hu_b11381af18de827a.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/7_hu_662eb3f3d713b5ab.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/7_hu_2e551c4fda1e0d4f.png"
+        alt="edit blog"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">Editing a post 
+    <div id="editing-a-post" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#editing-a-post" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Open the post we just created and edit it. When you are done click on <strong>Publish.</strong> DecapCMS will push a commit with the changes to your Github repository and vercel will start the build. Wait for the build to finish and see the changes.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/8_hu_fe5a75817a8e1c98.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/8_hu_9af1c14119317d9e.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/8_hu_cb63f4a9e3408c55.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/8_hu_b1c5f4c8cf910dbc.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/8_hu_9af1c14119317d9e.png"
+        alt="blog test"
+      />
+      
+    </figure>
+</p>
+<p>You&rsquo;ll not be able to edit the posts just yet from the public url on vercel. Commit and push all your changes to Github. We&rsquo;ll need to configure the OAuth for production use.</p>
+
+
+<h2 class="relative group">Creating OAuth for production 
+    <div id="creating-oauth-for-production" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#creating-oauth-for-production" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Create Github OAuth application 
+    <div id="create-github-oauth-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#create-github-oauth-application" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Login to Github and go to <strong>Profile &gt; Developer Settings &gt; OAuth Apps &gt; New OAuth app.</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/9_hu_f5d1f0e6c079af0a.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/9_hu_aca1bb5da0986be2.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/9_hu_1118af3e88b7f212.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/9_hu_2a5fd8a393f668be.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/9_hu_aca1bb5da0986be2.png"
+        alt="gitlab oauth"
+      />
+      
+    </figure>
+</p>
+<p>Enter the following values:</p>
+<ol>
+<li><strong>Application name:</strong> blog (can be anything)</li>
+<li><strong>Homepage URL:</strong> vercel public url of the app</li>
+<li><strong>Application Description:</strong> decap oauth (can be anything)</li>
+<li><strong>Authorization callback URL:</strong> <vercel public url>/api/callback</li>
+<li><strong>Enable Device Flow:</strong> Keep unchecked</li>
+</ol>
+<p>Click <strong>Register.</strong> On the next page copy the <strong>Client ID</strong> and <strong>Client secret.</strong> We&rsquo;ll need it later.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/10_hu_7b5fc3a83e039011.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/10_hu_b30806eec9754f61.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/10_hu_acab4d8f171c2881.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/10_hu_4bf6967cc2cf2bef.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/10_hu_b30806eec9754f61.png"
+        alt="gitlab oauth app"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">Adding environment variables in vercel 
+    <div id="adding-environment-variables-in-vercel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#adding-environment-variables-in-vercel" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>In your vercel project go to <strong>Settings &gt; Environment variables.</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/11_hu_ee1f70de0b8b87d0.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/11_hu_f607f4c2aba49a23.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/11_hu_875d775173cf87c0.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/11_hu_d7e86893a7e7b042.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/11_hu_f607f4c2aba49a23.png"
+        alt="vercel env variables"
+      />
+      
+    </figure>
+</p>
+<p>Enter the following values:</p>
+<ol>
+<li><strong>GITHUB_CLIENT_ID:</strong> copied from github.</li>
+<li><strong>GITHUB_CLIENT_SECRET:</strong> copied from github.</li>
+<li><strong>REDIRECT_URI:</strong> The url you used in github authorization callback url.</li>
+</ol>
+<p>Click <strong>Save.</strong></p>
+
+
+<h3 class="relative group">Adding API routes in application 
+    <div id="adding-api-routes-in-application" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#adding-api-routes-in-application" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>We&rsquo;ll use vercel functions to create an API to forward these requests to Github.</p>
+<p>Create a directory named <code>api</code> in the root <code>blog</code> directory. Create two files <code>auth.js</code> and <code>callback.js</code>.</p>
+<p><strong>auth.js</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kd">function</span> <span class="nx">GET</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">CLIENT_ID</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GITHUB_CLIENT_ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">REDIRECT_URI</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REDIRECT_URI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">authURL</span> <span class="o">=</span> <span class="sb">`https://github.com/login/oauth/authorize?client_id=</span><span class="si">${</span><span class="nx">CLIENT_ID</span><span class="si">}</span><span class="sb">&amp;redirect_uri=</span><span class="si">${</span><span class="nx">REDIRECT_URI</span><span class="si">}</span><span class="sb">&amp;scope=repo,user`</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">Response</span><span class="p">.</span><span class="nx">redirect</span><span class="p">(</span><span class="nx">authURL</span><span class="p">,</span> <span class="mi">307</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><strong>callback.js</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&#34;axios&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">GET</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">CLIENT_ID</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GITHUB_CLIENT_ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">CLIENT_SECRET</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">GITHUB_CLIENT_SECRET</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">REDIRECT_URI</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REDIRECT_URI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">params</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">search</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">params</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">code</span> <span class="o">=</span> <span class="nx">params</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;code&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">code</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="sb">`&lt;script&gt;window.opener.postMessage({ error: &#34;Missing code&#34; }, &#34;*&#34;); window.close();&lt;/script&gt;`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">tokenResponse</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;https://github.com/login/oauth/access_token&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">client_id</span><span class="o">:</span> <span class="nx">CLIENT_ID</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">client_secret</span><span class="o">:</span> <span class="nx">CLIENT_SECRET</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">code</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">redirect_uri</span><span class="o">:</span> <span class="nx">REDIRECT_URI</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span> <span class="nx">Accept</span><span class="o">:</span> <span class="s2">&#34;application/json&#34;</span> <span class="p">}</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">accessToken</span> <span class="o">=</span> <span class="nx">tokenResponse</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="nx">token</span><span class="o">:</span> <span class="nx">accessToken</span><span class="p">,</span> <span class="nx">provider</span><span class="o">:</span> <span class="s2">&#34;github&#34;</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="sb">`authorization:github:success:</span><span class="si">${</span><span class="nx">content</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">      &lt;html&gt;&lt;body&gt;&lt;script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    (function() {
+</span></span></span><span class="line"><span class="cl"><span class="sb">      function recieveMessage(e) {
+</span></span></span><span class="line"><span class="cl"><span class="sb">        console.log(&#34;recieveMessage %o&#34;, e)
+</span></span></span><span class="line"><span class="cl"><span class="sb">        // send message to main window with da app
+</span></span></span><span class="line"><span class="cl"><span class="sb">        window.opener.postMessage(
+</span></span></span><span class="line"><span class="cl"><span class="sb">          </span><span class="si">${</span><span class="nx">message</span><span class="si">}</span><span class="sb">,
+</span></span></span><span class="line"><span class="cl"><span class="sb">          e.origin
+</span></span></span><span class="line"><span class="cl"><span class="sb">        )
+</span></span></span><span class="line"><span class="cl"><span class="sb">      }
+</span></span></span><span class="line"><span class="cl"><span class="sb">      window.addEventListener(&#34;message&#34;, recieveMessage, false)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      // Start handshare with parent
+</span></span></span><span class="line"><span class="cl"><span class="sb">      console.log(&#34;Sending message: %o&#34;, &#34;github&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      window.opener.postMessage(&#34;authorizing:github&#34;, &#34;*&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      })()
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    `</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s2">&#34;text/html&#34;</span> <span class="p">}</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="sb">`authorization:github:error:</span><span class="si">${</span><span class="nx">content</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">      &lt;html&gt;&lt;body&gt;&lt;script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    (function() {
+</span></span></span><span class="line"><span class="cl"><span class="sb">      function recieveMessage(e) {
+</span></span></span><span class="line"><span class="cl"><span class="sb">        console.log(&#34;recieveMessage %o&#34;, e)
+</span></span></span><span class="line"><span class="cl"><span class="sb">        // send message to main window with da app
+</span></span></span><span class="line"><span class="cl"><span class="sb">        window.opener.postMessage(
+</span></span></span><span class="line"><span class="cl"><span class="sb">          </span><span class="si">${</span><span class="nx">message</span><span class="si">}</span><span class="sb">,
+</span></span></span><span class="line"><span class="cl"><span class="sb">          e.origin
+</span></span></span><span class="line"><span class="cl"><span class="sb">        )
+</span></span></span><span class="line"><span class="cl"><span class="sb">      }
+</span></span></span><span class="line"><span class="cl"><span class="sb">      window.addEventListener(&#34;message&#34;, recieveMessage, false)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      // Start handshare with parent
+</span></span></span><span class="line"><span class="cl"><span class="sb">      console.log(&#34;Sending message: %o&#34;, &#34;github&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      window.opener.postMessage(&#34;authorizing:github&#34;, &#34;*&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="sb">      })()
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    `</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The directory structure will look like this:</p>
+<pre tabindex="0"><code>📦blog
+ ┣ 📂api
+ ┃ ┣ 📜auth.js
+ ┃ ┗ 📜callback.js
+</code></pre>
+
+<h3 class="relative group">Add production and development config 
+    <div id="add-production-and-development-config" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#add-production-and-development-config" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Make a copy of the <code>public/admin/config.yml</code> as <strong>config.dev.yml</strong> and <strong>config.prod.yml.</strong></p>
+<p><strong>config.dev.yml</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">collections</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;blog&#34;</span><span class="w"> </span><span class="c"># Used in routes, e.g., /admin/collections/blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Blog&#34;</span><span class="w"> </span><span class="c"># Used in the UI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/content/blog&#34;</span><span class="w"> </span><span class="c"># The path to the folder where the documents are stored</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># Allow users to create new documents in this collection</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="c"># The fields for each document, usually in frontmatter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Title&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;title&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Description&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;description&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Publist date&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pubDate&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;datetime&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hero image&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;heroImage&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">media_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># Location where files will be stored in the repo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">public_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># The src attribute for uploaded media</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">backend</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;owner-name&gt;/&lt;repo-name&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
+</span></span></span></code></pre></div><p><strong>config.prod.yml</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">collections</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;blog&#34;</span><span class="w"> </span><span class="c"># Used in routes, e.g., /admin/collections/blog</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Blog&#34;</span><span class="w"> </span><span class="c"># Used in the UI</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/content/blog&#34;</span><span class="w"> </span><span class="c"># The path to the folder where the documents are stored</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">create</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c"># Allow users to create new documents in this collection</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fields</span><span class="p">:</span><span class="w"> </span><span class="c"># The fields for each document, usually in frontmatter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Title&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;title&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Description&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;description&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Publist date&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pubDate&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;datetime&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- {<span class="w"> </span><span class="nt">label</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Hero image&#34;</span><span class="nt">, name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;heroImage&#34;</span><span class="nt">, widget</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;string&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">media_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># Location where files will be stored in the repo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">public_folder</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;src/assets/images&#34;</span><span class="w"> </span><span class="c"># The src attribute for uploaded media</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">backend</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;owner-name&gt;/&lt;repo-name&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="l">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">base_url</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;astro public url&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auth_endpoint</span><span class="p">:</span><span class="w"> </span><span class="l">api/auth</span><span class="w">
+</span></span></span></code></pre></div><p>Edit the scripts in <strong>package.json</strong> as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;cp public/admin/config.prod.yml public/admin/config.yml &amp;&amp; astro build&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;develop&#34;</span><span class="p">:</span> <span class="s2">&#34;cp public/admin/config.dev.yml public/admin/config.yml &amp;&amp; vercel dev&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></div><p>Now install the following packages</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm i -g vercel
+</span></span><span class="line"><span class="cl">npm i next@latest axios
+</span></span></code></pre></div><p>Check that everything is working locally. You&rsquo;ll asked to login to vercel. Follow the steps to link the existing project on vercel to your local project.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run develop
+</span></span></code></pre></div><p>If everything worked you&rsquo;ll still be able to open <a href="http://localhost:4321/admin/index.html" target="_blank">http://localhost:4321/admin/index.html</a>.</p>
+
+
+<h2 class="relative group">Finally deploying everything 
+    <div id="finally-deploying-everything" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#finally-deploying-everything" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Now we&rsquo;ll finally commit and push everything again. Wait for the deployment to finish on vercel. Then navigate to <strong><vercel url>/admin/index.html.</strong> If all went good you&rsquo;ll be able to login using Github and see your posts.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/12_hu_79daef5624288fcc.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/12_hu_2e97cd121d8332f5.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/12_hu_33bfe9ec5bef927.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/12_hu_acbfc1082190ad36.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/12_hu_2e97cd121d8332f5.png"
+        alt="final deploy"
+      />
+      
+    </figure>
+</p>
+<p>Try to edit a post and publish. The changes will reflected on the site after the build is completed in vercel.</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /blog/modify-static-site-content-easily-from-your-browser/13_hu_ac3db3cd274788b4.png 330w,
+        /blog/modify-static-site-content-easily-from-your-browser/13_hu_efcc2879d2bc2208.png 660w,
+        /blog/modify-static-site-content-easily-from-your-browser/13_hu_d2daebc70a913f1b.png 1024w,
+        /blog/modify-static-site-content-easily-from-your-browser/13_hu_fdeaa8a6284bb991.png 2x"
+        src="/blog/modify-static-site-content-easily-from-your-browser/13_hu_efcc2879d2bc2208.png"
+        alt="final blog"
+      />
+      
+    </figure>
+</p>
+<p>This blog is a bit long. Thank you for making it till the end.🙏</p>
+<p>Share with others who might find this useful too.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_blog\/Modify-static-site-content-easily-from-your-browser\/index.md"
+        var oid_likes = "likes_blog\/Modify-static-site-content-easily-from-your-browser\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/blog/how-to-host-a-local-llm-model/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >How to host a local LLM model</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-03-25T18:30:00&#43;00:00">25 March 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/blog/what-is-a-homelab-and-why-you-should-consider-having-one/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >What is a Homelab and why you should consider having one?</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-04-01T19:52:00&#43;00:00">1 April 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      Nipun Haldar
+    </p>
+    
+
+    
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:portfolio@nipunh.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/nipun24"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="http://instagram.com/focus.breathing"
+          target="_blank"
+          aria-label="Instagram"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="http://linkedin.com/in/nipunhaldar/"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="http://twitter.com/focus_breathing"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+
+
+    
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
