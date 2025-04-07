@@ -1,6 +1,7 @@
 ---
 title: How to send email using terminal
-description: Test your SMTP credentials without any extra tool just from your terminal
+description: Send emails from your terminal without using any external tools,
+  great for testing your SMTP credentials.
 draft: false
 tags:
   - email
