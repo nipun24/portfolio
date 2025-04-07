@@ -12,9 +12,10 @@ tags:
   - SSG
 date: 2025-03-27T12:27:00.000Z
 ---
+
 I created this tutorial as I could not find a simple and easy to integrate a CMS with a static site generator (SSG).
 
-All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS](<>) to an existing Astro project to edit the site using an admin interface.
+All the SSGs have a single issue that you have to edit the markdown directly. You need to have the project set up on your device. There is no admin interface to easily edit the content of the website[](https://decapcms.org). The tutorials available are not easy to understand and implement. But in this tutorial I'll also show you how to add [DecapCMS]() to an existing Astro project to edit the site using an admin interface.
 
 ## Getting started
 
@@ -37,7 +38,7 @@ npm create astro@latest -- --template blog
 
 After following the steps you'll have the following directory structure.
 
-```
+```text
 📦blog
  ┣ 📂.vscode
  ┣ 📂public
@@ -87,7 +88,7 @@ Your site is now ready to be deployed. First we'll push the code to Github and t
 
 Create an [empty repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) in Github and push the code.
 
-```
+```shell
 git remote add origin <your repository url>
 git branch -M main
 git push -u origin main
@@ -115,7 +116,7 @@ Now if you add a post and push to your repository, vercel will automatically bui
 
 Create two files inside `public/admin/`
 
-```
+```text
 📦public
  ┣ 📂admin
  ┃ ┣ 📜config.yml
@@ -248,7 +249,7 @@ export async function GET(req) {
   console.log(code);
   if (!code) {
     return new Response(
-      `<script>window.opener.postMessage({ error: "Missing code" }, "*"); window.close();</script>`,
+      `<script>window.opener.postMessage({ error: "Missing code" }, "*"); window.close();</script>`
     );
   }
 
@@ -261,7 +262,7 @@ export async function GET(req) {
         code,
         redirect_uri: REDIRECT_URI,
       },
-      { headers: { Accept: "application/json" } },
+      { headers: { Accept: "application/json" } }
     );
 
     const accessToken = tokenResponse.data.access_token;
@@ -287,7 +288,7 @@ export async function GET(req) {
       })()
     </script></body></html>
     `,
-      { headers: { "Content-Type": "text/html" } },
+      { headers: { "Content-Type": "text/html" } }
     );
   } catch (error) {
     const content = JSON.stringify(error);

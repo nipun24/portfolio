@@ -7,6 +7,7 @@ replyByEmail = false
 disableImageOptimization = false
 disableTextInHeader = true
 defaultBackgroundImage = "bg.svg"
+smartTOC = true
 
 [header]
 layout = "fixed"
@@ -24,7 +25,7 @@ showRecent = true
 showRecentItems = 5
 showMoreLink = false
 showMoreLinkDest = "/posts/"
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 layoutBackgroundBlur = false
 
@@ -67,7 +68,7 @@ showTableOfContents = false
 showCards = false
 orderByWeight = false
 groupByYear = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 constrainItemsWidth = false
 
