@@ -112,7 +112,7 @@
   <meta
     property="og:image"
     itemprop="image"
-    content="/og-image.png"
+    content="{{ .Site.BaseURL }}/og-image.png"
   />
 
   <!-- Twitter -->
@@ -120,7 +120,7 @@
   <meta property="twitter:url" content="{{ .Site.BaseURL }}" />
   <meta property="twitter:title" content="{{ .Site.Title }}" />
   <meta property="twitter:description" content="{{ .Site.Params.Description }}" />
-  <meta property="twitter:image" content="/og-image.png" />
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}/og-image.png" />
 
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
