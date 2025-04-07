@@ -3,6 +3,7 @@ languageCode = "en"
 languageName = "English"
 weight = 1
 title = "Focus Breathing"
+description = "Portfolio | Blog"
 
 [params]
 displayName = "EN"
