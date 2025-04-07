@@ -85,8 +85,10 @@ const { Content, headings } = await render(post);
         ) : null
       }
     </div>
-    {headings.length > 0 && <TableOfContents headings={headings} />}
-    <article class="animate">
+    <div class="fixed top-90 right-10 hidden 2xl:block">
+      {headings.length > 0 && <TableOfContents headings={headings} />}
+    </div>
+    <article class="animate post-content">
       <Content />
       <div class="mt-24">
         <PostNavigation prevPost={prevPost} nextPost={nextPost} />

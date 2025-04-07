@@ -1,16 +1,15 @@
 ---
 import type { Heading } from "./TableOfContents.astro";
-import Link from "./Link.astro";
 
 // https://kld.dev/building-table-of-contents/
 
 const { heading } = Astro.props;
 ---
 
-<li class="list-inside list-disc px-6 py-1.5 text-sm">
-  <Link href={"#" + heading.slug} underline>
+<li class="list-inside list-none py-1 pr-4 pl-1 text-sm">
+  <a href={"#" + heading.slug} class="toc-link hover:underline">
     {heading.text}
-  </Link>
+  </a>
   {
     heading.subheadings.length > 0 && (
       <ul class="translate-x-3">
@@ -21,3 +20,60 @@ const { heading } = Astro.props;
     )
   }
 </li>
+
+<script>
+  // Wrapper for Blog post content
+  let wrappingElement: Element | null;
+  let observeHeaderTags: IntersectionObserver;
+  let allHeaderTags: NodeListOf<Element>;
+
+  // Function that runs when the Intersection Observer fires
+  function setCurrent(e: IntersectionObserverEntry[]) {
+    var allSectionLinks = document.querySelectorAll(".toc-link");
+    e.map((i) => {
+      if (i.isIntersecting === true) {
+        allSectionLinks.forEach((link) => link.classList.remove("toc-current"));
+        const targetLink = document.querySelector(
+          `a[href="#${i.target.id}"].toc-link`,
+        );
+
+        if (targetLink) targetLink.classList.add("toc-current");
+      }
+    });
+  }
+
+  function initTOC() {
+    // update this with whatever class wraps your blog post content
+    wrappingElement = document.querySelector(".post-content");
+    if (wrappingElement !== null) {
+      // Get all H1/H2/H3 tags from the post
+      allHeaderTags = wrappingElement.querySelectorAll(
+        ":scope > h1, :scope > h2, :scope > h3, :scope > h4",
+      );
+    }
+
+    // Intersection Observer Options
+    let options: IntersectionObserverInit = {
+      root: null,
+      rootMargin: "0px 0px -65% 0px",
+      threshold: [1],
+    };
+
+    // Each Intersection Observer runs setCurrent
+    observeHeaderTags = new IntersectionObserver(setCurrent, options);
+    if (wrappingElement === null) {
+      return;
+    }
+    allHeaderTags.forEach((tag) => {
+      // add scroll margin top to account for fixed navbar
+      tag.classList.add("scroll-mt-24");
+      observeHeaderTags.observe(tag);
+    });
+  }
+
+  // runs on initial page load
+  initTOC();
+
+  // runs on view transitions navigation
+  document.addEventListener("astro:after-swap", initTOC);
+</script>
