@@ -14,7 +14,7 @@ description = "Keeping it Simple"
 pronounciation = "/ˈfoʊ.kəs ˈbriː.ðɪŋ/"
 meaning = "A conceptual breathing style inspired by the elemental techniques in anime, symbolizing a mastery of controlled focus and precision. Unlike elemental breathing forms such as Flame Breathing or Water Breathing, Focus Breathing is not tied to a physical element but instead channels pure concentration and awareness."
 author = { name = "Nipun Haldar" }
-links = [ { email = "mailto:portfolio@nipunh.com" }, { github = "https://github.com/nipun24" }, { instagram = "http://instagram.com/focus.breathing" }, { linkedin = "http://linkedin.com/in/nipunhaldar/" }, { x-twitter = "http://twitter.com/focus_breathing" } ]
+links = [ { email = "mailto:portfolio@nipunh.com" }, { github = "https://github.com/nipun24" }, { instagram = "https://instagram.com/focus.breathing" }, { linkedin = "https://linkedin.com/in/nipunhaldar/" }, { unsplash = "https://unsplash.com/@focusbreathing" }, { x-twitter = "https://twitter.com/focus_breathing" } ]
 
 [author]
 name = "Nipun Haldar"
