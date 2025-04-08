@@ -1,10 +1,12 @@
 const fs = require("fs");
+const fg = require("fast-glob");
+
 const path = require("path");
 const { createCanvas } = require("canvas");
 const crypto = require("crypto");
 
 // Config
-const postsRoot = "content/blog";
+const postsRoot = "content/blog/**/index.md";
 const gradientFileName = "featured.png";
 const width = 1200;
 const height = 630;
@@ -41,24 +43,40 @@ function generateColorsFromHash(hash) {
   return ["#" + hash.slice(0, 6), "#" + hash.slice(6, 12)];
 }
 
-fs.readdirSync(postsRoot).forEach((folder) => {
-  const postDir = path.join(postsRoot, folder);
-  const indexPath = path.join(postDir, "index.md");
-  const outPath = path.join(postDir, gradientFileName);
-  if (fs.existsSync(outPath)) {
-    console.log(`⏩ Skipping: ${folder} (featured.png already exists)`);
+fg.sync([postsRoot]).forEach((file) => {
+  const imgPath = path.join(file.replace("index.md", ""), "featured.*");
+  if (fg.sync([imgPath]).length > 0) {
+    console.log(`⏩ Skipping: featued image for ${file} already exists`);
     return;
   }
-
-  if (!fs.existsSync(indexPath)) return;
 
   const content = fs.readFileSync(indexPath, "utf8");
   const hash = crypto.createHash("sha1").update(content).digest("hex");
   const [color1, color2] = generateColorsFromHash(hash);
-
   const buffer = generateGradientImage(color1, color2);
-
   fs.writeFileSync(outPath, buffer);
-
   console.log(`✅ Generated ${gradientFileName} for ${folder}`);
 });
+
+// fs.readdirSync(postsRoot).forEach((folder) => {
+//   const postDir = path.join(postsRoot, folder);
+//   const indexPath = path.join(postDir, "index.md");
+//   const outPath = path.join(postDir, gradientFileName.replace(".png", ""));
+//   console.log(outPath);
+//   if (fs.existsSync(outPath)) {
+//     console.log(`⏩ Skipping: ${folder} (featured.png already exists)`);
+//     return;
+//   }
+
+//   if (!fs.existsSync(indexPath)) return;
+
+//   const content = fs.readFileSync(indexPath, "utf8");
+//   const hash = crypto.createHash("sha1").update(content).digest("hex");
+//   const [color1, color2] = generateColorsFromHash(hash);
+
+//   const buffer = generateGradientImage(color1, color2);
+
+//   fs.writeFileSync(outPath, buffer);
+
+//   console.log(`✅ Generated ${gradientFileName} for ${folder}`);
+// });
