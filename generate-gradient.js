@@ -46,7 +46,7 @@ fs.readdirSync(postsRoot).forEach((folder) => {
   const indexPath = path.join(postDir, "index.md");
   const outPath = path.join(postDir, gradientFileName);
   if (fs.existsSync(outPath)) {
-    console.log(`⏩ Skipping: ${folder} (feature.png already exists)`);
+    console.log(`⏩ Skipping: ${folder} (featured.png already exists)`);
     return;
   }
 
