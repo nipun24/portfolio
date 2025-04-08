@@ -2,7 +2,7 @@
 layout: simple
 ---
 
-<img src="./avatar.webp" alt="avatar" class="rounded-full h-36 w-36 object-cover">
+<img src="./avatar.webp" alt="avatar" class="rounded-full h-36 w-36 object-cover" loading="lazy" decoding="async">
 
 # Nipun Haldar
 
