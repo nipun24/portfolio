@@ -7,7 +7,7 @@ layout: simple
 # Nipun Haldar
 
 {{< keywordList >}}
-{{< keyword icon="amazon" >}} Cloud Architect {{< /keyword >}}
+{{< keyword icon="cloud" >}} Cloud Architect {{< /keyword >}}
 {{< keyword icon="code" >}} Python Developer {{< /keyword >}}
 {{< /keywordList >}}
 
