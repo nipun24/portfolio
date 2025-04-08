@@ -2,81 +2,96 @@
 title: Generate random images from text
 description: Learn how to generate random gradient images from any text useful
   for adding feature images to blogs and much more!
-draft: true
+draft: false
 tags:
   - image
   - javascript
   - placeholder
 date: 2025-04-08T14:25:00.000Z
 ---
-How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this website to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
+How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](#) to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
 
-You can use the website or use the script to use it in your own project.
+You can use the [website](#) or use the script to use it in your own project.
 
-```javascript
-const fs = require("fs");
-const path = require("path");
-const { createCanvas } = require("canvas");
-const crypto = require("crypto");
+## Running the script
 
-// Config
-const postsRoot = "content/blog";
-const gradientFileName = "featured.png";
-const width = 1200;
-const height = 630;
+1. Installing the dependencies
 
-function generateGradientImage(color1, color2) {
-  const canvas = createCanvas(width, height);
-  const ctx = canvas.getContext("2d");
+   ```shell
+   npm i canvas slugify
+   ```
+2. Create a file `image-gen.js`.
 
-  // Create gradient background
-  const gradient = ctx.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, color1);
-  gradient.addColorStop(1, color2);
+   ```javascript
+   const fs = require("fs");
+   const path = require("path");
+   const { createCanvas } = require("canvas");
+   const crypto = require("crypto");
 
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, width, height);
+   // Config
+   const gradientFileName = "featured.png";
+   const width = 1200;
+   const height = 630;
 
-  // Add noise: draw semi-transparent dots
-  const noiseDensity = 0.1; // 4% of pixels
-  const totalPixels = Math.floor(width * height * noiseDensity);
+   function generateGradientImage(color1, color2) {
+     const canvas = createCanvas(width, height);
+     const ctx = canvas.getContext("2d");
 
-  for (let i = 0; i < totalPixels; i++) {
-    const x = Math.floor(Math.random() * width);
-    const y = Math.floor(Math.random() * height);
-    const alpha = Math.random() * 0.08; // subtle opacity
-    const gray = Math.floor(Math.random() * 255);
-    ctx.fillStyle = `rgba(${gray},${gray},${gray},${alpha})`;
-    ctx.fillRect(x, y, 1, 1);
-  }
+     // Create gradient background
+     const gradient = ctx.createLinearGradient(0, 0, width, height);
+     gradient.addColorStop(0, color1);
+     gradient.addColorStop(1, color2);
 
-  return canvas.toBuffer("image/png");
-}
+     ctx.fillStyle = gradient;
+     ctx.fillRect(0, 0, width, height);
 
-function generateColorsFromHash(hash) {
-  return ["#" + hash.slice(0, 6), "#" + hash.slice(6, 12)];
-}
+     // Add noise
+     const noiseDensity = 0.1;
+     const totalPixels = Math.floor(width * height * noiseDensity);
+     for (let i = 0; i < totalPixels; i++) {
+       const x = Math.floor(Math.random() * width);
+       const y = Math.floor(Math.random() * height);
+       const alpha = Math.random() * 0.08;
+       const gray = Math.floor(Math.random() * 255);
+       ctx.fillStyle = `rgba(${gray},${gray},${gray},${alpha})`;
+       ctx.fillRect(x, y, 1, 1);
+     }
 
-fs.readdirSync(postsRoot).forEach((folder) => {
-  const postDir = path.join(postsRoot, folder);
-  const indexPath = path.join(postDir, "index.md");
-  const outPath = path.join(postDir, gradientFileName);
-  if (fs.existsSync(outPath)) {
-    console.log(`⏩ Skipping: ${folder} (feature.png already exists)`);
-    return;
-  }
+     return canvas.toBuffer("image/png");
+   }
 
-  if (!fs.existsSync(indexPath)) return;
+   function generateColorsFromHash(hash) {
+     return ["#" + hash.slice(0, 6), "#" + hash.slice(6, 12)];
+   }
 
-  const content = fs.readFileSync(indexPath, "utf8");
-  const hash = crypto.createHash("sha1").update(content).digest("hex");
-  const [color1, color2] = generateColorsFromHash(hash);
+   // Main
+   const filePath = process.argv[2];
 
-  const buffer = generateGradientImage(color1, color2);
+   if (!filePath) {
+     console.error("❌ Usage: node image-gen.js path/to/file.txt");
+     process.exit(1);
+   }
 
-  fs.writeFileSync(outPath, buffer);
+   if (!fs.existsSync(filePath)) {
+     console.error(`❌ File not found: ${filePath}`);
+     process.exit(1);
+   }
 
-  console.log(`✅ Generated ${gradientFileName} for ${folder}`);
-});
+   const content = fs.readFileSync(filePath, "utf8");
+   const hash = crypto.createHash("sha1").update(content).digest("hex");
+   const [color1, color2] = generateColorsFromHash(hash);
 
-```
+   const buffer = generateGradientImage(color1, color2);
+
+   const outputDir = path.dirname(filePath);
+   const outPath = path.join(outputDir, gradientFileName);
+   fs.writeFileSync(outPath, buffer);
+
+   console.log(`✅ Generated ${gradientFileName} in ${outputDir}`);
+
+   ```
+3. Run the script
+
+   ```shell
+   node image-gen.js /path/to/file.txt
+   ```
