@@ -54,7 +54,7 @@ fg.sync([postsRoot]).forEach((file) => {
   const hash = crypto.createHash("sha1").update(content).digest("hex");
   const [color1, color2] = generateColorsFromHash(hash);
   const buffer = generateGradientImage(color1, color2);
-  fs.writeFileSync(outPath, buffer);
+  fs.writeFileSync(file.replace("index.md", gradientFileName), buffer);
   console.log(`✅ Generated ${gradientFileName} for ${folder}`);
 });
 
