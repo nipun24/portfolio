@@ -2,6 +2,10 @@
 
 This site has been created using Hugo and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
 
+🚀 The site scores 100/100 on [lighthouse](https://pagespeed.web.dev/analysis/https-nipunh-com/dv1jp1sysp?form_factor=desktop).
+
+![lighthouse score](lighthouse.png)
+
 ## How to run this site
 
 1. Clone this repo
