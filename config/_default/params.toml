@@ -6,7 +6,7 @@ enableCodeCopy = true
 replyByEmail = false
 disableImageOptimization = false
 disableTextInHeader = true
-defaultBackgroundImage = "bg.svg"
+defaultBackgroundImage = "fireflies.svg"
 smartTOC = true
 
 [header]
