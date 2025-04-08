@@ -1,10 +1,6 @@
 # This is my portfolio and blogging site
 
-This site has been created using Astro and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
-
-🚀 The site scores 100/100 on [lighthouse](https://pagespeed.web.dev/analysis/https-nipunh-com/5znpceml4r?utm_source=search_console&form_factor=desktop&hl=en).
-
-![lighthouse score](lighthouse.png)
+This site has been created using Hugo and DecapCMS. The oauth for decapCMS is written to be hosten using vercel functions.
 
 ## How to run this site
 
