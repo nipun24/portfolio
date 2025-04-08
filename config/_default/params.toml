@@ -16,7 +16,7 @@ layout = "fixed"
 showMenu = true
 showCopyright = true
 showThemeAttribution = false
-showAppearanceSwitcher = false
+showAppearanceSwitcher = true
 showScrollToTop = true
 
 [homepage]
