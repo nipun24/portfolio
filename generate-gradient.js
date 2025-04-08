@@ -50,7 +50,7 @@ fg.sync([postsRoot]).forEach((file) => {
     return;
   }
 
-  const content = fs.readFileSync(indexPath, "utf8");
+  const content = fs.readFileSync(file, "utf8");
   const hash = crypto.createHash("sha1").update(content).digest("hex");
   const [color1, color2] = generateColorsFromHash(hash);
   const buffer = generateGradientImage(color1, color2);
