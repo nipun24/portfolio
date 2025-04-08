@@ -55,7 +55,7 @@ fg.sync([postsRoot]).forEach((file) => {
   const [color1, color2] = generateColorsFromHash(hash);
   const buffer = generateGradientImage(color1, color2);
   fs.writeFileSync(file.replace("index.md", gradientFileName), buffer);
-  console.log(`✅ Generated ${gradientFileName} for ${folder}`);
+  console.log(`✅ Generated ${gradientFileName} for ${file}`);
 });
 
 // fs.readdirSync(postsRoot).forEach((folder) => {
