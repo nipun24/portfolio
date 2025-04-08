@@ -7,7 +7,7 @@ tags:
   - image
   - javascript
   - placeholder
-date: 2025-04-08T15:10:00.000Z
+date: 2025-04-08T00:00:00.000Z
 ---
 How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](#) to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
 
