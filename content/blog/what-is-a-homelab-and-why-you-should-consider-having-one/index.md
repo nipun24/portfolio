@@ -1,11 +1,11 @@
 ---
-title: "What is a Homelab and why you should consider having one?"
-date: 2025-04-01T19:52:00.000Z
+title: What is a Homelab and why you should consider having one?
+description: Learn what is a homelab and the services that you can run on it
 draft: false
-description: "Learn what is a homelab and the services that you can run on it"
 tags:
   - homelab
   - docker
+date: 2025-04-01T19:52:00.000Z
 ---
 
 Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer.
