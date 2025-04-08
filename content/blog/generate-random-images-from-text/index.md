@@ -9,9 +9,22 @@ tags:
   - placeholder
 date: 2025-04-08T00:00:00.000Z
 ---
-How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](#) to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
+How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](https://nipun24.github.io/file-to-gradient/) to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
 
-You can use the [website](#) or use the script to use it in your own project.
+## Using the Website
+
+1. Open <https://nipun24.github.io/file-to-gradient/>.
+
+   ![website](1.png)
+2. Choose a file to upload.
+
+   ![upload file](2.png)
+3. Click **Generate Image** to get a preview.
+
+   ![generate](3.png)
+4. Click **Download Image** to get the full resolution image.
+
+   ![gradient file](gradient-2.png)
 
 ## Running the script
 
@@ -88,7 +101,6 @@ You can use the [website](#) or use the script to use it in your own project.
    fs.writeFileSync(outPath, buffer);
 
    console.log(`✅ Generated ${gradientFileName} in ${outputDir}`);
-
    ```
 3. Run the script
 
