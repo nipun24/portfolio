@@ -11,14 +11,14 @@ This site has been created using Hugo and DecapCMS. The oauth for decapCMS is wr
 1. Clone this repo
 2. Install dependencies
    ```bash
-   pnpm install
+   npm install
    ```
 3. Run the development server
    ```bash
-   pnpm dev
+   npm run dev
    ```
-4. Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
-5. Open [http://localhost:4321/admin/index.html](http://localhost:4321/admin/index.html) to see the admin panel.
+4. Open [http://localhost:4321](http://localhost:1313) with your browser to see the result.
+5. Open [http://localhost:1313/admin/index.html](http://localhost:1313/admin/index.html) to see the admin panel.
 
 ## How to deploy this site
 

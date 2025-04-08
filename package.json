@@ -4,7 +4,7 @@
     "slugify": "^1.6.6"
   },
   "scripts": {
-    "dev": "hugo serve",
+    "dev": "cp static/admin/config.dev.yml static/admin/config.yml && hugo serve",
     "build": "node generate-gradient.js && cp static/admin/config.prod.yml static/admin/config.yml && hugo --gc --minify"
   }
 }
