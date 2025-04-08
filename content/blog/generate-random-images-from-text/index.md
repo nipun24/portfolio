@@ -1,6 +1,6 @@
 ---
-title: Generate random images from text
-description: Learn how to generate random gradient images from any text useful
+title: Generate random images from text or file
+description: Learn how to generate random gradient images from any text, useful
   for adding feature images to blogs and much more!
 draft: false
 tags:
@@ -9,7 +9,7 @@ tags:
   - placeholder
 date: 2025-04-08T00:00:00.000Z
 ---
-How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](https://nipun24.github.io/file-to-gradient/) to generate images from the contents of any text file. Images generated are unique to the contents of that file so every image is different.
+How often do you need placeholder images or thumbnail images for your blog or other websites. Finding appropriate images on Unspash or other stock image sites takes a lot of time. So I created this [website](https://nipun24.github.io/file-to-gradient/) to generate images from the contents of any text file. The images are generated from the hash of the file, so each image is unique.
 
 ## Using the Website
 
