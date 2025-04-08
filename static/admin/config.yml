@@ -1,15 +1,48 @@
-media_folder: static/img
-public_folder: /img
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: name
+    fields: # The fields for each document, usually in frontmatter
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "about" # Used in routes, e.g., /admin/collections/blog
+    label: "About" # Used in the UI
+    folder: "content/about" # The path to the folder where the documents are stored
+    # create: true # Allow users to create new documents in this collection
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: layout
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Layout", name: "layout", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "photos" # Used in routes, e.g., /admin/collections/blog
+    label: "Photos" # Used in the UI
+    folder: "content/photos" # The path to the folder where the documents are stored
+    # create: true # Allow users to create new documents in this collection
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: layout
+    fields: # The fields for each document, usually in frontmatter
+      - { label: "Layout", name: "layout", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+media_folder: "static/images" # Location where files will be stored in the repo
+public_folder: "static/images" # The src attribute for uploaded media
+
+backend:
+  name: github
+  repo: nipun24/portfolio
+  branch: main
