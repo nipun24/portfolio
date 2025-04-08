@@ -1,5 +1,5 @@
 ---
-title: Generate random images from text or file
+title: Generate gradient images from a text or file
 description: Learn how to generate random gradient images from any text, useful
   for adding feature images to blogs and much more!
 draft: false
