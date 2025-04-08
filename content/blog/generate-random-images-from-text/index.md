@@ -29,7 +29,7 @@ You can use the [website](#) or use the script to use it in your own project.
    const crypto = require("crypto");
 
    // Config
-   const gradientFileName = "featured.png";
+   const gradientFileName = "image.png";
    const width = 1200;
    const height = 630;
 
@@ -95,3 +95,5 @@ You can use the [website](#) or use the script to use it in your own project.
    ```shell
    node image-gen.js /path/to/file.txt
    ```
+
+You'll see a file called `image.png` in the same folder as the file.
