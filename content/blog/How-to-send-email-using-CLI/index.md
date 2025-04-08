@@ -1,6 +1,7 @@
 ---
 title: Send email from your terminal
-description: Send emails from your terminal without using any external tools, great for testing your SMTP credentials.
+description: Send emails from your terminal without using any external tools,
+  great for testing your SMTP credentials.
 draft: false
 tags:
   - email
@@ -9,7 +10,6 @@ tags:
   - terminal
 date: 2025-03-23T18:30:00.000Z
 ---
-
 In this tutorial we'll use the terminal to send email using SMTP. This method can be used to test the SMTP credentials by sending a test email.
 
 ## Before you start
