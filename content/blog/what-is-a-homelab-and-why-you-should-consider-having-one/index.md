@@ -7,22 +7,21 @@ tags:
   - docker
 date: 2025-04-01T19:52:00.000Z
 ---
-
 Homelab is the name given to the server(s) that reside locally in your home that you can use for various functions such as virtualization, testing, NAS, media server etc. This server can be a raspberry pi, an old pc/laptop or any other computer.
 
 ## The homelab architecture
 
 ### The server
 
-For my homelab server I use an [Asrock Deskmeet x600](https://www.asrock.com/nettop/AMD/DeskMeet%20X600%20Series/index.asp), it is a mini ITX barebone unit. It is a great fit for a homelab due to its compact size. The specs are:
+For my homelab server I use an [Asrock Deskmeet x300](https://www.asrock.com/nettop/AMD/DeskMeet%20X300%20Series/index.asp), it is a mini ITX barebone unit. It is a great fit for a homelab due to its compact size. The specs are:
 
-- **CPU:** Ryzen 7 5700G
-- **RAM:** 64GB
-- **Storage:**
+* **CPU:** Ryzen 7 5700G
+* **RAM:** 64GB
+* **Storage:**
 
-  - Internal - 500GB + 4TB
-  - External - 4TB + 1TB
-  - Network Attached Storage - 1TB
+  * Internal - 500GB + 4TB
+  * External - 4TB + 1TB
+  * Network Attached Storage - 1TB
 
 ![homelab pc](asrock-deskmeet.jpg)
 
@@ -30,11 +29,11 @@ For my homelab server I use an [Asrock Deskmeet x600](https://www.asrock.com/net
 
 Storage is an important part of any homelab. For me, I am using it as a media server, photos and drive. So I have a lot of storage for this data as well as for backups.
 
-- **Internal 1:** This is a [Crucial P3 500GB M.2 drive](https://amzn.to/4la3gqk). It is used as the OS drive for the hypervisor and all the VMs.
-- **Internal 2:** This is a [Seagate Ironwolf 4TB](https://amzn.to/4hTktSd) hard drive and is used to store everything.
-- **External 1:** This is a [Seagate 4TB external hard drive](https://amzn.to/4i0MxDc). This is the backup drive. All important stuff is backed up to this drive daily.
-- **External 2:** This is a 1TB [drive](https://amzn.to/3RAxEMR) from an old computer housed in a [SATA to USB enclosure](https://amzn.to/3XByywf). It is used as my time machine backup disk.
-- **NAS:** It's a [Synology NAS](https://amzn.to/3E2Rv4k) with a 1TB drive from another old computer. This stores the backup of all my VMs.
+* **Internal 1:** This is a [Crucial P3 500GB M.2 drive](https://amzn.to/4la3gqk). It is used as the OS drive for the hypervisor and all the VMs.
+* **Internal 2:** This is a [Seagate Ironwolf 4TB](https://amzn.to/4hTktSd) hard drive and is used to store everything.
+* **External 1:** This is a [Seagate 4TB external hard drive](https://amzn.to/4i0MxDc). This is the backup drive. All important stuff is backed up to this drive daily.
+* **External 2:** This is a 1TB [drive](https://amzn.to/3RAxEMR) from an old computer housed in a [SATA to USB enclosure](https://amzn.to/3XByywf). It is used as my time machine backup disk.
+* **NAS:** It's a [Synology NAS](https://amzn.to/3E2Rv4k) with a 1TB drive from another old computer. This stores the backup of all my VMs.
 
 ### Architecture
 
@@ -158,6 +157,6 @@ Jellyfin is a media server. It organises all your downloaded media with the corr
 
 #### \*arr Stack [🔗](https://wiki.servarr.com)
 
-Paying for multiple OTT subscriptions. Save money by hosting the \*arr stack. I host [sonarr](https://sonarr.tv), [radarr](https://radarr.video) and [prowlarr](https://prowlarr.com) in my homelab. You'll also need to host a download client with these like [qBittorrent](https://docs.linuxserver.io/images/docker-qbittorrent/).
+Paying for multiple OTT subscriptions. Save money by hosting the *arr stack. I host [sonarr](https://sonarr.tv), [radarr](https://radarr.video) and [prowlarr](https://prowlarr.com) in my homelab. You'll also need to host a download client with these like [qBittorrent](https://docs.linuxserver.io/images/docker-qbittorrent/).
 
 You'll still need to manually add the shows and movies which can be a hassle. To fully automate this you can use [listrr.pro](https://listrr.pro) to create lists of movies and shows using filters. You can use my custom lists as a starting point: [Movies](https://listrr.pro/Lists/ShowMovieList/6726592c8e1c7df1624485ad) and [Shows](https://listrr.pro/Lists/ShowShowList/67346e00ad3213fedc8bf15c).
