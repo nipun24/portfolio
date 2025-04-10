@@ -19,12 +19,15 @@ How often do you need placeholder images or thumbnail images for your blog or ot
 2. Choose a file to upload.
 
    ![upload file](2.png)
-3. Click **Generate Image** to get a preview.
+3. Enter the dimensions or keep the default value.
 
-   ![generate](3.png)
-4. Click **Download Image** to get the full resolution image.
+   ![enter dimensions](3.png)
+4. Click **Generate Image** to get a preview.
 
-   ![gradient file](gradient-2.png)
+   ![generate](4.png)
+5. Click **Download Image** to get the full resolution image.
+
+   ![gradient file](gradient.png)
 
 ## Running the script
 
