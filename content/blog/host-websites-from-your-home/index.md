@@ -121,6 +121,8 @@ services:
       - ./public:/usr/share/nginx/html/:ro
 ```
 
+> If you are facing low transfer speeds through your tunnel you can add the following to command `--protocol h2mux`
+
 Also create a .env file to store the token
 
 ```ini
