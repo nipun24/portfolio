@@ -24,7 +24,7 @@ How often do you need placeholder images or thumbnail images for your blog or ot
    ![enter dimensions](3.png)
 4. Click **Generate Image** to get a preview.
 
-   ![generate](4.png)
+   ![generate](featured.jpg)
 5. Click **Download Image** to get the full resolution image.
 
    ![gradient file](gradient.png)
