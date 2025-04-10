@@ -10,7 +10,7 @@ defaultBackgroundImage = "fireflies.svg"
 smartTOC = true
 
 [header]
-layout = "fixed"
+layout = "basic"
 
 [footer]
 showMenu = true
