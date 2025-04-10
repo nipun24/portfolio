@@ -15,6 +15,63 @@ collections:
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "tools"
+    label: "Tools"
+    folder: "content/tools"
+    create: true
+    media_folder: ""
+    public_folder: ""
+    path: "{{slug}}/index"
+    identifier_field: title
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "groupByYear",
+          name: "groupByYear",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "showDate",
+          name: "showDate",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "showSummary",
+          name: "showSummary",
+          widget: "boolean",
+          default: true,
+        }
+      - { label: "externalUrl", name: "externalUrl", widget: "string" }
+      - { label: "summary", name: "summary", widget: "string" }
+      - {
+          label: "showReadingTime",
+          name: "showReadingTime",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "_build",
+          name: "_build",
+          widget: "object",
+          fields:
+            [
+              {
+                label: "render",
+                name: "render",
+                widget: "boolean",
+                default: false,
+              },
+              {
+                label: "list",
+                name: "list",
+                widget: "string",
+                default: "local",
+              },
+            ],
+        }
+
   - name: "about" # Used in routes, e.g., /admin/collections/blog
     label: "About" # Used in the UI
     folder: "content/about" # The path to the folder where the documents are stored

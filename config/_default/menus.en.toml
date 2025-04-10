@@ -2,7 +2,7 @@
 name = "Blog"
 pageRef = "blog"
 identifier = "gFCo2i677J"
-weight = 9999
+weight = 1
 
 [[main]]
 name = "About"
@@ -14,7 +14,13 @@ weight = 9999
 name = "Photos"
 pageRef = "photos"
 identifier = "yS11aKwCyc"
-weight = 9999
+weight = 2
+
+[[main]]
+name = "Tools"
+pageRef = "tools"
+identifier = "jx8IybX1eU"
+weight = 3
 
 [[footer]]
 name = "Tags"
